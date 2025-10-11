@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useAuth, SignOutButton } from "@clerk/nextjs";
+
 
 // Navigation configuration
 const NAV_LINKS = [
@@ -20,6 +22,8 @@ const HOVER_ANIMATION = {
 };
 
 export default function Navbar() {
+  const { isSignedIn } = useAuth();
+
   return (
     <nav className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-8 rounded-lg border-[1px] border-neutral-700 bg-neutral-900 px-8 py-2 text-sm text-neutral-500 z-[60]">
       <Logo />
@@ -28,7 +32,7 @@ export default function Navbar() {
           {label}
         </NavLink>
       ))}
-      <JoinButton />
+      {isSignedIn ? <SignOutButtonComponent /> : <JoinButton />}
     </nav>
   );
 }
@@ -95,5 +99,31 @@ const JoinButton = () => {
         Sign-Up/Login
       </button>
     </Link>
+  );
+};
+
+const SignOutButtonComponent = () => {
+  return (
+    <SignOutButton>
+      <button
+        className={`
+            relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px] 
+            border-neutral-700 px-4 py-1.5 font-medium
+           text-neutral-300 transition-all duration-300
+            
+            before:absolute before:inset-0
+            before:-z-10 before:translate-y-[200%]
+            before:scale-[2.5]
+            before:rounded-[100%] before:bg-neutral-50
+            before:transition-transform before:duration-1000
+            before:content-[""]
+    
+            hover:scale-105 hover:border-neutral-50 hover:text-neutral-900
+            hover:before:translate-y-[0%]
+            active:scale-100`}
+      >
+        Sign Out
+      </button>
+    </SignOutButton>
   );
 };
