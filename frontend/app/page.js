@@ -1,27 +1,26 @@
 'use client'
 import Navbar from "./components/navbar";
 import Plasma from "./components/homebg";
+import Silk from "./components/homebg";
 
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <div className="relative min-h-screen w-full">
-        {/* Plasma Background - Full Screen */}
-        <div className="fixed inset-0 w-screen h-screen -z-10">
-          <Plasma 
-            color="#784aacff"
-            speed={0.6}
-            direction="forward"
-            scale={1.1}
-            opacity={0.8}
-            mouseInteractive={true}
+        {/* Plasma Background - Full Screen - Bottom Layer */}
+        <div className="fixed inset-0 w-screen h-screen -z-50">
+          <Silk
+            speed={5}
+            scale={1}
+            color="#572384ff"
+            noiseIntensity={1.5}
+            rotation={0}
           />
         </div>
-        
-        {/* Content Overlay - Centered */}
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen w-full px-4">
+        <Navbar/>
+        {/* Content Overlay - Centered - Top Layer */}
+        <div className="relative z-50 flex flex-col items-center justify-center min-h-screen w-full px-4">
           <div className="text-center">
             <h1 className="text-6xl font-bold text-white mb-6">
               Title
