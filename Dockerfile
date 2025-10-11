@@ -48,6 +48,8 @@ cd /app/frontend && npm start &\n\
 wait' > /app/start.sh && chmod +x /app/start.sh
 
 # Expose ports
+# Note: Port 5000 may conflict with macOS ControlCenter
+# Use -p 5001:5000 when running the container
 EXPOSE 3000 5000
 
 # Start both services

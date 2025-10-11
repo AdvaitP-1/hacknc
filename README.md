@@ -13,16 +13,15 @@ The easiest way to run the application is using Docker:
 # Build the Docker image
 docker build -t hacknc-app .
 
-# Run the container (Docker will automatically assign available ports)
-docker run -d -P --name hacknc-app hacknc-app
-
-# Check which ports were assigned
-docker ps
+# Run the container with specific ports
+docker run -d -p 3000:3000 -p 5001:5000 --name hacknc-app hacknc-app
 ```
 
 The application will be available at:
-- **Frontend**: `http://localhost:[ASSIGNED_PORT_3000]`
-- **Backend API**: `http://localhost:[ASSIGNED_PORT_5000]/api/health`
+- **Frontend**: `http://localhost:3000`
+- **Backend API**: `http://localhost:5001/api/health`
+
+**Note**: Port 5000 is used by macOS ControlCenter, so the backend runs on port 5001.
 
 To stop the container:
 ```bash
