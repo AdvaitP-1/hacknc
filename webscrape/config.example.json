@@ -1,0 +1,32 @@
+{
+  "colleges": [
+    {
+      "college_name": "College A",
+      "majors_url": "https://example.edu/catalog/programs/",
+      "major_link_selector": "ul.program-list li a",
+      "major_name_selector": null,
+      "ignore_major_keywords": ["minor", "certificate"],
+
+
+      "course_row_selector": ".courseblock",
+      "course_code_selector": ".courseblocktitle strong",
+      "course_title_selector": ".courseblocktitle",
+      "course_units_selector": ".courseblockhours",
+      "course_desc_selector": ".courseblockdesc"
+    },
+    {
+      "college_name": "College B",
+      "majors_url": "https://example2.edu/academics/majors",
+      "major_link_selector": "a.major-link",
+      "major_name_selector": null,
+      "ignore_major_keywords": ["minor", "certificate"],
+
+
+      "course_row_selector": ".course",
+      "course_code_selector": ".course-code",
+      "course_title_selector": ".course-title",
+      "course_units_selector": ".course-credits",
+      "course_desc_selector": ".course-desc"
+    }
+  ]
+}
