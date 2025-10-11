@@ -2,6 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Original Study Share Design System */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+  
+  body {
+    font-weight: 400;
+    color: #0a0a0a;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #0a0a0a;
+    letter-spacing: -0.02em;
+  }
+  
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+  
+  .neon-border {
+    @apply border-2 border-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-border;
+    background-clip: padding-box;
+  }
+  
+  .cyber-button {
+    @apply relative overflow-hidden bg-black text-white font-medium py-3 px-6 border-2 border-cyan-400 transition-all duration-300;
+    transform: skew(-2deg);
+  }
+  
+  .cyber-button:hover {
+    @apply bg-cyan-400 text-black shadow-lg shadow-cyan-400/50;
+    transform: skew(-2deg) translateY(-2px);
+  }
+  
+  .data-grid {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .pixel-border {
+    border-image: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff) 1;
+    border-width: 2px;
+    border-style: solid;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
