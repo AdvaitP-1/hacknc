@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { User, School, GraduationCap, Settings, Lock, Mail, MapPin } from 'lucide-react';
 import Navbar from '../components/navbar';
+import majorsData from '../../../webscrape/college_data/all_stem_majors.json';
 
 // Helper function to map Clerk user data to our profile format
 const mapClerkUserToProfile = (clerkUser) => {
@@ -16,10 +17,16 @@ const mapClerkUserToProfile = (clerkUser) => {
   };
 };
 
+// Helper function for the search bar
+const getMajorsList = () => majorsData.majors.map(m => m.major);
+
+
 export default function Dashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userProfile, setUserProfile] = useState(null);
   const [hasSchoolInfo, setHasSchoolInfo] = useState(false);
+
+  const [selectedMajor, setSelectedMajor] = useState('');
 
   // Authentication check - easy to switch to Clerk
   useEffect(() => {
@@ -93,6 +100,65 @@ export default function Dashboard() {
     </>
   );
 }
+
+const CourseSearch = () => {
+  const [selectedMajor, setSelectedMajor] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Get courses to display
+  const filteredCourses = majorsData.majors
+    .filter(majorObj => !selectedMajor || majorObj.major === selectedMajor)
+    .flatMap(majorObj =>
+      majorObj.core_courses.filter(course =>
+        course.course_name.toLowerCase().includes(searchQuery.toLowerCase())
+      ).map(course => ({
+        ...course,
+        major: majorObj.major,
+        university: majorObj.university
+      }))
+    );
+  return (
+    <div>
+      {/* Major Dropdown */}
+      <label className="block text-sm font-medium text-zinc-700 mb-2">Major</label>
+      <select
+        value={selectedMajor}
+        onChange={e => setSelectedMajor(e.target.value)}
+        className="w-full px-4 py-3 border border-zinc-300 rounded-lg mb-4"
+      >
+        <option value="">All Majors</option>
+        {getMajorsList().map((major, idx) => (
+          <option key={idx} value={major}>{major}</option>
+        ))}
+      </select>
+
+      {/* Search Bar */}
+      <label className="block text-sm font-medium text-zinc-700 mb-2">Search Courses</label>
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={e => setSearchQuery(e.target.value)}
+        placeholder="Search for a course..."
+        className="w-full px-4 py-3 border border-zinc-300 rounded-lg mb-4"
+      />
+
+      {/* Filtered Results */}
+      <ul>
+        {filteredCourses.length === 0 ? (
+          <li className="text-zinc-600">No courses found.</li>
+        ) : (
+          filteredCourses.map((course, idx) => (
+            <li key={idx} className="p-2 border-b">
+              <strong>{course.course_code}</strong>: {course.course_name}
+              <br />
+              <span className="text-xs text-zinc-500">{course.major} - {course.university}</span>
+            </li>
+          ))
+        )}
+      </ul>
+    </div>
+  );
+};
 
 const LoginPrompt = () => (
   <div className="min-h-screen bg-zinc-900 flex items-center justify-center px-4">
@@ -173,6 +239,27 @@ const SchoolSetupPrompt = ({ userProfile }) => (
     </motion.div>
   </div>
 );
+const MajorDropdown = ({ selectedMajor, onMajorChange }) => {
+  const majorsList = getMajorsList();
+  
+  return (
+    <div className="text-left">
+      <label className="block text-sm font-medium text-zinc-700 mb-2">Major</label>
+      <select
+        value={selectedMajor}
+        onChange={(e) => onMajorChange(e.target.value)}
+        className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option value="">Select your major</option>
+        {majorsList.map((major, index) => (
+          <option key={index} value={major.value}>
+            {major.label} - {major.university}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
 
 const DashboardContent = ({ userProfile }) => (
   <div className="min-h-screen bg-zinc-50">
