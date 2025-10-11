@@ -7,14 +7,15 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg border-[1px] border-neutral-700 bg-neutral-900 p-2 text-sm text-neutral-500 z-[60]">
+    <nav className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-8 rounded-lg border-[1px] border-neutral-700 bg-neutral-900 px-8 py-2 text-sm text-neutral-500 z-[60]">
       <Logo />
 
-      <NavLink>Home</NavLink>
-      <NavLink>About</NavLink>
-     
-
-
+      <NavLink href="/">Home</NavLink>
+      <NavLink href="/about">About</NavLink>
+      <NavLink href="/dashboard">Dashboard</NavLink>
+      <NavLink href="/forums">Forums</NavLink>
+      <NavLink href="/notes">Notes</NavLink>
+      <NavLink href="/profile">Profile</NavLink>
       <JoinButton />
     </nav>
   );
@@ -43,9 +44,9 @@ const Logo = () => {
   );
 };
 
-const NavLink = ({ children }) => {
+const NavLink = ({ children, href }) => {
   return (
-    <a href="#" rel="nofollow" className="block overflow-hidden">
+    <a href={href || "#"} rel="nofollow" className="block overflow-hidden">
       <motion.div
         whileHover={{ y: -20 }}
         transition={{ ease: "backInOut", duration: 0.5 }}
@@ -62,7 +63,7 @@ const NavLink = ({ children }) => {
 
 const JoinButton = () => {
   return (
-    <Link href="/auth">
+    <Link href="/Auth">
       <button
         className={`
             relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px] 
