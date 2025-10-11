@@ -6,10 +6,7 @@ import Navbar from '../components/navbar';
 
 
 const forumsData = [
-  { id: 1, title: 'General Discussion', description: 'Talk about anything!' },
-  { id: 2, title: 'Course Help', description: 'Get help with your courses.' },
-  { id: 3, title: 'Events', description: 'Upcoming events and meetups.' },
-  // Add more forum objects as needed
+    // Store all forums
 ];
 
 export default function ForumsPage() {
@@ -27,18 +24,18 @@ export default function ForumsPage() {
           placeholder="Search forums..."
           value={search}
           onChange={e => setSearch(e.target.value)}
-          className="w-full p-2 border rounded mb-4"
+            className="w-full p-2 border rounded mb-4 text-black placeholder-black"
         />
         <div>
           {filteredForums.length > 0 ? (
             filteredForums.map(forum => (
-              <div key={forum.id} className="p-4 mb-2 border rounded">
-                <h2 className="font-bold">{forum.title}</h2>
-                <p>{forum.description}</p>
+                <div key={forum.id} className="p-4 mb-2 border rounded text-black">
+                  <h2 className="font-bold text-black">{forum.title}</h2>
+                  <p className="text-black">{forum.description}</p>
               </div>
             ))
           ) : (
-            <p>No forums found.</p>
+              <p className="text-black">No forums found.</p>
           )}
         </div>
       </div>
