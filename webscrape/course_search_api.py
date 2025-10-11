@@ -1,3 +1,4 @@
+
 """
 Flask API endpoints for course and major search functionality.
 
