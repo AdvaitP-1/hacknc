@@ -6,11 +6,10 @@ import Link from "next/link";
 // Navigation configuration
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/dashboard", label: "Dashboard" },
   { href: "/forums", label: "Forums" },
   { href: "/notes", label: "Notes" },
-  { href: "/profile", label: "Profile" },
+
 ];
 
 // Animation constants
