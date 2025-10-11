@@ -10,6 +10,7 @@ export default function Navbar() {
 
       <NavLink href="/">Home</NavLink>
       <NavLink href="/about">About</NavLink>
+      
 
       <JoinButton />
     </nav>
