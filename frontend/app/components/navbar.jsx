@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useAuth, SignOutButton } from "@clerk/nextjs";
@@ -22,6 +22,12 @@ const HOVER_ANIMATION = {
 
 export default function Navbar() {
   const { isSignedIn } = useAuth();
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent hydration mismatch by only rendering auth-dependent content after mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <nav className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-8 rounded-lg border-[1px] border-neutral-700 bg-neutral-900 px-8 py-2 text-sm text-neutral-500 z-[60]">
@@ -31,7 +37,7 @@ export default function Navbar() {
           {label}
         </NavLink>
       ))}
-      {isSignedIn ? <SignOutButtonComponent /> : <JoinButton />}
+      {mounted && (isSignedIn ? <SignOutButtonComponent /> : <JoinButton />)}
     </nav>
   );
 }
@@ -61,7 +67,7 @@ const Logo = () => {
 
 const NavLink = ({ children, href }) => {
   return (
-    <a href={href || "#"} rel="nofollow" className="block overflow-hidden">
+    <Link href={href || "#"} className="block overflow-hidden">
       <motion.div
         whileHover={HOVER_ANIMATION}
         className="h-[20px]"
@@ -71,7 +77,7 @@ const NavLink = ({ children, href }) => {
           {children}
         </span>
       </motion.div>
-    </a>
+    </Link>
   );
 };
 
