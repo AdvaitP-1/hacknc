@@ -4,6 +4,10 @@ import { User, School, GraduationCap, Settings, Lock, Mail, MapPin } from 'lucid
 import Navbar from '../components/navbar';
 import majorsData from '../../../webscrape/college_data/all_stem_majors.json';
 
+const getMajorsList = () => {
+  return majorsData.majors.map(majorObj => majorObj.major);
+};
+
 const CourseSearch = () => {
   const [selectedMajor, setSelectedMajor] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
