@@ -1,24 +1,36 @@
-# HackNC Full-Stack Application
 
-This is a full-stack application with a Next.js frontend and Flask backend that displays system health information.
-
-## Project Structure
-
-```
-hacknc/
-├── frontend/          # Next.js React application
-├── backend/           # Flask Python API
-├── Dockerfile         # Single production Docker setup
-└── README.md
-```
 
 ## Prerequisites
 
-- Node.js (v18 or higher)
-- Python 3.11+
-- npm or yarn
+- Docker (recommended)
+- OR Node.js (v18 or higher) + Python 3.11+ + npm/yarn (for local development)
 
-## Quick Start (Local Development)
+## Quick Start (Docker - Recommended)
+
+The easiest way to run the application is using Docker:
+
+```bash
+# Build the Docker image
+docker build -t hacknc-app .
+
+# Run the container (Docker will automatically assign available ports)
+docker run -d -P --name hacknc-app hacknc-app
+
+# Check which ports were assigned
+docker ps
+```
+
+The application will be available at:
+- **Frontend**: `http://localhost:[ASSIGNED_PORT_3000]`
+- **Backend API**: `http://localhost:[ASSIGNED_PORT_5000]/api/health`
+
+To stop the container:
+```bash
+docker stop hacknc-app
+docker rm hacknc-app
+```
+
+## Local Development (Alternative)
 
 ### 1. Clone the Repository
 
@@ -68,16 +80,6 @@ npm run dev
 
 The frontend will start on `http://localhost:3000` (or the next available port).
 
-
-### Using Docker
-
-```bash
-# Build the Docker image
-docker build -t hacknc-app .
-
-# Run the container
-docker run -p 3000:3000 -p 5000:5000 hacknc-app
-```
 
 ### Using the startup script
 
