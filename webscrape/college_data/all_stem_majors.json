@@ -1,0 +1,518 @@
+{
+    "majors": [
+        {
+            "major": "Computer Science B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CSC 111",
+                    "course_name": "Introduction to Computing"
+                },
+                {
+                    "course_code": "CSC 112",
+                    "course_name": "Fundamentals of Programming"
+                },
+                {
+                    "course_code": "CSC 212",
+                    "course_name": "Data Structures"
+                },
+                {
+                    "course_code": "CSC 216",
+                    "course_name": "C Programming and Software Development"
+                },
+                {
+                    "course_code": "CSC 226",
+                    "course_name": "Discrete Structures in Computer Science"
+                },
+                {
+                    "course_code": "CSC 230",
+                    "course_name": "Introduction to Computer Organization and Architecture"
+                },
+                {
+                    "course_code": "CSC 316",
+                    "course_name": "Data Structures and Algorithms"
+                },
+                {
+                    "course_code": "CSC 418",
+                    "course_name": "Introduction to Databases"
+                },
+                {
+                    "course_code": "CSC 420",
+                    "course_name": "Operating Systems"
+                },
+                {
+                    "course_code": "CSC 430",
+                    "course_name": "Software Engineering"
+                },
+                {
+                    "course_code": "CSC 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 241",
+                    "course_name": "Discrete Mathematics"
+                },
+                {
+                    "course_code": "PHY 101",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 121
+        },
+        {
+            "major": "Electrical Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "EEE 101",
+                    "course_name": "Introduction to Electrical Engineering"
+                },
+                {
+                    "course_code": "EEE 211",
+                    "course_name": "Circuit Analysis I"
+                },
+                {
+                    "course_code": "EEE 212",
+                    "course_name": "Circuit Analysis II"
+                },
+                {
+                    "course_code": "EEE 220",
+                    "course_name": "Electronics"
+                },
+                {
+                    "course_code": "EEE 321",
+                    "course_name": "Signals and Systems"
+                },
+                {
+                    "course_code": "EEE 330",
+                    "course_name": "Digital Systems Design"
+                },
+                {
+                    "course_code": "EEE 341",
+                    "course_name": "Electromagnetic Fields and Waves"
+                },
+                {
+                    "course_code": "EEE 430",
+                    "course_name": "Control Systems"
+                },
+                {
+                    "course_code": "EEE 482",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Mechanical Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "ME 101",
+                    "course_name": "Introduction to Mechanical Engineering"
+                },
+                {
+                    "course_code": "ME 212",
+                    "course_name": "Mechanical Engineering Graphics"
+                },
+                {
+                    "course_code": "ME 250",
+                    "course_name": "Thermodynamics I"
+                },
+                {
+                    "course_code": "ME 315",
+                    "course_name": "Materials Science and Engineering"
+                },
+                {
+                    "course_code": "ME 340",
+                    "course_name": "Dynamics"
+                },
+                {
+                    "course_code": "ME 350",
+                    "course_name": "Fluid Mechanics"
+                },
+                {
+                    "course_code": "ME 360",
+                    "course_name": "Mechanical Systems and Design"
+                },
+                {
+                    "course_code": "ME 460",
+                    "course_name": "Mechanical Systems Dynamics"
+                },
+                {
+                    "course_code": "ME 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Biological Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BE 101",
+                    "course_name": "Introduction to Biological Engineering"
+                },
+                {
+                    "course_code": "BE 220",
+                    "course_name": "Introduction to Biomaterials"
+                },
+                {
+                    "course_code": "BE 240",
+                    "course_name": "Bioengineering Fluid Mechanics"
+                },
+                {
+                    "course_code": "BE 350",
+                    "course_name": "Bioprocess Engineering"
+                },
+                {
+                    "course_code": "BE 460",
+                    "course_name": "Bioengineering Modeling"
+                },
+                {
+                    "course_code": "BE 462",
+                    "course_name": "Biochemical Engineering"
+                },
+                {
+                    "course_code": "BE 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Chemical Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CE 101",
+                    "course_name": "Introduction to Chemical Engineering"
+                },
+                {
+                    "course_code": "CE 211",
+                    "course_name": "Chemical Process Principles"
+                },
+                {
+                    "course_code": "CE 241",
+                    "course_name": "Material and Energy Balances"
+                },
+                {
+                    "course_code": "CE 311",
+                    "course_name": "Transport Phenomena"
+                },
+                {
+                    "course_code": "CE 330",
+                    "course_name": "Chemical Engineering Thermodynamics"
+                },
+                {
+                    "course_code": "CE 350",
+                    "course_name": "Chemical Engineering Kinetics"
+                },
+                {
+                    "course_code": "CE 460",
+                    "course_name": "Process Control"
+                },
+                {
+                    "course_code": "CE 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Civil Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CE 101",
+                    "course_name": "Introduction to Civil Engineering"
+                },
+                {
+                    "course_code": "CE 211",
+                    "course_name": "Engineering Mechanics I"
+                },
+                {
+                    "course_code": "CE 221",
+                    "course_name": "Surveying and Mapping"
+                },
+                {
+                    "course_code": "CE 310",
+                    "course_name": "Fluid Mechanics"
+                },
+                {
+                    "course_code": "CE 350",
+                    "course_name": "Structural Analysis"
+                },
+                {
+                    "course_code": "CE 450",
+                    "course_name": "Transportation Engineering"
+                },
+                {
+                    "course_code": "CE 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Industrial Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "IE 101",
+                    "course_name": "Introduction to Industrial Engineering"
+                },
+                {
+                    "course_code": "IE 205",
+                    "course_name": "Engineering Economics"
+                },
+                {
+                    "course_code": "IE 315",
+                    "course_name": "Manufacturing Processes"
+                },
+                {
+                    "course_code": "IE 330",
+                    "course_name": "Operations Research I"
+                },
+                {
+                    "course_code": "IE 350",
+                    "course_name": "Human Factors Engineering"
+                },
+                {
+                    "course_code": "IE 480",
+                    "course_name": "Engineering Optimization"
+                },
+                {
+                    "course_code": "IE 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Materials Science & Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MSE 101",
+                    "course_name": "Introduction to Materials Science"
+                },
+                {
+                    "course_code": "MSE 220",
+                    "course_name": "Materials Structure and Properties"
+                },
+                {
+                    "course_code": "MSE 240",
+                    "course_name": "Thermodynamics of Materials"
+                },
+                {
+                    "course_code": "MSE 350",
+                    "course_name": "Mechanical Behavior of Materials"
+                },
+                {
+                    "course_code": "MSE 420",
+                    "course_name": "Materials Characterization"
+                },
+                {
+                    "course_code": "MSE 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Physics B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "PHY 212",
+                    "course_name": "General Physics II"
+                },
+                {
+                    "course_code": "PHY 301",
+                    "course_name": "Mathematical Methods in Physics"
+                },
+                {
+                    "course_code": "PHY 311",
+                    "course_name": "Classical Mechanics"
+                },
+                {
+                    "course_code": "PHY 321",
+                    "course_name": "Electromagnetic Theory"
+                },
+                {
+                    "course_code": "PHY 492",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MAT 171",
+                    "course_name": "Calculus for Life and Management Sciences"
+                },
+                {
+                    "course_code": "MAT 242",
+                    "course_name": "Calculus for Engineers"
+                },
+                {
+                    "course_code": "PHY 211",
+                    "course_name": "General Physics I"
+                },
+                {
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry - A Molecular Science"
+                }
+            ],
+            "total_credit_hours": 128
+        }
+    ]
+}
