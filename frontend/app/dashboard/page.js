@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
 import Navbar from '../components/navbar';
 
 // Import dashboard components
@@ -20,10 +21,18 @@ const mapClerkUserToProfile = (clerkUser) => ({
 
 export default function Dashboard() {
   const { user, isLoaded } = useUser();
+  const router = useRouter();
   const [userProfile, setUserProfile] = useState(null);
   const [userStats, setUserStats] = useState(null);
   const [recentActivity, setRecentActivity] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  // Handle redirect when user is not logged in
+  useEffect(() => {
+    if (isLoaded && !user) {
+      router.push('/Auth');
+    }
+  }, [isLoaded, user, router]);
 
   useEffect(() => {
     const fetchDashboardData = async () => {
@@ -114,7 +123,7 @@ export default function Dashboard() {
   }
 
   if (!user) {
-    return <LoadingSpinner message="Authentication required..." />;
+    return <LoadingSpinner message="Redirecting to login..." />;
   }
 
   if (!userProfile) {
