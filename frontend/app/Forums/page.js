@@ -17,7 +17,7 @@ export default function ForumsPage() {
     return (
       <div>
         <Navbar />
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+        <div className="pt-32 min-h-screen flex flex-col items-center justify-center bg-gray-100">
           <div className="p-8 border rounded bg-white shadow-md">
             <h2 className="text-2xl font-bold text-black mb-4 text-center">You have to be logged in to view forums.</h2>
             <p className="text-black text-center">Please log in to access and participate in the forums.</p>
@@ -53,9 +53,10 @@ export default function ForumsPage() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-row p-4 gap-8">
-        {/* Forum creation UI */}
-        <div className="w-1/3 p-4 border rounded bg-gray-100 flex flex-col">
+      <div className="pt-32">
+        <div className="flex flex-col md:flex-row p-4 gap-8 max-w-6xl mx-auto">
+          {/* Forum creation UI */}
+          <div className="md:w-1/3 w-full p-4 border rounded bg-gray-100 flex flex-col sticky top-36">
           <h2 className="font-bold mb-2 text-black">Create a Forum</h2>
           <input
             type="text"
@@ -77,8 +78,8 @@ export default function ForumsPage() {
             Publish
           </button>
         </div>
-        {/* Forums list and search */}
-        <div className="w-2/3">
+          {/* Forums list and search */}
+          <div className="md:w-2/3 w-full">
           <input
             type="text"
             placeholder="Search forums..."
