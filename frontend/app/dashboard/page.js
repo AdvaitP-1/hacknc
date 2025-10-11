@@ -20,7 +20,6 @@ export default function Dashboard() {
   const [userStats, setUserStats] = useState(null);
   const [recentActivity, setRecentActivity] = useState([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
@@ -190,6 +189,81 @@ const LoginPrompt = () => (
   </div>
 );
 
+<<<<<<< HEAD
+=======
+const SchoolSetupPrompt = ({ userProfile }) => (
+  <div className="min-h-screen bg-zinc-900 flex items-center justify-center px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="max-w-md w-full bg-white rounded-xl p-8 text-center"
+    >
+      <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <School className="w-8 h-8 text-orange-600" />
+      </div>
+      <h1 className="text-2xl font-medium text-zinc-900 mb-4">
+        Complete Your Profile
+      </h1>
+      <p className="text-zinc-600 mb-8">
+        To get the most out of Study Share, please specify your school and major so we can connect you with relevant study materials and forums.
+      </p>
+      <div className="space-y-4 mb-6">
+        <div className="text-left">
+          <label className="block text-sm font-medium text-zinc-700 mb-2">School</label>
+          <input
+            type="text"
+            placeholder="Enter your school name"
+            className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+        <div className="text-left">
+          <label className="block text-sm font-medium text-zinc-700 mb-2">Major</label>
+          <input
+            type="text"
+            placeholder="Enter your major"
+            className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+        <div className="text-left">
+          <label className="block text-sm font-medium text-zinc-700 mb-2">Year</label>
+          <select className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="">Select your year</option>
+            <option value="freshman">Freshman</option>
+            <option value="sophomore">Sophomore</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+            <option value="graduate">Graduate</option>
+          </select>
+        </div>
+      </div>
+      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+        Complete Setup
+      </button>
+    </motion.div>
+  </div>
+);
+const MajorDropdown = ({ selectedMajor, onMajorChange }) => {
+  const majorsList = getMajorsList();
+  
+  return (
+    <div className="text-left">
+      <label className="block text-sm font-medium text-zinc-700 mb-2">Major</label>
+      <select
+        value={selectedMajor}
+        onChange={(e) => onMajorChange(e.target.value)}
+        className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option value="">Select your major</option>
+        {majorsList.map((major, index) => (
+          <option key={index} value={major.value}>
+            {major.label} - {major.university}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
+>>>>>>> 31f5be0b9e27a1e652c0cf22e6c1cecea7a67ce3
 
 const DashboardContent = ({ userProfile, userStats, recentActivity }) => {
   const formatDate = (dateString) => {
