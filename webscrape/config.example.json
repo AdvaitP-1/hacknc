@@ -17,12 +17,12 @@
     {
       "college_name": "College B",
       "majors_url": "https://example2.edu/academics/majors",
-      "major_link_selector": "a.major-link",
+      "major_link_selector": "li.isotope-item a.title",
       "major_name_selector": null,
       "ignore_major_keywords": ["minor", "certificate"],
 
 
-      "course_row_selector": ".course",
+      "course_row_selector": "table.sc_courselist td.codecol a.bubblelink.code",
       "course_code_selector": ".course-code",
       "course_title_selector": ".course-title",
       "course_units_selector": ".course-credits",
