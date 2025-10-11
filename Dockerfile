@@ -4,7 +4,7 @@ FROM node:18-alpine AS frontend-builder
 # Build frontend
 WORKDIR /app/frontend
 COPY frontend/package*.json ./
-RUN npm ci --only=production
+RUN npm ci
 COPY frontend/ ./
 RUN npm run build
 
@@ -13,6 +13,9 @@ FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
+
+# Install build dependencies for psutil
+RUN apt-get update && apt-get install -y gcc python3-dev && rm -rf /var/lib/apt/lists/*
 
 # Copy and install Python dependencies
 COPY backend/requirements.txt ./
@@ -39,7 +42,10 @@ RUN echo '#!/bin/bash\n\
 gunicorn --bind 0.0.0.0:5000 app:app &\n\
 \n\
 # Start frontend\n\
-cd /app/frontend && npm start' > /app/start.sh && chmod +x /app/start.sh
+cd /app/frontend && npm start &\n\
+\n\
+# Wait for any process to exit\n\
+wait' > /app/start.sh && chmod +x /app/start.sh
 
 # Expose ports
 EXPOSE 3000 5000
