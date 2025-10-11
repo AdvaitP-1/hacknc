@@ -80,6 +80,34 @@ def parse_courses(soup: BeautifulSoup, cfg: Dict[str, Any]) -> List[Course]:
     return uniq
 
 
+def get_majors_list(col_cfg: Dict[str, Any]) -> List[Dict[str, str]]:
+    base = col_cfg["majors_url"]
+    session = requests.Session()
+    html = get(base, session)
+    if not html:
+        print(f"[warn] Can't load majors_url: {base}", file=sys.stderr)
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    majors = []
+    for a in soup.select(col_cfg["major_link_selector"]):
+        href = a.get("href") or ""
+        if not href:
+            continue
+        url = urljoin(base, href)
+        name = clean_text(a.get_text(" "))
+        if col_cfg.get("major_name_selector"):
+            name_el = a.select_one(col_cfg["major_name_selector"])
+            if name_el:
+                name = clean_text(name_el.get_text(" "))
+        allow = True
+        ignore_keywords = col_cfg.get("ignore_major_keywords", [])
+        for kw in ignore_keywords:
+            if kw.lower() in name.lower():
+                allow = False; break
+        if allow:
+            majors.append({"name": name, "url": url})
+    return majors
+
 def scrape_college(col_cfg: Dict[str, Any]) -> CollegeResult:
     base = col_cfg["majors_url"]
     session = requests.Session()
@@ -88,10 +116,8 @@ def scrape_college(col_cfg: Dict[str, Any]) -> CollegeResult:
         print(f"[warn] Can't load majors_url: {base}", file=sys.stderr)
         return CollegeResult(college_name=col_cfg["college_name"], majors=[])
 
-
     soup = BeautifulSoup(html, "html.parser")
     majors = []
-
 
     # Collect major links
     links = []
@@ -101,12 +127,10 @@ def scrape_college(col_cfg: Dict[str, Any]) -> CollegeResult:
             continue
         url = urljoin(base, href)
         name = clean_text(a.get_text(" "))
-        # If a specific selector for the major name is provided, prefer it
         if col_cfg.get("major_name_selector"):
             name_el = a.select_one(col_cfg["major_name_selector"])
             if name_el:
                 name = clean_text(name_el.get_text(" "))
-        # Optional filter by keywords (e.g., avoid minors/certificates)
         allow = True
         ignore_keywords = col_cfg.get("ignore_major_keywords", [])
         for kw in ignore_keywords:
@@ -114,7 +138,6 @@ def scrape_college(col_cfg: Dict[str, Any]) -> CollegeResult:
                 allow = False; break
         if allow:
             links.append((name, url))
-
 
     # Visit each major page and parse courses
     for name, url in links:
@@ -124,15 +147,8 @@ def scrape_college(col_cfg: Dict[str, Any]) -> CollegeResult:
             print(f"[warn] Can't load major page: {url}", file=sys.stderr)
             continue
         psoup = BeautifulSoup(page, "html.parser")
-
-
-        # Optional: some catalogs put courses in a separate tab/frame/anchor
-        # You can pre-transform psoup here if needed.
-
-
         courses = parse_courses(psoup, col_cfg)
         majors.append(Major(name=name, url=url, courses=courses))
-
 
     return CollegeResult(college_name=col_cfg["college_name"], majors=majors)
 
@@ -174,21 +190,26 @@ def to_csv(results: List[CollegeResult], majors_out: str, courses_out: str):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python scrape_colleges.py config.json [--json out.json] [--csv majors.csv courses.csv]")
+        print("Usage: python scrape_colleges.py config.json [--json out.json] [--csv majors.csv courses.csv] [--majors]")
         print("See config.example.json for the schema.")
         sys.exit(1)
-
 
     config_path = sys.argv[1]
     with open(config_path, "r", encoding="utf-8") as f:
         cfg = json.load(f)
 
+    if "--majors" in sys.argv:
+        for col_cfg in cfg["colleges"]:
+            print(f"Majors for {col_cfg['college_name']}:")
+            majors = get_majors_list(col_cfg)
+            for m in majors:
+                print(f"{m['name']}: {m['url']}")
+        sys.exit(0)
 
     results: List[CollegeResult] = []
     for col_cfg in cfg["colleges"]:
         print(f"Scraping: {col_cfg['college_name']}")
         results.append(scrape_college(col_cfg))
-
 
     # Outputs
     if "--json" in sys.argv:

@@ -1,0 +1,28 @@
+{
+  "colleges": [
+    {
+      "college_name": "NC State University",
+    "majors_url": "https://catalog.ncsu.edu/undergraduate/#majorstext",
+    "major_link_selector": "a[href^='https://catalog.ncsu.edu/undergraduate/'][href$='/']",
+    "major_name_selector": null,
+    "ignore_major_keywords": ["minor", "certificate", "First Year", "Transfer", "Exploratory"],
+    "course_row_selector": "table tr",
+    "course_code_selector": "td:first-child",
+    "course_title_selector": "td:nth-child(2)",
+    "course_units_selector": "td:nth-child(3)",
+    "course_desc_selector": null
+    },
+    {
+      "college_name": "UNC Chapel Hill",
+    "majors_url": "https://catalog.unc.edu/programs/",
+    "major_link_selector": "li.isotope-item a.title",
+    "major_name_selector": null,
+    "ignore_major_keywords": ["minor", "certificate"],
+    "course_row_selector": "table.sc_courselist tr",
+    "course_code_selector": "td.codecol a.bubblelink.code",
+    "course_title_selector": "td.titlecol",
+    "course_units_selector": "td.hourscol",
+    "course_desc_selector": "td.desccol"
+    }
+  ]
+}
