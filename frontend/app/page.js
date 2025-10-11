@@ -9,11 +9,10 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center min-h-screen px-4">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-white mb-6">
-            Welcome to HackNC
+            Title
           </h1>
           <p className="text-xl text-neutral-400 mb-8 max-w-2xl">
-            Join us for an amazing hackathon experience filled with innovation, 
-            collaboration, and endless possibilities.
+            subtitle
           </p>
           <div className="flex gap-4 justify-center">
             <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
