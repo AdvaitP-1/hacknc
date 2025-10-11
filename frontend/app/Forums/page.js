@@ -17,8 +17,11 @@ export default function ForumsPage() {
     return (
       <div>
         <Navbar />
-        <div className="p-8 flex flex-col items-center justify-center">
-          <h2 className="text-2xl font-bold text-black mb-4">Log in to see forums.</h2>
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+          <div className="p-8 border rounded bg-white shadow-md">
+            <h2 className="text-2xl font-bold text-black mb-4 text-center">You have to be logged in to view forums.</h2>
+            <p className="text-black text-center">Please log in to access and participate in the forums.</p>
+          </div>
         </div>
       </div>
     );
