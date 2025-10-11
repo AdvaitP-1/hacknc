@@ -3,15 +3,65 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { ArrowRight } from "lucide-react";
 
+// Animation configuration
+const STAGGER_CONFIG = {
+  staggerChildren: 0.05,
+};
+
+const BLOCK_ANIMATION = {
+  initial: {
+    scale: 0.5,
+    y: 50,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    y: 0,
+    opacity: 1,
+  },
+  transition: {
+    type: "spring",
+    mass: 3,
+    stiffness: 400,
+    damping: 50,
+  },
+};
+
+// Feature configuration
+const FEATURES = [
+  {
+    emoji: "📚",
+    label: "Share Notes",
+    bgColor: "bg-blue-500",
+    rotation: "2.5deg",
+  },
+  {
+    emoji: "💬",
+    label: "Forums",
+    bgColor: "bg-green-600",
+    rotation: "-2.5deg",
+  },
+  {
+    emoji: "👍",
+    label: "Upvote",
+    bgColor: "bg-purple-600",
+    rotation: "-2.5deg",
+  },
+  {
+    emoji: "🎓",
+    label: "College",
+    bgColor: "bg-orange-500",
+    rotation: "2.5deg",
+  },
+];
+
 export const RevealBento = () => {
   return (
     <div className="px-4 py-12 text-zinc-900">
       <motion.div
         initial="initial"
         animate="animate"
-        transition={{
-          staggerChildren: 0.05,
-        }}
+        transition={STAGGER_CONFIG}
         className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
       >
         <HeaderBlock />
@@ -25,24 +75,7 @@ export const RevealBento = () => {
 const Block = ({ className, ...rest }) => {
   return (
     <motion.div
-      variants={{
-        initial: {
-          scale: 0.5,
-          y: 50,
-          opacity: 0,
-        },
-        animate: {
-          scale: 1,
-          y: 0,
-          opacity: 1,
-        },
-      }}
-      transition={{
-        type: "spring",
-        mass: 3,
-        stiffness: 400,
-        damping: 50,
-      }}
+      variants={BLOCK_ANIMATION}
       className={twMerge(
         "col-span-4 rounded-lg border border-zinc-700 bg-white p-6",
         className
@@ -74,54 +107,21 @@ const HeaderBlock = () => (
 
 const FeaturesBlock = () => (
   <>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-blue-500 md:col-span-3"
-    >
-      <div className="grid h-full place-content-center text-center">
-        <div className="text-3xl mb-2">📚</div>
-        <div className="text-sm font-medium">Share Notes</div>
-      </div>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-green-600 md:col-span-3"
-    >
-      <div className="grid h-full place-content-center text-center">
-        <div className="text-3xl mb-2">💬</div>
-        <div className="text-sm font-medium">Forums</div>
-      </div>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-purple-600 md:col-span-3"
-    >
-      <div className="grid h-full place-content-center text-center">
-        <div className="text-3xl mb-2">👍</div>
-        <div className="text-sm font-medium">Upvote</div>
-      </div>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-orange-500 md:col-span-3"
-    >
-      <div className="grid h-full place-content-center text-center">
-        <div className="text-3xl mb-2">🎓</div>
-        <div className="text-sm font-medium">College</div>
-      </div>
-    </Block>
+    {FEATURES.map((feature, index) => (
+      <Block
+        key={feature.label}
+        whileHover={{
+          rotate: feature.rotation,
+          scale: 1.1,
+        }}
+        className={`col-span-6 ${feature.bgColor} md:col-span-3`}
+      >
+        <div className="grid h-full place-content-center text-center">
+          <div className="text-3xl mb-2">{feature.emoji}</div>
+          <div className="text-sm font-medium">{feature.label}</div>
+        </div>
+      </Block>
+    ))}
   </>
 );
 

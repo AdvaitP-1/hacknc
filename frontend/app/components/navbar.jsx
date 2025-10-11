@@ -3,23 +3,35 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+// Navigation configuration
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/dashboard", label: "Dashboard" },
+  { href: "/forums", label: "Forums" },
+  { href: "/notes", label: "Notes" },
+  { href: "/profile", label: "Profile" },
+];
 
+// Animation constants
+const HOVER_ANIMATION = {
+  y: -20,
+  transition: { ease: "backInOut", duration: 0.5 }
+};
 
 export default function Navbar() {
   return (
     <nav className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-8 rounded-lg border-[1px] border-neutral-700 bg-neutral-900 px-8 py-2 text-sm text-neutral-500 z-[60]">
       <Logo />
-
-      <NavLink href="/">Home</NavLink>
-      <NavLink href="/about">About</NavLink>
-      <NavLink href="/dashboard">Dashboard</NavLink>
-      <NavLink href="/forums">Forums</NavLink>
-      <NavLink href="/notes">Notes</NavLink>
-      <NavLink href="/profile">Profile</NavLink>
+      {NAV_LINKS.map(({ href, label }) => (
+        <NavLink key={href} href={href}>
+          {label}
+        </NavLink>
+      ))}
       <JoinButton />
     </nav>
   );
-};
+}
 
 const Logo = () => {
   // Temp logo from https://logoipsum.com/
@@ -48,8 +60,7 @@ const NavLink = ({ children, href }) => {
   return (
     <a href={href || "#"} rel="nofollow" className="block overflow-hidden">
       <motion.div
-        whileHover={{ y: -20 }}
-        transition={{ ease: "backInOut", duration: 0.5 }}
+        whileHover={HOVER_ANIMATION}
         className="h-[20px]"
       >
         <span className="flex h-[20px] items-center">{children}</span>
