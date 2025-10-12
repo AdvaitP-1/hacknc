@@ -46,28 +46,15 @@
                     "course_name": "Space Flight Mechanics"
                 },
                 {
-                    "course_code": "MAE 480/481",
-                    "course_name": "Aerospace Engineering Design I/II"
+                    "course_code": "MAE 480",
+                    "course_name": "Aerospace Engineering Design I"
+                },
+                {
+                    "course_code": "MAE 481",
+                    "course_name": "Aerospace Engineering Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics for Engineers and Scientists I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry - A Molecular Science / Lab"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -85,7 +72,7 @@
                 },
                 {
                     "course_code": "BME 302",
-                    "course_name": "Biomedical Engineering Design and Manufacturing"
+                    "course_name": "BME Design and Manufacturing"
                 },
                 {
                     "course_code": "BME 310",
@@ -97,7 +84,7 @@
                 },
                 {
                     "course_code": "BME 316",
-                    "course_name": "Biolectricity"
+                    "course_name": "Bioelectricity"
                 },
                 {
                     "course_code": "BME 351",
@@ -112,28 +99,7 @@
                     "course_name": "Biomedical Engineering Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 201/202",
-                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 183",
-                    "course_name": "Introductory Biology: Cellular and Molecular"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -167,39 +133,22 @@
                 },
                 {
                     "course_code": "CHE 330",
-                    "course_name": "Chemical Engineering Lab I"
+                    "course_name": "Chemical Engineering Laboratory I"
                 },
                 {
                     "course_code": "CHE 331",
                     "course_name": "Chemical Reactor Design"
                 },
                 {
-                    "course_code": "CHE 450/451",
-                    "course_name": "Chemical Engineering Design I/II"
+                    "course_code": "CHE 450",
+                    "course_name": "Chemical Engineering Design I"
+                },
+                {
+                    "course_code": "CHE 451",
+                    "course_name": "Chemical Engineering Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 201/202",
-                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 221/222",
-                    "course_name": "Organic Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -209,7 +158,7 @@
             "core_courses": [
                 {
                     "course_code": "CE 214",
-                    "course_name": "Engineering Mechanics (Statics)"
+                    "course_name": "Engineering Mechanics \u2013 Statics"
                 },
                 {
                     "course_code": "CE 225",
@@ -248,28 +197,7 @@
                     "course_name": "Senior Design Project"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry (Lecture/Lab)"
-                },
-                {
-                    "course_code": "MEA 101",
-                    "course_name": "Geology I (Earth Science)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -282,8 +210,16 @@
                     "course_name": "Introduction to Computer Systems"
                 },
                 {
-                    "course_code": "ECE 211/212",
-                    "course_name": "Electric Circuits I/II"
+                    "course_code": "ECE 200",
+                    "course_name": "Introduction to ECE Concepts"
+                },
+                {
+                    "course_code": "ECE 211",
+                    "course_name": "Electric Circuits I"
+                },
+                {
+                    "course_code": "ECE 212",
+                    "course_name": "Electric Circuits II"
                 },
                 {
                     "course_code": "ECE 214",
@@ -291,7 +227,7 @@
                 },
                 {
                     "course_code": "ECE 306",
-                    "course_name": "Intro to Semiconductor Devices"
+                    "course_name": "Introduction to Semiconductor Devices"
                 },
                 {
                     "course_code": "ECE 310",
@@ -306,28 +242,15 @@
                     "course_name": "Computer Hardware/Logic Design"
                 },
                 {
-                    "course_code": "ECE 480/481",
-                    "course_name": "Senior Design I/II"
+                    "course_code": "ECE 480",
+                    "course_name": "Senior Design I"
+                },
+                {
+                    "course_code": "ECE 481",
+                    "course_name": "Senior Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -337,11 +260,15 @@
             "core_courses": [
                 {
                     "course_code": "CSC 116",
-                    "course_name": "Introduction to Computing - Java"
+                    "course_name": "Introduction to Computing \u2013 Java"
                 },
                 {
                     "course_code": "CSC 216",
-                    "course_name": "Programming Concepts - Java"
+                    "course_name": "Software Development Fundamentals"
+                },
+                {
+                    "course_code": "CSC 217",
+                    "course_name": "Software Development Fundamentals Lab"
                 },
                 {
                     "course_code": "CSC 226",
@@ -368,36 +295,15 @@
                     "course_name": "Automata, Grammars, and Computability"
                 },
                 {
-                    "course_code": "CSC 440",
-                    "course_name": "Database Management Systems"
+                    "course_code": "CSC 379",
+                    "course_name": "Ethics in Computing"
                 },
                 {
                     "course_code": "CSC 492",
                     "course_name": "Senior Design Project"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241",
-                    "course_name": "Calculus I/II"
-                },
-                {
-                    "course_code": "MA 225",
-                    "course_name": "Foundations of Advanced Mathematics"
-                },
-                {
-                    "course_code": "ST 370",
-                    "course_name": "Probability and Statistics for Engineers"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 121
         },
         {
@@ -407,7 +313,7 @@
             "core_courses": [
                 {
                     "course_code": "CE 214",
-                    "course_name": "Engineering Mechanics (Statics)"
+                    "course_name": "Engineering Mechanics \u2013 Statics"
                 },
                 {
                     "course_code": "CE 327",
@@ -438,24 +344,7 @@
                     "course_name": "Construction Contracts and Law"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry (Lecture/Lab)"
-                },
-                {
-                    "course_code": "MEA 101",
-                    "course_name": "Geology I (recommended)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -468,8 +357,12 @@
                     "course_name": "Introduction to Computer Systems"
                 },
                 {
-                    "course_code": "ECE 211/212",
-                    "course_name": "Electric Circuits I/II"
+                    "course_code": "ECE 211",
+                    "course_name": "Electric Circuits I"
+                },
+                {
+                    "course_code": "ECE 212",
+                    "course_name": "Electric Circuits II"
                 },
                 {
                     "course_code": "ECE 214",
@@ -496,28 +389,15 @@
                     "course_name": "Microelectronics/Logic Design"
                 },
                 {
-                    "course_code": "ECE 480/481",
-                    "course_name": "Senior Design I/II"
+                    "course_code": "ECE 480",
+                    "course_name": "Senior Design I"
+                },
+                {
+                    "course_code": "ECE 481",
+                    "course_name": "Senior Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -558,28 +438,7 @@
                     "course_name": "Environmental Engineering Project Design"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 201/202",
-                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181",
-                    "course_name": "Introductory Biology: Ecology, Evolution, Biodiversity"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -624,24 +483,7 @@
                     "course_name": "Systems Design (Senior Design)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "ST 371",
-                    "course_name": "Probability and Statistics for Engineers"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -650,16 +492,16 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "MSE 201",
-                    "course_name": "Structure of Materials"
-                },
-                {
                     "course_code": "MSE 200",
                     "course_name": "Mechanical Properties of Structural Materials"
                 },
                 {
+                    "course_code": "MSE 201",
+                    "course_name": "Structure of Materials"
+                },
+                {
                     "course_code": "MSE 250",
-                    "course_name": "Materials Science Lab I"
+                    "course_name": "Materials Science Laboratory I"
                 },
                 {
                     "course_code": "MSE 300",
@@ -675,7 +517,7 @@
                 },
                 {
                     "course_code": "MSE 355",
-                    "course_name": "Materials Science Lab II"
+                    "course_name": "Materials Science Laboratory II"
                 },
                 {
                     "course_code": "MSE 401",
@@ -686,28 +528,15 @@
                     "course_name": "Materials Processing and Design"
                 },
                 {
-                    "course_code": "MSE 491/492",
-                    "course_name": "Senior Design I/II"
+                    "course_code": "MSE 491",
+                    "course_name": "Senior Design I"
+                },
+                {
+                    "course_code": "MSE 492",
+                    "course_name": "Senior Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -752,28 +581,15 @@
                     "course_name": "Heat Transfer"
                 },
                 {
-                    "course_code": "MAE 480/481",
-                    "course_name": "Mechanical Engineering Design I/II"
+                    "course_code": "MAE 480",
+                    "course_name": "Mechanical Engineering Design I"
+                },
+                {
+                    "course_code": "MAE 481",
+                    "course_name": "Mechanical Engineering Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -810,28 +626,15 @@
                     "course_name": "Nuclear Engineering Laboratory"
                 },
                 {
-                    "course_code": "NE 490/491",
-                    "course_name": "Nuclear Engineering Design I/II"
+                    "course_code": "NE 490",
+                    "course_name": "Nuclear Engineering Design I"
+                },
+                {
+                    "course_code": "NE 491",
+                    "course_name": "Nuclear Engineering Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -857,7 +660,7 @@
                 },
                 {
                     "course_code": "PSE 371",
-                    "course_name": "Introduction to Process Control"
+                    "course_name": "Process Control for Pulp and Paper"
                 },
                 {
                     "course_code": "PSE 465",
@@ -868,24 +671,7 @@
                     "course_name": "Pulp and Paper Process Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 201/202",
-                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 221/223",
-                    "course_name": "Organic Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -894,8 +680,16 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
+                    "course_code": "MA 141",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MA 241",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MA 242",
+                    "course_name": "Calculus III"
                 },
                 {
                     "course_code": "MA 225",
@@ -926,20 +720,7 @@
                     "course_name": "Senior Seminar in Applied Mathematics"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 208/209",
-                    "course_name": "Physics II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CSC 116",
-                    "course_name": "Introduction to Computing - Java"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -948,48 +729,31 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
+                    "course_code": "BIO 181",
+                    "course_name": "Introductory Biology: Ecology, Evolution, and Biodiversity"
+                },
+                {
+                    "course_code": "BIO 183",
+                    "course_name": "Introductory Biology: Cellular and Molecular"
                 },
                 {
                     "course_code": "BIO 202",
                     "course_name": "Laboratory Investigations in Biology"
                 },
                 {
-                    "course_code": "GN 311",
-                    "course_name": "Principles of Genetics"
+                    "course_code": "BIO 250",
+                    "course_name": "Introductory Microbiology"
                 },
                 {
                     "course_code": "BIO 330",
                     "course_name": "Evolutionary Biology"
                 },
                 {
-                    "course_code": "BIO 250",
-                    "course_name": "Introductory Microbiology"
-                },
-                {
                     "course_code": "BIO 495",
-                    "course_name": "Senior Capstone/Topics (as offered)"
+                    "course_name": "Special Topics/Senior Capstone (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 205/206 or PY 211/212",
-                    "course_name": "Physics I/II (calc- or algebra-based)"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus (Life Science or Engineering)"
-                },
-                {
-                    "course_code": "ST 311 or ST 370",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -998,24 +762,56 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "CH 101/102",
-                    "course_name": "Chemistry - A Molecular Science / Laboratory"
+                    "course_code": "CH 101",
+                    "course_name": "Chemistry \u2013 A Molecular Science"
                 },
                 {
-                    "course_code": "CH 201/202",
-                    "course_name": "Chemistry - A Quantitative Science / Laboratory"
+                    "course_code": "CH 102",
+                    "course_name": "General Chemistry Laboratory"
                 },
                 {
-                    "course_code": "CH 221/223 & CH 222/224",
-                    "course_name": "Organic Chemistry I & II (Lecture/Lab)"
+                    "course_code": "CH 201",
+                    "course_name": "Chemistry \u2013 A Quantitative Science"
+                },
+                {
+                    "course_code": "CH 202",
+                    "course_name": "Quantitative Chemistry Laboratory"
+                },
+                {
+                    "course_code": "CH 221",
+                    "course_name": "Organic Chemistry I"
+                },
+                {
+                    "course_code": "CH 223",
+                    "course_name": "Organic Chemistry I Lab"
+                },
+                {
+                    "course_code": "CH 222",
+                    "course_name": "Organic Chemistry II"
+                },
+                {
+                    "course_code": "CH 224",
+                    "course_name": "Organic Chemistry II Lab"
                 },
                 {
                     "course_code": "CH 315",
                     "course_name": "Quantitative Analysis"
                 },
                 {
-                    "course_code": "CH 431/433 & CH 432/434",
-                    "course_name": "Physical Chemistry I & II (Lecture/Lab)"
+                    "course_code": "CH 431",
+                    "course_name": "Physical Chemistry I"
+                },
+                {
+                    "course_code": "CH 433",
+                    "course_name": "Physical Chemistry I Lab"
+                },
+                {
+                    "course_code": "CH 432",
+                    "course_name": "Physical Chemistry II"
+                },
+                {
+                    "course_code": "CH 434",
+                    "course_name": "Physical Chemistry II Lab"
                 },
                 {
                     "course_code": "CH 444",
@@ -1023,19 +819,10 @@
                 },
                 {
                     "course_code": "CH 479",
-                    "course_name": "Chemistry Capstone/Research (as offered)"
+                    "course_name": "Capstone/Research in Chemistry (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1068,24 +855,7 @@
                     "course_name": "Senior Seminar in Genetics"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "ST 311 or ST 371",
-                    "course_name": "Statistics"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1096,10 +866,6 @@
                 {
                     "course_code": "MEA 101",
                     "course_name": "Introduction to Geology"
-                },
-                {
-                    "course_code": "MEA 200",
-                    "course_name": "Introduction to Oceanography (or Earth Systems)"
                 },
                 {
                     "course_code": "MEA 211",
@@ -1122,20 +888,7 @@
                     "course_name": "Senior Seminar in Geology"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1149,7 +902,7 @@
                 },
                 {
                     "course_code": "MEA 210",
-                    "course_name": "Oceanography Lab/Techniques"
+                    "course_name": "Oceanography Laboratory and Techniques"
                 },
                 {
                     "course_code": "MEA 220",
@@ -1157,7 +910,7 @@
                 },
                 {
                     "course_code": "MEA 250",
-                    "course_name": "Introduction to Coastal Environments"
+                    "course_name": "Intro to Coastal Environments"
                 },
                 {
                     "course_code": "MEA 360",
@@ -1176,20 +929,7 @@
                     "course_name": "Senior Seminar in Marine Sciences"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 131 or MA 141/241",
-                    "course_name": "Calculus sequence"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1198,8 +938,16 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
+                    "course_code": "MA 141",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MA 241",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MA 242",
+                    "course_name": "Calculus III"
                 },
                 {
                     "course_code": "MA 225",
@@ -1218,24 +966,19 @@
                     "course_name": "Linear Algebra and Matrix Theory"
                 },
                 {
-                    "course_code": "MA 407/408",
-                    "course_name": "Advanced Calculus I/II"
+                    "course_code": "MA 407",
+                    "course_name": "Advanced Calculus I"
+                },
+                {
+                    "course_code": "MA 408",
+                    "course_name": "Advanced Calculus II"
                 },
                 {
                     "course_code": "MA 425",
                     "course_name": "Mathematical Analysis I"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CSC 116",
-                    "course_name": "Intro to Computing"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1276,24 +1019,7 @@
                     "course_name": "Senior Seminar in Meteorology"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 341",
-                    "course_name": "Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1302,12 +1028,16 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "MB 351/352",
-                    "course_name": "General Microbiology / Lab"
+                    "course_code": "MB 351",
+                    "course_name": "General Microbiology"
+                },
+                {
+                    "course_code": "MB 352",
+                    "course_name": "General Microbiology Laboratory"
                 },
                 {
                     "course_code": "MB 412",
-                    "course_name": "Microbial Diversity"
+                    "course_name": "Microbial Diversity, Ecology, and Evolution"
                 },
                 {
                     "course_code": "MB 414",
@@ -1326,24 +1056,7 @@
                     "course_name": "Microbiology Capstone/Research (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "ST 311 or ST 371",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1352,40 +1065,55 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics for Engineers and Scientists I & II (Lecture/Lab)"
+                    "course_code": "PY 205",
+                    "course_name": "Physics for Engineers and Scientists I"
                 },
                 {
-                    "course_code": "PY 310/311",
-                    "course_name": "Intermediate Mechanics I/II"
+                    "course_code": "PY 206",
+                    "course_name": "Physics for Engineers and Scientists I Laboratory"
                 },
                 {
-                    "course_code": "PY 401/402",
-                    "course_name": "Electromagnetic Fields I/II"
+                    "course_code": "PY 208",
+                    "course_name": "Physics for Engineers and Scientists II"
+                },
+                {
+                    "course_code": "PY 209",
+                    "course_name": "Physics for Engineers and Scientists II Laboratory"
+                },
+                {
+                    "course_code": "PY 310",
+                    "course_name": "Intermediate Mechanics I"
+                },
+                {
+                    "course_code": "PY 311",
+                    "course_name": "Intermediate Mechanics II"
+                },
+                {
+                    "course_code": "PY 401",
+                    "course_name": "Electromagnetic Fields I"
+                },
+                {
+                    "course_code": "PY 402",
+                    "course_name": "Electromagnetic Fields II"
                 },
                 {
                     "course_code": "PY 403",
                     "course_name": "Modern Physics Laboratory"
                 },
                 {
-                    "course_code": "PY 452/453",
-                    "course_name": "Quantum Physics I/II"
+                    "course_code": "PY 452",
+                    "course_name": "Quantum Physics I"
+                },
+                {
+                    "course_code": "PY 453",
+                    "course_name": "Quantum Physics II"
                 },
                 {
                     "course_code": "PY 499",
-                    "course_name": "Senior Research/Capstone (as offered)"
+                    "course_name": "Senior Research/Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242 & MA 341",
-                    "course_name": "Calculus I/II/III & Differential Equations"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1394,40 +1122,47 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "ST 307/308",
-                    "course_name": "Intro Statistical Programming (SAS/R)"
+                    "course_code": "ST 114",
+                    "course_name": "Introduction to Statistical Programming \u2013 Python"
                 },
                 {
-                    "course_code": "ST 371/372",
-                    "course_name": "Probability / Statistical Inference"
+                    "course_code": "ST 307",
+                    "course_name": "Introduction to Statistical Programming \u2013 SAS"
                 },
                 {
-                    "course_code": "ST 430/431",
-                    "course_name": "Regression / Experimental Design"
+                    "course_code": "ST 308",
+                    "course_name": "Introduction to Statistical Programming \u2013 R"
                 },
                 {
-                    "course_code": "ST 445",
-                    "course_name": "Statistical Machine Learning"
+                    "course_code": "ST 311",
+                    "course_name": "Introduction to Statistics I"
                 },
                 {
-                    "course_code": "ST 495",
-                    "course_name": "Statistics Capstone (as offered)"
+                    "course_code": "ST 312",
+                    "course_name": "Introduction to Statistics II"
+                },
+                {
+                    "course_code": "ST 421",
+                    "course_name": "Introduction to Mathematical Statistics I"
+                },
+                {
+                    "course_code": "ST 422",
+                    "course_name": "Introduction to Mathematical Statistics II"
+                },
+                {
+                    "course_code": "ST 430",
+                    "course_name": "Introduction to Regression Analysis"
+                },
+                {
+                    "course_code": "ST 431",
+                    "course_name": "Introduction to Experimental Design"
+                },
+                {
+                    "course_code": "ST 432",
+                    "course_name": "Introduction to Survey Sampling"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242",
-                    "course_name": "Calculus I/II/III"
-                },
-                {
-                    "course_code": "MA 405",
-                    "course_name": "Linear Algebra"
-                },
-                {
-                    "course_code": "CSC 116",
-                    "course_name": "Intro to Computing"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1436,48 +1171,31 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
+                    "course_code": "BIO 181",
+                    "course_name": "Introductory Biology: Ecology, Evolution, and Biodiversity"
+                },
+                {
+                    "course_code": "BIO 183",
+                    "course_name": "Introductory Biology: Cellular and Molecular"
                 },
                 {
                     "course_code": "BIO 350",
                     "course_name": "Animal Physiology"
                 },
                 {
+                    "course_code": "BIO 405",
+                    "course_name": "Functional Histology"
+                },
+                {
                     "course_code": "BIO 432",
                     "course_name": "Evolution"
                 },
                 {
-                    "course_code": "GN 311",
-                    "course_name": "Principles of Genetics"
-                },
-                {
-                    "course_code": "BIO 405",
-                    "course_name": "Functional Histology (representative lab)"
-                },
-                {
                     "course_code": "BIO 495",
-                    "course_name": "Senior Capstone/Topics (as offered)"
+                    "course_name": "Special Topics/Senior Capstone (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 205/206 or PY 211/212",
-                    "course_name": "Physics I/II (calc- or algebra-based)"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "ST 311 or ST 371",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1494,18 +1212,6 @@
                     "course_name": "Climate Change and Sustainability"
                 },
                 {
-                    "course_code": "SSC 200",
-                    "course_name": "Soil Science"
-                },
-                {
-                    "course_code": "MEA 200",
-                    "course_name": "Introduction to Oceanography"
-                },
-                {
-                    "course_code": "NR 300",
-                    "course_name": "Natural Resource Measurements"
-                },
-                {
                     "course_code": "ES 450",
                     "course_name": "Environmental Assessment & Management"
                 },
@@ -1514,24 +1220,7 @@
                     "course_name": "Environmental Sciences Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Elements of Calculus or Calculus for Life Sciences"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 211/212 or PY 205/208",
-                    "course_name": "Physics sequence (algebra- or calculus-based)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1564,24 +1253,7 @@
                     "course_name": "Environmental Technology Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 201/202",
-                    "course_name": "General & Quantitative Chemistry"
-                },
-                {
-                    "course_code": "PY 211/212 or PY 205/208",
-                    "course_name": "Physics sequence"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1611,27 +1283,10 @@
                 },
                 {
                     "course_code": "FW 488",
-                    "course_name": "Fisheries, Wildlife, and Conservation Capstone"
+                    "course_name": "FWCB Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Intro to Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1668,24 +1323,7 @@
                     "course_name": "Forest Management Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1718,24 +1356,7 @@
                     "course_name": "Natural Resources Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1768,20 +1389,7 @@
                     "course_name": "Sustainable Materials Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 211/212 or PY 205/208",
-                    "course_name": "Physics sequence"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1818,20 +1426,7 @@
                     "course_name": "Textile Engineering Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242 & MA 341",
-                    "course_name": "Calculus I/II/III & Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206 & PY 208/209",
-                    "course_name": "Physics I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 201/202",
-                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -1864,20 +1459,7 @@
                     "course_name": "Capstone in Polymer and Color Chemistry"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241",
-                    "course_name": "Calculus I/II"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 221/223 & CH 222/224",
-                    "course_name": "General & Organic Chemistry I & II (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1891,7 +1473,7 @@
                 },
                 {
                     "course_code": "TT 221",
-                    "course_name": "Yarn Production"
+                    "course_name": "Yarn Production and Properties"
                 },
                 {
                     "course_code": "TT 252",
@@ -1910,20 +1492,7 @@
                     "course_name": "Textile Technology Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241",
-                    "course_name": "Calculus I/II"
-                },
-                {
-                    "course_code": "PY 211/212 or PY 205/208",
-                    "course_name": "Physics sequence"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -1931,14 +1500,6 @@
             "university": "North Carolina State University",
             "degree_type": "Bachelor of Science",
             "core_courses": [
-                {
-                    "course_code": "BIO 183",
-                    "course_name": "Introductory Biology: Cellular and Molecular"
-                },
-                {
-                    "course_code": "GN 311",
-                    "course_name": "Principles of Genetics"
-                },
                 {
                     "course_code": "BCH 351",
                     "course_name": "General Biochemistry"
@@ -1960,24 +1521,7 @@
                     "course_name": "Biochemistry Capstone/Research (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102 & CH 221/223 & CH 222/224",
-                    "course_name": "General & Organic Chemistry I & II (Lecture/Lab)"
-                },
-                {
-                    "course_code": "PY 205/206 or PY 211/212",
-                    "course_name": "Physics sequence"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Intro to Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2006,28 +1550,15 @@
                     "course_name": "Bioenvironmental Engineering"
                 },
                 {
-                    "course_code": "BAE 451/452",
-                    "course_name": "Engineering Design I/II"
+                    "course_code": "BAE 451",
+                    "course_name": "Engineering Design I"
+                },
+                {
+                    "course_code": "BAE 452",
+                    "course_name": "Engineering Design II"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 141/241/242 & MA 341",
-                    "course_name": "Calculus I/II/III & Differential Equations"
-                },
-                {
-                    "course_code": "PY 205/206",
-                    "course_name": "Physics I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 126
         },
         {
@@ -2037,7 +1568,7 @@
             "core_courses": [
                 {
                     "course_code": "BBS 200",
-                    "course_name": "Introduction to Bio & Ag Systems Technology"
+                    "course_name": "Introduction to Biomanufacturing Science"
                 },
                 {
                     "course_code": "BAT 240",
@@ -2060,24 +1591,7 @@
                     "course_name": "Senior Project in BAET"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "PY 211/212",
-                    "course_name": "College Physics I/II"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2110,24 +1624,7 @@
                     "course_name": "Bioprocessing Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 183 & MB 351/352",
-                    "course_name": "Cell Biology & General Microbiology/Lab"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2160,24 +1657,7 @@
                     "course_name": "Food Product Development"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "MB 351/352",
-                    "course_name": "General Microbiology / Lab"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2210,24 +1690,7 @@
                     "course_name": "Nutrition Capstone/Senior Seminar"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102 & CH 221/223",
-                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 183",
-                    "course_name": "Cellular and Molecular Biology"
-                },
-                {
-                    "course_code": "MB 351/352",
-                    "course_name": "General Microbiology / Lab"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2260,24 +1723,7 @@
                     "course_name": "Plant Biology Capstone/Research (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                },
-                {
-                    "course_code": "MA 131 or MA 141",
-                    "course_name": "Calculus"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2290,8 +1736,12 @@
                     "course_name": "Introduction to Animal Science"
                 },
                 {
-                    "course_code": "ANS 205/206",
-                    "course_name": "Physiology of Domestic Animals / Lab"
+                    "course_code": "ANS 205",
+                    "course_name": "Physiology of Domestic Animals"
+                },
+                {
+                    "course_code": "ANS 206",
+                    "course_name": "Physiology of Domestic Animals Laboratory"
                 },
                 {
                     "course_code": "ANS 215",
@@ -2310,24 +1760,7 @@
                     "course_name": "Animal Science Capstone/Topics (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                },
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2360,24 +1793,7 @@
                     "course_name": "Horticultural Science Capstone/Topics (as offered)"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                },
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2390,40 +1806,11 @@
                     "course_name": "Introduction to Agricultural Science"
                 },
                 {
-                    "course_code": "AEC 201",
-                    "course_name": "Introduction to Agricultural and Resource Economics"
-                },
-                {
-                    "course_code": "SSC 200",
-                    "course_name": "Soil Science"
-                },
-                {
-                    "course_code": "CS 213",
-                    "course_name": "Crop Science"
-                },
-                {
-                    "course_code": "ANS 150",
-                    "course_name": "Introduction to Animal Science"
-                },
-                {
                     "course_code": "AGS 492",
                     "course_name": "Agricultural Science Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                },
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2456,24 +1843,7 @@
                     "course_name": "Poultry Science Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                },
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         },
         {
@@ -2506,24 +1876,7 @@
                     "course_name": "Crop and Soil Sciences Capstone"
                 }
             ],
-            "math_science_requirements": [
-                {
-                    "course_code": "CH 101/102",
-                    "course_name": "General Chemistry I (Lecture/Lab)"
-                },
-                {
-                    "course_code": "BIO 181/183",
-                    "course_name": "Introductory Biology I & II"
-                },
-                {
-                    "course_code": "ST 311",
-                    "course_name": "Statistics"
-                },
-                {
-                    "course_code": "MA 121 or MA 131",
-                    "course_name": "Calculus"
-                }
-            ],
+            "math_science_requirements": [],
             "total_credit_hours": 120
         }
     ]
