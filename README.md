@@ -1,4 +1,4 @@
-🚀 HackNC Full-Stack Application
+🚀 ## HackNC Full-Stack Application
 
 A full-stack starter with a Next.js frontend, Flask backend, Clerk auth, and Gemini AI. Run it via Docker (recommended) or locally with Node.js + Python.
 
