@@ -140,9 +140,10 @@ const EnrolledList = ({ enrolled, onRemove }) => {
 //     </div>
 //   );
 // };
-const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
+const NotesSection = ({ enrolledCourses, notes, onUploadClick, onUpvote }) => {
   const [activeTab, setActiveTab] = useState('enrolled');
   const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('popularity'); // 'popularity', 'date', 'alphabetical'
   const [searchFilters, setSearchFilters] = useState({
     course: '',
     author: '',
@@ -150,9 +151,26 @@ const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
   });
 
   const enrolledIds = new Set(enrolledCourses.map(c => c.id));
-  const enrolledNotes = notes.filter(n => enrolledIds.has(n.courseId));
   
-  const searchedNotes = notes.filter(note => {
+  // Sort function
+  const sortNotes = (notesToSort) => {
+    return [...notesToSort].sort((a, b) => {
+      switch (sortBy) {
+        case 'popularity':
+          return (b.upvotes || 0) - (a.upvotes || 0);
+        case 'date':
+          return new Date(b.uploadedAt || 0) - new Date(a.uploadedAt || 0);
+        case 'alphabetical':
+          return a.title.localeCompare(b.title);
+        default:
+          return (b.upvotes || 0) - (a.upvotes || 0);
+      }
+    });
+  };
+  
+  const enrolledNotes = sortNotes(notes.filter(n => enrolledIds.has(n.courseId)));
+  
+  const searchedNotes = sortNotes(notes.filter(note => {
     const matchesQuery = !searchQuery || 
       note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (note.noteText && note.noteText.toLowerCase().includes(searchQuery.toLowerCase())) ||
@@ -179,7 +197,7 @@ const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
     }
     
     return matchesQuery && matchesCourse && matchesAuthor && matchesDate;
-  });
+  }));
 
   const allCourses = [...new Set(notes.map(n => n.courseCode))];
   const allAuthors = [...new Set(notes.map(n => n.author))];
@@ -190,25 +208,52 @@ const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
         {activeTab === 'enrolled' ? 'No notes yet for your enrolled courses.' : 'No notes found matching your search.'}
       </div>
     ) : (
-      notesToShow.map(n => (
-        <div key={n.id} className="border rounded p-3 mb-3">
-          <div className="text-xs text-zinc-500">{n.courseCode} • by {n.author}</div>
-          <div className="font-semibold">{n.title}</div>
-          <div className="text-sm text-zinc-700">{n.noteText || ''}</div>
-          {n.fileUrl && (
-            <div className="mt-2">
-              <a href={n.fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 underline">
-                Open PDF ({n.fileName})
-              </a>
+      notesToShow.map(n => {
+        const currentUser = typeof window !== 'undefined' ? (localStorage.getItem('username') || 'anonymous') : 'anonymous';
+        const hasUpvoted = n.upvotedBy?.includes(currentUser);
+        
+        return (
+          <div key={n.id} className="border rounded p-3 mb-3">
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="text-xs text-zinc-500">{n.courseCode} • by {n.author}</div>
+                <div className="font-semibold">{n.title}</div>
+                <div className="text-sm text-zinc-700">{n.noteText || ''}</div>
+                {n.fileUrl && (
+                  <div className="mt-2">
+                    <a href={n.fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 underline">
+                      Open PDF ({n.fileName})
+                    </a>
+                  </div>
+                )}
+                {n.uploadedAt && (
+                  <div className="text-xs text-zinc-400 mt-2">
+                    Uploaded: {new Date(n.uploadedAt).toLocaleDateString()}
+                  </div>
+                )}
+              </div>
+              
+              {/* Upvote Section */}
+              <div className="flex flex-col items-center ml-4">
+                <button
+                  onClick={() => onUpvote(n.id)}
+                  className={`p-1 rounded transition-colors ${
+                    hasUpvoted 
+                      ? 'text-blue-600 bg-blue-50 hover:bg-blue-100' 
+                      : 'text-zinc-400 hover:text-blue-600 hover:bg-zinc-50'
+                  }`}
+                  title={hasUpvoted ? 'Remove upvote' : 'Upvote this note'}
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                </button>
+                <span className="text-sm font-medium text-zinc-600">{n.upvotes || 0}</span>
+              </div>
             </div>
-          )}
-          {n.uploadedAt && (
-            <div className="text-xs text-zinc-400 mt-2">
-              Uploaded: {new Date(n.uploadedAt).toLocaleDateString()}
-            </div>
-          )}
-        </div>
-      ))
+          </div>
+        );
+      })
     )
   );
 
@@ -243,9 +288,20 @@ const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
         <div>
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-lg font-bold">Notes for your enrolled courses</h3>
-            <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">
-              Upload notes
-            </button>
+            <div className="flex items-center gap-2">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-3 py-1 text-sm border border-zinc-300 rounded"
+              >
+                <option value="popularity">Most Popular</option>
+                <option value="date">Newest First</option>
+                <option value="alphabetical">A-Z</option>
+              </select>
+              <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">
+                Upload notes
+              </button>
+            </div>
           </div>
 
           {enrolledCourses.length === 0 ? (
@@ -261,9 +317,20 @@ const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
         <div>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-bold">Search All Notes</h3>
-            <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">
-              Upload notes
-            </button>
+            <div className="flex items-center gap-2">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-3 py-1 text-sm border border-zinc-300 rounded"
+              >
+                <option value="popularity">Most Popular</option>
+                <option value="date">Newest First</option>
+                <option value="alphabetical">A-Z</option>
+              </select>
+              <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">
+                Upload notes
+              </button>
+            </div>
           </div>
 
           {/* Search Controls */}
@@ -379,7 +446,9 @@ const UploadModal = ({ visible, onClose, enrolledCourses, onUpload }) => {
       fileName: file.name,
       fileUrl,
       author,
-      uploadedAt: new Date().toISOString()
+      uploadedAt: new Date().toISOString(),
+      upvotes: 0,
+      upvotedBy: []
     };
     onUpload(note);
     onClose();
@@ -440,8 +509,8 @@ const NotesPage = () => {
       } else {
         // seed with some public notes from other users
         setNotes([
-          { id: 1, courseId: '0-0', courseCode: 'Intro-1', title: 'Intro summary', noteText: 'High level summary', fileUrl: null, fileName: null, author: 'alice' },
-          { id: 2, courseId: '0-1', courseCode: 'Intro-2', title: 'DS notes', noteText: 'Stacks and queues', fileUrl: null, fileName: null, author: 'bob' },
+          { id: 1, courseId: '0-0', courseCode: 'Intro-1', title: 'Intro summary', noteText: 'High level summary', fileUrl: null, fileName: null, author: 'alice', upvotes: 5, upvotedBy: ['user1', 'user2', 'user3'], uploadedAt: '2024-10-10T10:00:00.000Z' },
+          { id: 2, courseId: '0-1', courseCode: 'Intro-2', title: 'DS notes', noteText: 'Stacks and queues', fileUrl: null, fileName: null, author: 'bob', upvotes: 3, upvotedBy: ['user1', 'user4'], uploadedAt: '2024-10-11T10:00:00.000Z' },
         ]);
       }
     }
@@ -476,6 +545,38 @@ const NotesPage = () => {
     setNotes(prev => [note, ...prev]);
   };
 
+    const handleUpvote = (noteId) => {
+    if (!isSignedIn) {
+      alert('You must be logged in to upvote.');
+      return;
+    }
+    
+    const currentUser = typeof window !== 'undefined' ? (localStorage.getItem('username') || 'anonymous') : 'anonymous';
+    
+    setNotes(prev => prev.map(note => {
+      if (note.id === noteId) {
+        const hasUpvoted = note.upvotedBy?.includes(currentUser);
+        
+        if (hasUpvoted) {
+          // Remove upvote
+          return {
+            ...note,
+            upvotes: Math.max(0, (note.upvotes || 0) - 1),
+            upvotedBy: (note.upvotedBy || []).filter(user => user !== currentUser)
+          };
+        } else {
+          // Add upvote
+          return {
+            ...note,
+            upvotes: (note.upvotes || 0) + 1,
+            upvotedBy: [...(note.upvotedBy || []), currentUser]
+          };
+        }
+      }
+      return note;
+    }));
+  };
+
   return (
     <div className="pt-32 max-w-6xl mx-auto px-4">
       <Navbar />
@@ -486,7 +587,7 @@ const NotesPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <CourseSearch allCourses={allCourses} onEnroll={handleEnroll} />
-          <NotesSection enrolledCourses={enrolledCourses} notes={notes} onUploadClick={() => setUploadOpen(true)} />
+          <NotesSection enrolledCourses={enrolledCourses} notes={notes} onUploadClick={() => setUploadOpen(true)} onUpvote={handleUpvote} />
         </div>
 
         <aside className="bg-white p-4 border rounded">
