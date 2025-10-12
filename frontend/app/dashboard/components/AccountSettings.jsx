@@ -1,26 +1,28 @@
 'use client';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Lock, Mail, MapPin, Settings, ChevronRight, Trash2 } from 'lucide-react';
 import { useUser, useClerk } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
 
 const AccountSettings = () => {
   const { user } = useUser();
   const { signOut } = useClerk();
+  const router = useRouter();
 
   const handleDeleteAccount = async () => {
-    if (!user) return;
-    const confirmed = window.confirm('This permanently deletes your account. Do you want to continue?');
-    if (!confirmed) {
-      return;
-    }
-
+    if (window.confirm('Are you sure you want to delete your account? This cannot be undone.')) {
     try {
-      await user.delete();
+      await user.delete({
+        confirmation: true
+      });
       await signOut();
+      router.push('/');
     } catch (error) {
       console.error('Error deleting account:', error);
-      alert('Something went wrong. Please try again.');
+      alert('Failed to delete account. Please try again.');
     }
+  }
   };
   const settings = [
     {
