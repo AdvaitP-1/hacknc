@@ -3,7 +3,7 @@ import { useUser } from '@clerk/nextjs';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import majorsData from '../../../webscrape/college_data/all_stem_majors.json';
+import majorsData from '../../../webscrape/college_data/nc_state_stem_majors.json';
 
 const majors = Array.from(
   new Set(majorsData.majors.map((entry) => entry.major).filter(Boolean))
