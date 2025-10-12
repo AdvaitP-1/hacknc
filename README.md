@@ -2,7 +2,7 @@
 
 A full-stack starter with a Next.js frontend, Flask backend, Clerk auth, and Gemini AI. Run it via Docker (recommended) or locally with Node.js + Python.
 
-🧩 Prerequisites
+# Prerequisites
 
 You can run the app using Docker (recommended) or locally using Node.js and Python.
 
