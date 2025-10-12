@@ -1,18 +1,20 @@
 🚀 HackNC Full-Stack Application
+
+A full-stack starter with a Next.js frontend, Flask backend, Clerk auth, and Gemini AI. Run it via Docker (recommended) or locally with Node.js + Python.
+
 🧩 Prerequisites
 
 You can run the app using Docker (recommended) or locally using Node.js and Python.
 
-Options
-
-Docker (Recommended)
+Options: 
+1. Docker (Recommended)
 OR
 
-Node.js v18+
+2. Node.js v18+
 
-Python 3.11+
+3. Python 3.11+
 
-npm or yarn
+4. npm or yarn
 
 Optional but required for full functionality
 
@@ -68,13 +70,13 @@ GEMINI_API_KEY=your_google_gemini_api_key
 CLERK_SECRET_KEY=your_clerk_backend_key
 
 Run the Backend
+
 python app.py
 
 
 Backend runs on:
 
 http://localhost:5000
-
 (or http://localhost:5001
  if port 5000 is in use)
 
@@ -84,6 +86,8 @@ Open a new terminal window:
 
 cd frontend
 npm install
+# or
+yarn
 
 Environment Variables
 
@@ -103,12 +107,12 @@ http://localhost:3000
 
 🧠 Tech Stack Overview
 Layer	Technology	Description
-Frontend	React (Next.js)	Modern UI for users, includes authentication and dashboards
-Authentication	Clerk	Manages sign-in/up and email verification (.edu-restricted)
-Backend	Python (Flask)	REST API with routes for AI requests and data processing
-AI Integration	Google Gemini API	Generates intelligent text and data responses
-Containerization	Docker	Simplifies setup and deployment
-Database (optional)	Supabase / PostgreSQL	(Optional) Data storage for user info or analytics
+Frontend	React - (Next.js): 	Modern UI for users, includes authentication and dashboards
+Authentication -	Clerk:	Manages sign-in/up and email verification (.edu-restricted)
+Backend	Python - Flask:	REST API with routes for AI requests and data processing
+AI Integration	- Google Gemini API:	Generates intelligent text and data responses
+Containerization	- Docker:	Simplifies setup and deployment
+Database (optional) -	Supabase / PostgreSQL	(Optional) Data storage for user info or analytics
 ▶️ Startup Script
 
 You can also use the provided startup script for convenience:
@@ -118,15 +122,3 @@ chmod +x start.sh
 
 
 This will start both the frontend and backend automatically.
-
-✅ Summary
-
-This setup gives you:
-
-🔒 Secure authentication using Clerk
-
-🤖 AI-powered backend using Gemini API
-
-⚛️ A fast React/Next.js frontend
-
-🐳 Easy deployment through Docker
