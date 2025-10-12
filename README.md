@@ -1,92 +1,135 @@
+🚀 HackNC Full-Stack Application
+Prerequisites
+You can run the app using Docker (recommended) or locally using Node.js and Python.
+Docker (Recommended)
 
 
-## Prerequisites
+OR
 
-- Docker (recommended)
-- OR Node.js (v18 or higher) + Python 3.11+ + npm/yarn (for local development)
 
-## Quick Start (Docker - Recommended)
+Node.js v18+
 
-The easiest way to run the application is using Docker:
 
-```bash
+Python 3.11+
+
+
+npm or yarn
+
+
+Optional but required for full functionality:
+Google Gemini API key — used for AI-powered responses in the backend.
+
+
+Clerk API key — used for authentication and user management.
+
+
+
+⚡ Quick Start (Docker - Recommended)
+The easiest way to run the application is using Docker.
 # Build the Docker image
 docker build -t hacknc-app .
 
 # Run the container with specific ports
 docker run -d -p 3000:3000 -p 5001:5000 --name hacknc-app hacknc-app
-```
 
 The application will be available at:
-- **Frontend**: `http://localhost:3000`
-- **Backend API**: `http://localhost:5001/api/health`
+Frontend: http://localhost:3000
 
-**Note**: Port 5000 is used by macOS ControlCenter, so the backend runs on port 5001.
 
+Backend API: http://localhost:5001/api/health
+
+
+📝 Note: macOS uses port 5000 for ControlCenter, so the backend runs on port 5001.
 To stop the container:
-```bash
 docker stop hacknc-app
 docker rm hacknc-app
-```
 
-## Local Development (Alternative)
 
-### 1. Clone the Repository
-
-```bash
+💻 Local Development (Alternative)
+1️⃣ Clone the Repository
 git clone <repository-url>
 cd hacknc
-```
 
-### 2. Set Up the Backend
 
-```bash
-# Navigate to backend directory
+2️⃣ Backend Setup
 cd backend
 
-# Create a virtual environment
+# Create and activate a virtual environment
 python3 -m venv venv
-
-# Activate the virtual environment
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-# venv\Scripts\activate
+source venv/bin/activate   # macOS/Linux
+# venv\Scripts\activate    # Windows
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Start the backend server
+Environment Variables
+Create a .env file in the backend directory:
+GEMINI_API_KEY=your_google_gemini_api_key
+CLERK_SECRET_KEY=your_clerk_backend_key
+
+Run the Backend
 python app.py
-```
 
-The backend will start on `http://localhost:5000` (or `http://localhost:5001` if port 5000 is in use).
+Backend runs on:
+http://localhost:5000 (or http://localhost:5001 if port 5000 is in use)
 
-### 3. Set Up the Frontend
 
-Open a new terminal window and run:
 
-```bash
-# Navigate to frontend directory
+3️⃣ Frontend Setup
+Open a new terminal window:
 cd frontend
-
-# Install dependencies
 npm install
 
-# Start the development server
+Environment Variables
+Create a .env.local file in the frontend directory:
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_frontend_key
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5001
+
+Start the Frontend
 npm run dev
-```
 
-The frontend will start on `http://localhost:3000` (or the next available port).
+Frontend will start on http://localhost:3000 (or next available port).
+
+🧠 Tech Stack Overview
+Layer
+Technology
+Description
+Frontend
+React (Next.js)
+Modern UI for users, includes authentication and dashboards
+Authentication
+Clerk
+Manages sign-in/up, email verification (.edu-restricted)
+Backend
+Python (Flask)
+REST API with routes for AI requests and data processing
+AI Integration
+Google Gemini API
+Generates intelligent text and data responses
+Containerization
+Docker
+Simplifies setup and deployment
+Database (optional)
+Supabase / PostgreSQL
+(Optional) Data storage for user info or analytics
 
 
-### Using the startup script
-
-```bash
-# Make the script executable (if not already)
+▶️ Startup Script
+You can also use the provided startup script for convenience:
 chmod +x start.sh
-
-# Run the application
 ./start.sh
-```
 
+This will start both the frontend and backend automatically.
+
+✅ Summary
+This setup gives you:
+🔒 Secure authentication using Clerk
+
+
+🤖 AI-powered backend using Gemini API
+
+
+⚛️ A fast React/Next.js frontend
+
+
+🐳 Easy deployment through Docker
