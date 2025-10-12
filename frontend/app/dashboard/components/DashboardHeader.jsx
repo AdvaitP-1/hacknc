@@ -29,26 +29,16 @@ const DashboardHeader = ({ userProfile }) => {
         <div className="flex items-center justify-between">
           {/* Left side - Title */}
           <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-5xl font-bold tracking-tight"
-            >
+            <h1 className="text-5xl font-bold tracking-tight">
               <span className="text-white">STUDIO</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                 DASHBOARD
               </span>
-            </motion.h1>
+            </h1>
           </div>
 
           {/* Right side - User info with terminal-style */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-2"
-          >
+          <div className="space-y-2">
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-red-500 rounded-full"></div>
               <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -64,7 +54,7 @@ const DashboardHeader = ({ userProfile }) => {
                 <div>major: "{userProfile?.major || 'Not specified'}"</div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

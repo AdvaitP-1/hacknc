@@ -26,6 +26,7 @@ export default function Dashboard() {
   const [userStats, setUserStats] = useState(null);
   const [recentActivity, setRecentActivity] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // Handle redirect when user is not logged in
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function Dashboard() {
     const fetchDashboardData = async () => {
       try {
         setLoading(true);
+        setError(null);
         
         if (!isLoaded) return;
         
@@ -50,7 +52,29 @@ export default function Dashboard() {
         }
         
         const clerkUserId = user.id;
-        const API_BASE = 'http://localhost:5001/api/dashboard';
+        const API_BASE = `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001'}/api/dashboard`;
+        
+        // Check if backend is reachable first
+        try {
+          const healthCheck = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001'}/api/health/`);
+          if (!healthCheck.ok) {
+            throw new Error('Backend server is not responding');
+          }
+        } catch (healthError) {
+          console.warn('Backend health check failed, using fallback data:', healthError);
+          // Use fallback data instead of failing completely
+          const clerkProfile = mapClerkUserToProfile(user);
+          setUserProfile(clerkProfile);
+          setUserStats({
+            notes_shared: 0,
+            forum_posts: 0,
+            upvotes_received: 0,
+            total_contributions: 0
+          });
+          setRecentActivity([]);
+          setLoading(false);
+          return;
+        }
         
         const [profileRes, statsRes, activityRes] = await Promise.all([
           fetch(`${API_BASE}/user-profile?user_id=${clerkUserId}`),
@@ -81,8 +105,17 @@ export default function Dashboard() {
         setRecentActivity(activityData.success ? activityData.data : []);
       } catch (error) {
         console.error('Error fetching dashboard data:', error);
-        setUserProfile(null);
-        setUserStats(null);
+        setError('Failed to load dashboard data. Using offline mode.');
+        
+        // Fallback to Clerk data
+        const clerkProfile = mapClerkUserToProfile(user);
+        setUserProfile(clerkProfile);
+        setUserStats({
+          notes_shared: 0,
+          forum_posts: 0,
+          upvotes_received: 0,
+          total_contributions: 0
+        });
         setRecentActivity([]);
       } finally {
         setLoading(false);
@@ -91,7 +124,7 @@ export default function Dashboard() {
 
     const createUserProfile = async (clerkUserId, clerkProfile) => {
       try {
-        const response = await fetch('http://localhost:5001/api/dashboard/create-profile', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001'}/api/dashboard/create-profile`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -118,36 +151,73 @@ export default function Dashboard() {
     fetchDashboardData();
   }, [user, isLoaded]);
 
-  if (!isLoaded || loading) {
-    return <LoadingSpinner message="Initializing dashboard..." />;
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+          <div className="text-center">
+          <div className="w-8 h-8 border-4 border-gray-300 border-t-purple-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
   if (!user) {
-    return <LoadingSpinner message="Redirecting to login..." />;
-  }
-
-  if (!userProfile) {
-    return <LoadingSpinner message="Loading user data..." />;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+          <div className="text-center">
+          <div className="w-8 h-8 border-4 border-gray-300 border-t-purple-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Redirecting to login...</p>
+        </div>
+      </div>
+    );
   }
 
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-        <DashboardHeader userProfile={userProfile} />
+        <DashboardHeader userProfile={userProfile || { name: user.fullName || 'User', university: 'Not specified', major: 'Not specified' }} />
         
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2 space-y-12">
-              <StatsCards userStats={userStats} />
-              <RecentActivity recentActivity={recentActivity} />
-            </div>
-            
-            <div>
-              <AccountSettings />
-            </div>
+          {loading ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="text-center">
+                <div className="w-8 h-8 border-4 border-gray-300 border-t-purple-500 rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-gray-600">Loading dashboard data...</p>
           </div>
+            </div>
+          ) : (
+            <>
+              {error && (
+                <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                  <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                      <div className="w-5 h-5 text-yellow-600 mr-3">⚠️</div>
+                      <p className="text-yellow-800 text-sm">{error}</p>
+                  </div>
+                    <button
+                      onClick={() => window.location.reload()}
+                      className="px-3 py-1 bg-yellow-600 text-white text-xs rounded hover:bg-yellow-700 transition-colors"
+                    >
+                      Retry
+                    </button>
+                  </div>
+                </div>
+              )}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div className="lg:col-span-2 space-y-12">
+                  <StatsCards userStats={userStats} />
+                  <RecentActivity recentActivity={recentActivity} />
         </div>
+
+              <div>
+                  <AccountSettings />
+              </div>
+              </div>
+            </>
+          )}
+          </div>
       </div>
     </>
   );

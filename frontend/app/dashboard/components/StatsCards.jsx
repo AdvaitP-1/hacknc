@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion';
 import { FileText, Users, GraduationCap, TrendingUp } from 'lucide-react';
 
 const StatsCards = ({ userStats }) => {
@@ -32,40 +31,22 @@ const StatsCards = ({ userStats }) => {
 
   return (
     <div className="space-y-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="flex items-center space-x-4"
-      >
+      <div className="flex items-center space-x-4">
         <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
           <TrendingUp className="w-5 h-5 text-purple-500" />
         </div>
         <h2 className="text-2xl font-bold">PERFORMANCE METRICS</h2>
         <div className="flex-1 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
-      </motion.div>
+      </div>
 
-      <div className="data-grid">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {stats.map((stat, index) => {
           const IconComponent = stat.icon;
           return (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 + index * 0.1 }}
-              whileHover={{ scale: 1.02, rotateY: 5 }}
-              className={`${stat.bgColor} glass-card p-6 border-2 ${stat.borderColor} relative overflow-hidden`}
+              className={`${stat.bgColor} glass-card p-6 border-2 ${stat.borderColor} relative overflow-hidden hover:shadow-lg transition-shadow duration-200`}
             >
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-5">
-                <div className="grid grid-cols-4 gap-2 h-full">
-                  {Array.from({ length: 16 }).map((_, i) => (
-                    <div key={i} className="bg-black rounded-sm"></div>
-                  ))}
-                </div>
-              </div>
-
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center shadow-lg`}>
@@ -85,16 +66,14 @@ const StatsCards = ({ userStats }) => {
                 {/* Progress bar */}
                 <div className="mt-4">
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <motion.div
-                      className={`h-2 bg-gradient-to-r ${stat.color} rounded-full`}
-                      initial={{ width: 0 }}
-                      animate={{ width: `${Math.min((stat.value / 10) * 100, 100)}%` }}
-                      transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
+                    <div
+                      className={`h-2 bg-gradient-to-r ${stat.color} rounded-full transition-all duration-500`}
+                      style={{ width: `${Math.min((stat.value / 10) * 100, 100)}%` }}
                     />
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>
