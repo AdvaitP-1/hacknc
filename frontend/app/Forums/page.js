@@ -88,7 +88,7 @@ export default function ForumsPage() {
             />
             <div>
               {filteredForums.length > 0 ? (
-                filteredForums.map(forum => (
+                filteredForums.map((forum) => (
                   <div key={forum.id} className="p-4 mb-2 border rounded text-black bg-white">
                     <h2 className="font-bold text-black">{forum.title}</h2>
                     <p className="text-black">{forum.description}</p>
@@ -99,7 +99,6 @@ export default function ForumsPage() {
               )}
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

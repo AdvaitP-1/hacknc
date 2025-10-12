@@ -1,8 +1,27 @@
-'use client'
+'use client';
 import { motion } from 'framer-motion';
-import { User, Lock, Mail, MapPin, Settings, ChevronRight } from 'lucide-react';
+import { User, Lock, Mail, MapPin, Settings, ChevronRight, Trash2 } from 'lucide-react';
+import { useUser, useClerk } from '@clerk/nextjs';
 
 const AccountSettings = () => {
+  const { user } = useUser();
+  const { signOut } = useClerk();
+
+  const handleDeleteAccount = async () => {
+    if (!user) return;
+    const confirmed = window.confirm('This permanently deletes your account. Do you want to continue?');
+    if (!confirmed) {
+      return;
+    }
+
+    try {
+      await user.delete();
+      await signOut();
+    } catch (error) {
+      console.error('Error deleting account:', error);
+      alert('Something went wrong. Please try again.');
+    }
+  };
   const settings = [
     {
       icon: User,
@@ -114,6 +133,13 @@ const AccountSettings = () => {
             );
           })}
         </div>
+        <button
+          onClick={handleDeleteAccount}
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-red-600 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
+        >
+          <Trash2 className="h-4 w-4" />
+          Delete account
+        </button>
       </motion.div>
     </div>
   );
