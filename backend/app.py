@@ -4,12 +4,10 @@ import logging
 from flask import Flask, jsonify
 from flask_cors import CORS
 
-# Import API blueprints
 from api.health.routes import health_bp
 from api.dashboard.routes import dashboard_bp
 from api.forums.routes import forums_bp
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -17,30 +15,20 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def create_app():
-    """
-    Application factory pattern for creating Flask app instance.
-    
-    Returns:
-        Flask: Configured Flask application instance
-    """
     app = Flask(__name__)
     
-    # Configure CORS for frontend communication
     CORS(app, origins=[
-        "http://localhost:3000",  # Next.js dev server
+        "http://localhost:3000",
         "http://127.0.0.1:3000",
-        "https://your-production-domain.com"  # Add your production domain
+        "https://your-production-domain.com"
     ])
     
-    # Register API blueprints
     app.register_blueprint(health_bp, url_prefix='/api/health')
     app.register_blueprint(dashboard_bp, url_prefix='/api/dashboard')
     app.register_blueprint(forums_bp, url_prefix='/api/forums')
     
-    # Global error handlers
     @app.errorhandler(404)
     def not_found(error):
-        """Handle 404 errors with consistent JSON response"""
         return jsonify({
             'success': False,
             'error': 'Endpoint not found',
@@ -49,7 +37,6 @@ def create_app():
     
     @app.errorhandler(500)
     def internal_error(error):
-        """Handle 500 errors with consistent JSON response"""
         logger.error(f"Internal server error: {error}")
         return jsonify({
             'success': False,
@@ -57,10 +44,8 @@ def create_app():
             'message': 'An unexpected error occurred on the server'
         }), 500
     
-    # Health check endpoint at root
     @app.route('/')
     def root_health():
-        """Root endpoint for basic health check"""
         return jsonify({
             'success': True,
             'message': 'StudyShare API is running',
@@ -70,11 +55,9 @@ def create_app():
     logger.info("Flask application created successfully")
     return app
 
-# Create the Flask app instance
 app = create_app()
 
 if __name__ == '__main__':
-    # Get configuration from environment variables
     port = int(os.environ.get('PORT', 5001))
     host = os.environ.get('HOST', '0.0.0.0')
     debug = os.environ.get('DEBUG', 'true').lower() == 'true'

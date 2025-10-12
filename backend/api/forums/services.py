@@ -1,13 +1,3 @@
-"""
-Forums service layer for business logic and data operations
-
-This module contains the business logic for forum operations,
-separating concerns from the API routes and providing reusable
-service functions.
-
-Author: StudyShare Team
-Version: 1.0.0
-"""
 
 import json
 import os
@@ -19,27 +9,14 @@ from config.database import supabase
 logger = logging.getLogger(__name__)
 
 class CourseDataService:
-    """Service for managing course data operations"""
-    
     @staticmethod
     def load_course_data() -> List[Dict[str, str]]:
-        """
-        Load course data from NC State and UNC JSON files.
-        
-        Returns:
-            List[Dict[str, str]]: List of course dictionaries with course_code, course_name, and university
-            
-        Raises:
-            Exception: If files cannot be read or parsed
-        """
         try:
-            # Get the path to the college data directory
             current_dir = os.path.dirname(os.path.abspath(__file__))
             college_data_dir = os.path.join(
                 current_dir, '../../../webscrape/college_data'
             )
             
-            # Define the university files to load
             university_files = [
                 'North Carolina State University.json',
                 'University of North Carolina at Chapel Hill.json',
@@ -62,27 +39,24 @@ class CourseDataService:
                     
                     majors_data = data.get('majors', [])
                     
-                    for major in majors_data:
-                        # Add core courses
-                        for course in major.get('core_courses', []):
-                            course_code = course.get('course_code', '').strip()
-                            course_name = course.get('course_name', '').strip()
-                            if course_code and course_name:
-                                courses.add((course_code, course_name, university_name))
-                        
-                        # Add math/science requirements
-                        for course in major.get('math_science_requirements', []):
-                            course_code = course.get('course_code', '').strip()
-                            course_name = course.get('course_name', '').strip()
-                            if course_code and course_name:
-                                courses.add((course_code, course_name, university_name))
-                        
-                        # Add elective courses if they exist
-                        for course in major.get('elective_courses', []):
-                            course_code = course.get('course_code', '').strip()
-                            course_name = course.get('course_name', '').strip()
-                            if course_code and course_name:
-                                courses.add((course_code, course_name, university_name))
+                            for major in majors_data:
+                                for course in major.get('core_courses', []):
+                                    course_code = course.get('course_code', '').strip()
+                                    course_name = course.get('course_name', '').strip()
+                                    if course_code and course_name:
+                                        courses.add((course_code, course_name, university_name))
+                                
+                                for course in major.get('math_science_requirements', []):
+                                    course_code = course.get('course_code', '').strip()
+                                    course_name = course.get('course_name', '').strip()
+                                    if course_code and course_name:
+                                        courses.add((course_code, course_name, university_name))
+                                
+                                for course in major.get('elective_courses', []):
+                                    course_code = course.get('course_code', '').strip()
+                                    course_name = course.get('course_name', '').strip()
+                                    if course_code and course_name:
+                                        courses.add((course_code, course_name, university_name))
                 
                 except FileNotFoundError:
                     logger.warning(f"University file not found: {file_path}")
@@ -91,12 +65,10 @@ class CourseDataService:
                     logger.warning(f"Invalid JSON in {filename}: {e}")
                     continue
             
-            # Convert set to list and deduplicate by course_code and university
             course_list = []
             seen_courses = set()
             
             for code, name, university in courses:
-                # Create a unique key for deduplication
                 unique_key = f"{code}-{university}"
                 if unique_key not in seen_courses:
                     seen_courses.add(unique_key)

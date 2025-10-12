@@ -1,64 +1,29 @@
-"""
-Forums API routes for course forums, posts, and interactions
-
-This module defines the REST API endpoints for forum functionality,
-including course management, post creation/retrieval, and upvoting.
-
-Author: StudyShare Team
-Version: 1.0.0
-"""
 
 import logging
 from flask import Blueprint, request, jsonify
 from api.forums.services import CourseDataService, ForumPostService, UpvoteService
 
-# Configure logging
 logger = logging.getLogger(__name__)
-
-# Create blueprint for forums routes
 forums_bp = Blueprint('forums', __name__)
 
 @forums_bp.route('/courses', methods=['GET'])
 def get_courses():
-    """
-    Get all available courses for forums with post counts and recent activity.
-    
-    Returns:
-        JSON response with list of courses and their metadata
-        
-    Example Response:
-        {
-            "success": true,
-            "data": [
-                {
-                    "course_code": "CSC 111",
-                    "course_name": "Introduction to Computing",
-                    "post_count": 5,
-                    "recent_activity": "2024-01-15T10:30:00Z"
-                }
-            ]
-        }
-    """
     try:
         logger.info("Fetching courses for forums")
         
-        # Load course data from JSON file
         courses = CourseDataService.load_course_data()
         logger.info(f"Loaded {len(courses)} courses from service")
         
-        # Enrich courses with post counts and recent activity
         courses_with_metadata = []
         for course in courses:
             course_code = course['course_code']
             
-            # For now, set default values to avoid overwhelming the database
-            # Post counts and recent activity can be fetched on-demand when viewing specific courses
             courses_with_metadata.append({
                 'course_code': course_code,
                 'course_name': course['course_name'],
                 'university': course.get('university', 'Unknown'),
-                'post_count': 0,  # Will be fetched when needed
-                'recent_activity': None  # Will be fetched when needed
+                'post_count': 0,
+                'recent_activity': None
             })
         
         logger.info(f"Successfully fetched {len(courses_with_metadata)} courses")

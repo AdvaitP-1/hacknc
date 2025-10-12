@@ -16,13 +16,11 @@ export default function ForumsPage() {
   const [posts, setPosts] = useState([]);
   const [postsLoading, setPostsLoading] = useState(false);
 
-  // Fetch courses from backend
   const fetchCourses = async () => {
     try {
       setLoading(true);
       setError(null);
       
-      // Health check first
       const healthResponse = await fetch(`${API_BASE_URL}/api/health/`, {
         signal: AbortSignal.timeout(5000)
       });
@@ -49,7 +47,6 @@ export default function ForumsPage() {
     } catch (err) {
       console.error('Error fetching courses:', err);
       setError(err.message);
-      // Fallback course data
       setCourses([
         { course_code: 'CSC 111', course_name: 'Introduction to Computing', university: 'North Carolina State University', post_count: 0 },
         { course_code: 'COMP 110', course_name: 'Introduction to Programming', university: 'University of North Carolina at Chapel Hill', post_count: 0 }
@@ -59,7 +56,6 @@ export default function ForumsPage() {
     }
   };
 
-  // Fetch posts for a specific course
   const fetchPosts = async (courseCode) => {
     try {
       setPostsLoading(true);
@@ -86,14 +82,12 @@ export default function ForumsPage() {
     }
   };
 
-  // Load courses on component mount
   useEffect(() => {
     if (isSignedIn) {
       fetchCourses();
     }
   }, [isSignedIn]);
 
-  // Filter courses based on search and university filter
   const filteredCourses = courses.filter(course => {
     const matchesSearch = search === '' || 
       course.course_code.toLowerCase().includes(search.toLowerCase()) ||
@@ -105,7 +99,6 @@ export default function ForumsPage() {
     return matchesSearch && matchesUniversity;
   });
 
-  // Get unique universities for filter
   const universities = ['all', ...new Set(courses.map(course => course.university))];
 
   if (!isSignedIn) {
@@ -127,32 +120,29 @@ export default function ForumsPage() {
       <Navbar />
       <div className="pt-32 min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto p-6">
-          {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Course Forums</h1>
-            <p className="text-gray-600">Join discussions for your courses across NC universities</p>
-          </div>
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Course Forums</h1>
+          <p className="text-gray-600">Join discussions for your courses across NC universities</p>
+        </div>
 
-          {/* Error Banner */}
-          {error && (
-            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-              <div className="flex items-center">
-                <div className="flex-1">
-                  <p className="text-red-800 font-medium">Backend Connection Issue</p>
-                  <p className="text-red-600 text-sm">{error}</p>
-                </div>
-                <button
-                  onClick={fetchCourses}
-                  className="ml-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
-                >
-                  Retry
-                </button>
+        {error && (
+          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+            <div className="flex items-center">
+              <div className="flex-1">
+                <p className="text-red-800 font-medium">Backend Connection Issue</p>
+                <p className="text-red-600 text-sm">{error}</p>
               </div>
+              <button
+                onClick={fetchCourses}
+                className="ml-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+              >
+                Retry
+              </button>
             </div>
-          )}
+          </div>
+        )}
 
-          {/* Search and Filter Controls */}
-          <div className="mb-6 flex flex-col sm:flex-row gap-4">
+        <div className="mb-6 flex flex-col sm:flex-row gap-4">
             <div className="flex-1">
               <input
                 type="text"
@@ -178,16 +168,14 @@ export default function ForumsPage() {
             </div>
           </div>
 
-          {/* Loading State */}
-          {loading && (
-            <div className="text-center py-12">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <p className="mt-2 text-gray-600">Loading courses...</p>
-            </div>
-          )}
+        {loading && (
+          <div className="text-center py-12">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <p className="mt-2 text-gray-600">Loading courses...</p>
+          </div>
+        )}
 
-          {/* Course Grid */}
-          {!loading && (
+        {!loading && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredCourses.map((course) => (
                 <div
@@ -220,16 +208,14 @@ export default function ForumsPage() {
             </div>
           )}
 
-          {/* No Results */}
-          {!loading && filteredCourses.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-600 text-lg">No courses found matching your search.</p>
-              <p className="text-gray-500 text-sm mt-2">Try adjusting your search terms or university filter.</p>
-            </div>
-          )}
+        {!loading && filteredCourses.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-600 text-lg">No courses found matching your search.</p>
+            <p className="text-gray-500 text-sm mt-2">Try adjusting your search terms or university filter.</p>
+          </div>
+        )}
 
-          {/* Course Forum Modal/View */}
-          {selectedCourse && (
+        {selectedCourse && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
               <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
                 <div className="p-6 border-b border-gray-200">
