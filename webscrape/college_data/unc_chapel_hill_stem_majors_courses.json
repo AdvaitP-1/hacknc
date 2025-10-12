@@ -1,0 +1,518 @@
+{
+    "majors": [
+        {
+            "major": "Computer Science B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "COMP 110",
+                    "course_name": "Introduction to Programming"
+                },
+                {
+                    "course_code": "COMP 210",
+                    "course_name": "Data Structures and Analysis"
+                },
+                {
+                    "course_code": "COMP 211",
+                    "course_name": "Systems Fundamentals"
+                },
+                {
+                    "course_code": "COMP 301",
+                    "course_name": "Foundations of Programming"
+                },
+                {
+                    "course_code": "COMP 311",
+                    "course_name": "Computer Organization"
+                },
+                {
+                    "course_code": "COMP 455",
+                    "course_name": "Models of Languages and Computation"
+                },
+                {
+                    "course_code": "COMP 550",
+                    "course_name": "Algorithms and Analysis"
+                },
+                {
+                    "course_code": "COMP 530",
+                    "course_name": "Operating Systems"
+                },
+                {
+                    "course_code": "COMP 431",
+                    "course_name": "Internet Services and Protocols"
+                },
+                {
+                    "course_code": "COMP 495/590",
+                    "course_name": "Senior Capstone/Advanced Topics (varies)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 231",
+                    "course_name": "Calculus of Functions of One Variable I"
+                },
+                {
+                    "course_code": "MATH 232",
+                    "course_name": "Calculus of Functions of One Variable II"
+                },
+                {
+                    "course_code": "STOR 435",
+                    "course_name": "Introductory Probability"
+                },
+                {
+                    "course_code": "PHYS 118",
+                    "course_name": "Introductory Calculus-based Mechanics and Relativity"
+                },
+                {
+                    "course_code": "PHYS 119",
+                    "course_name": "Introductory Calculus-based Electromagnetism and Optics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Statistics and Analytics B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "STOR 320",
+                    "course_name": "Introduction to Data Science"
+                },
+                {
+                    "course_code": "STOR 435",
+                    "course_name": "Introductory Probability"
+                },
+                {
+                    "course_code": "STOR 455",
+                    "course_name": "Methods of Data Analysis"
+                },
+                {
+                    "course_code": "STOR 456",
+                    "course_name": "Linear Models"
+                },
+                {
+                    "course_code": "STOR 457",
+                    "course_name": "Statistical Computing"
+                },
+                {
+                    "course_code": "STOR 458",
+                    "course_name": "Optimization"
+                },
+                {
+                    "course_code": "STOR 490",
+                    "course_name": "Special Topics in STOR (as approved)"
+                },
+                {
+                    "course_code": "STOR 692H",
+                    "course_name": "Senior Honors Thesis (optional honors)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 231",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 232",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 233",
+                    "course_name": "Calculus of Functions of Several Variables"
+                },
+                {
+                    "course_code": "MATH 347/548",
+                    "course_name": "Linear Algebra (or equivalent)"
+                },
+                {
+                    "course_code": "COMP 110 or COMP 116",
+                    "course_name": "Intro to Programming (Python/Matlab or equivalent)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Mathematics B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MATH 231",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 232",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 233",
+                    "course_name": "Calculus III"
+                },
+                {
+                    "course_code": "MATH 381",
+                    "course_name": "Discrete Mathematics"
+                },
+                {
+                    "course_code": "MATH 383",
+                    "course_name": "First Course in Differential Equations"
+                },
+                {
+                    "course_code": "MATH 521",
+                    "course_name": "Advanced Calculus I"
+                },
+                {
+                    "course_code": "MATH 522",
+                    "course_name": "Advanced Calculus II"
+                },
+                {
+                    "course_code": "MATH 547",
+                    "course_name": "Linear Algebra"
+                },
+                {
+                    "course_code": "MATH 548",
+                    "course_name": "Advanced Linear Algebra"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "COMP 110",
+                    "course_name": "Introduction to Programming"
+                },
+                {
+                    "course_code": "PHYS 118/119",
+                    "course_name": "Calculus-based Physics I/II (recommended for B.S.)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Biology B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BIOL 101 & 101L",
+                    "course_name": "Principles of Biology and Lab"
+                },
+                {
+                    "course_code": "BIOL 201",
+                    "course_name": "Ecology and Evolution"
+                },
+                {
+                    "course_code": "BIOL 202",
+                    "course_name": "Molecular Biology and Genetics"
+                },
+                {
+                    "course_code": "BIOL 205/252",
+                    "course_name": "Cell Biology / Human Anatomy (as allowed)"
+                },
+                {
+                    "course_code": "BIOL 224/225",
+                    "course_name": "Introductory Biostatistics / Lab Methods (as allowed)"
+                },
+                {
+                    "course_code": "BIOL 395",
+                    "course_name": "Undergraduate Research in Biology (capstone option)"
+                },
+                {
+                    "course_code": "BIOL 692H",
+                    "course_name": "Senior Honors Thesis (optional honors)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CHEM 101/101L & 102/102L",
+                    "course_name": "General Chemistry I & II with Labs"
+                },
+                {
+                    "course_code": "CHEM 241/241L & 262/262L",
+                    "course_name": "Organic Chemistry I & II with Labs"
+                },
+                {
+                    "course_code": "PHYS 114/115 or 118/119",
+                    "course_name": "Physics Sequence (algebra- or calculus-based)"
+                },
+                {
+                    "course_code": "MATH 231",
+                    "course_name": "Calculus I"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Chemistry B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CHEM 101/101L",
+                    "course_name": "General Descriptive Chemistry I with Lab"
+                },
+                {
+                    "course_code": "CHEM 102/102L",
+                    "course_name": "General Descriptive Chemistry II with Lab"
+                },
+                {
+                    "course_code": "CHEM 241/241L",
+                    "course_name": "Modern Organic Chemistry I with Lab"
+                },
+                {
+                    "course_code": "CHEM 262/262L",
+                    "course_name": "Modern Organic Chemistry II with Lab"
+                },
+                {
+                    "course_code": "CHEM 311",
+                    "course_name": "Instrumental Methods of Analysis"
+                },
+                {
+                    "course_code": "CHEM 410",
+                    "course_name": "Inorganic Chemistry"
+                },
+                {
+                    "course_code": "CHEM 481",
+                    "course_name": "Physical Chemistry I"
+                },
+                {
+                    "course_code": "CHEM 482",
+                    "course_name": "Physical Chemistry II"
+                },
+                {
+                    "course_code": "CHEM 441 or 420",
+                    "course_name": "Advanced Synthesis or Advanced Analytical (track dependent)"
+                },
+                {
+                    "course_code": "CHEM 550/555",
+                    "course_name": "Undergraduate Research / Capstone (as allowed)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 231 & 232",
+                    "course_name": "Calculus I & II"
+                },
+                {
+                    "course_code": "PHYS 118 & 119",
+                    "course_name": "Introductory Calculus-based Physics I & II"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Physics B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "PHYS 118",
+                    "course_name": "Introductory Calculus-based Mechanics and Relativity"
+                },
+                {
+                    "course_code": "PHYS 119",
+                    "course_name": "Introductory Calculus-based Electromagnetism and Optics"
+                },
+                {
+                    "course_code": "PHYS 311",
+                    "course_name": "Mechanics"
+                },
+                {
+                    "course_code": "PHYS 331",
+                    "course_name": "Electricity and Magnetism I"
+                },
+                {
+                    "course_code": "PHYS 332",
+                    "course_name": "Electricity and Magnetism II"
+                },
+                {
+                    "course_code": "PHYS 351",
+                    "course_name": "Experimental Techniques of Physics I"
+                },
+                {
+                    "course_code": "PHYS 352",
+                    "course_name": "Experimental Techniques of Physics II"
+                },
+                {
+                    "course_code": "PHYS 401/414",
+                    "course_name": "Thermal Physics / Modern Physics (as offered)"
+                },
+                {
+                    "course_code": "PHYS 421",
+                    "course_name": "Quantum Mechanics I"
+                },
+                {
+                    "course_code": "PHYS 422",
+                    "course_name": "Quantum Mechanics II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 231/232/233",
+                    "course_name": "Calculus I/II/Several Variables"
+                },
+                {
+                    "course_code": "MATH 381 or 347/547",
+                    "course_name": "Discrete Math or Linear Algebra"
+                },
+                {
+                    "course_code": "MATH 383",
+                    "course_name": "Differential Equations"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Data Science B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "DATA 101",
+                    "course_name": "Data Science and Society"
+                },
+                {
+                    "course_code": "COMP 110",
+                    "course_name": "Introduction to Programming"
+                },
+                {
+                    "course_code": "STOR 320",
+                    "course_name": "Introduction to Data Science"
+                },
+                {
+                    "course_code": "STOR 435",
+                    "course_name": "Introductory Probability"
+                },
+                {
+                    "course_code": "STOR 455",
+                    "course_name": "Methods of Data Analysis"
+                },
+                {
+                    "course_code": "COMP 210 or INLS 560",
+                    "course_name": "Data Structures (or equivalent)"
+                },
+                {
+                    "course_code": "DATA 310",
+                    "course_name": "Data, Culture, and Society (methods/ethics)"
+                },
+                {
+                    "course_code": "DATA 490",
+                    "course_name": "Capstone in Data Science (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 231/232",
+                    "course_name": "Calculus I & II"
+                },
+                {
+                    "course_code": "MATH 233",
+                    "course_name": "Calculus of Several Variables"
+                },
+                {
+                    "course_code": "STOR 215 or COMP 116",
+                    "course_name": "Foundations (computing/statistics as allowed)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Information Science B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "INLS 201",
+                    "course_name": "Foundations of Information Science"
+                },
+                {
+                    "course_code": "INLS 202",
+                    "course_name": "Retrieval and Organizing Systems"
+                },
+                {
+                    "course_code": "INLS 203",
+                    "course_name": "Human Information Behavior"
+                },
+                {
+                    "course_code": "INLS 382",
+                    "course_name": "Information Systems Analysis and Design"
+                },
+                {
+                    "course_code": "INLS 385",
+                    "course_name": "Information Use for Organizational Effectiveness"
+                },
+                {
+                    "course_code": "INLS 490/582/586 (electives)",
+                    "course_name": "Approved advanced electives"
+                },
+                {
+                    "course_code": "INLS 697",
+                    "course_name": "Professional Field Experience (capstone-style)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 231 or STOR 155",
+                    "course_name": "Calculus I or Introduction to Statistics"
+                },
+                {
+                    "course_code": "COMP 110",
+                    "course_name": "Introduction to Programming"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Neuroscience B.S.",
+            "university": "University of North Carolina at Chapel Hill",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "NSCI 175",
+                    "course_name": "Introduction to Neuroscience"
+                },
+                {
+                    "course_code": "NSCI 222/225",
+                    "course_name": "Neuroanatomy / Cellular and Molecular Neuroscience"
+                },
+                {
+                    "course_code": "NSCI 276",
+                    "course_name": "Research Methods in Neuroscience"
+                },
+                {
+                    "course_code": "NSCI 401",
+                    "course_name": "Systems Neuroscience"
+                },
+                {
+                    "course_code": "NSCI 405",
+                    "course_name": "Cognitive Neuroscience"
+                },
+                {
+                    "course_code": "NSCI 493/494 or 693H/694H",
+                    "course_name": "Research Experience or Senior Honors Thesis"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "BIOL 101 & 101L",
+                    "course_name": "Principles of Biology with Lab"
+                },
+                {
+                    "course_code": "CHEM 101/101L & 102/102L",
+                    "course_name": "General Chemistry I & II with Labs"
+                },
+                {
+                    "course_code": "MATH 231",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "STOR 155 or STOR 215",
+                    "course_name": "Introductory Statistics / Foundations of Statistics"
+                },
+                {
+                    "course_code": "PHYS 114/115 or 118/119",
+                    "course_name": "Physics Sequence (algebra- or calculus-based)"
+                }
+            ],
+            "total_credit_hours": 120
+        }
+    ]
+}
