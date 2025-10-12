@@ -106,36 +106,233 @@ const EnrolledList = ({ enrolled, onRemove }) => {
   );
 };
 
+// const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
+//   const enrolledIds = new Set(enrolledCourses.map(c => c.id));
+//   const filtered = notes.filter(n => enrolledIds.has(n.courseId));
+
+//   return (
+//     <div className="mt-6">
+//       <div className="flex items-center justify-between mb-3">
+//         <h3 className="text-lg font-bold">Notes for your enrolled courses</h3>
+//         <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">Upload notes</button>
+//       </div>
+
+//       {enrolledCourses.length === 0 ? (
+//         <div className="text-zinc-600">Enroll in courses to see notes here.</div>
+//       ) : filtered.length === 0 ? (
+//         <div className="text-zinc-600">No notes yet for your enrolled courses.</div>
+//       ) : (
+//         filtered.map(n => (
+//           <div key={n.id} className="border rounded p-3 mb-3">
+//             <div className="text-xs text-zinc-500">{n.courseCode} • by {n.author}</div>
+//             <div className="font-semibold">{n.title}</div>
+//             <div className="text-sm text-zinc-700">{n.noteText || ''}</div>
+//             {n.fileUrl && (
+//               <div className="mt-2">
+//                 <a href={n.fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 underline">
+//                   Open PDF ({n.fileName})
+//                 </a>
+//               </div>
+//             )}
+//           </div>
+//         ))
+//       )}
+//     </div>
+//   );
+// };
 const NotesSection = ({ enrolledCourses, notes, onUploadClick }) => {
+  const [activeTab, setActiveTab] = useState('enrolled');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchFilters, setSearchFilters] = useState({
+    course: '',
+    author: '',
+    dateRange: 'all'
+  });
+
   const enrolledIds = new Set(enrolledCourses.map(c => c.id));
-  const filtered = notes.filter(n => enrolledIds.has(n.courseId));
+  const enrolledNotes = notes.filter(n => enrolledIds.has(n.courseId));
+  
+  const searchedNotes = notes.filter(note => {
+    const matchesQuery = !searchQuery || 
+      note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (note.noteText && note.noteText.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      note.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      note.courseCode.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    const matchesCourse = !searchFilters.course || 
+      note.courseCode.toLowerCase().includes(searchFilters.course.toLowerCase());
+    
+    const matchesAuthor = !searchFilters.author || 
+      note.author.toLowerCase().includes(searchFilters.author.toLowerCase());
+    
+    let matchesDate = true;
+    if (searchFilters.dateRange !== 'all' && note.uploadedAt) {
+      const noteDate = new Date(note.uploadedAt);
+      const now = new Date();
+      const daysDiff = (now - noteDate) / (1000 * 60 * 60 * 24);
+      
+      switch (searchFilters.dateRange) {
+        case 'week': matchesDate = daysDiff <= 7; break;
+        case 'month': matchesDate = daysDiff <= 30; break;
+        case 'year': matchesDate = daysDiff <= 365; break;
+      }
+    }
+    
+    return matchesQuery && matchesCourse && matchesAuthor && matchesDate;
+  });
+
+  const allCourses = [...new Set(notes.map(n => n.courseCode))];
+  const allAuthors = [...new Set(notes.map(n => n.author))];
+
+  const renderNotesList = (notesToShow) => (
+    notesToShow.length === 0 ? (
+      <div className="text-zinc-600">
+        {activeTab === 'enrolled' ? 'No notes yet for your enrolled courses.' : 'No notes found matching your search.'}
+      </div>
+    ) : (
+      notesToShow.map(n => (
+        <div key={n.id} className="border rounded p-3 mb-3">
+          <div className="text-xs text-zinc-500">{n.courseCode} • by {n.author}</div>
+          <div className="font-semibold">{n.title}</div>
+          <div className="text-sm text-zinc-700">{n.noteText || ''}</div>
+          {n.fileUrl && (
+            <div className="mt-2">
+              <a href={n.fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 underline">
+                Open PDF ({n.fileName})
+              </a>
+            </div>
+          )}
+          {n.uploadedAt && (
+            <div className="text-xs text-zinc-400 mt-2">
+              Uploaded: {new Date(n.uploadedAt).toLocaleDateString()}
+            </div>
+          )}
+        </div>
+      ))
+    )
+  );
 
   return (
     <div className="mt-6">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-lg font-bold">Notes for your enrolled courses</h3>
-        <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">Upload notes</button>
+      {/* Tab Navigation */}
+      <div className="flex border-b mb-4">
+        <button
+          onClick={() => setActiveTab('enrolled')}
+          className={`px-4 py-2 font-medium ${
+            activeTab === 'enrolled' 
+              ? 'border-b-2 border-blue-600 text-blue-600' 
+              : 'text-zinc-600 hover:text-zinc-800'
+          }`}
+        >
+          My Notes ({enrolledNotes.length})
+        </button>
+        <button
+          onClick={() => setActiveTab('search')}
+          className={`px-4 py-2 font-medium ${
+            activeTab === 'search' 
+              ? 'border-b-2 border-blue-600 text-blue-600' 
+              : 'text-zinc-600 hover:text-zinc-800'
+          }`}
+        >
+          Search All Notes ({notes.length})
+        </button>
       </div>
 
-      {enrolledCourses.length === 0 ? (
-        <div className="text-zinc-600">Enroll in courses to see notes here.</div>
-      ) : filtered.length === 0 ? (
-        <div className="text-zinc-600">No notes yet for your enrolled courses.</div>
-      ) : (
-        filtered.map(n => (
-          <div key={n.id} className="border rounded p-3 mb-3">
-            <div className="text-xs text-zinc-500">{n.courseCode} • by {n.author}</div>
-            <div className="font-semibold">{n.title}</div>
-            <div className="text-sm text-zinc-700">{n.noteText || ''}</div>
-            {n.fileUrl && (
-              <div className="mt-2">
-                <a href={n.fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 underline">
-                  Open PDF ({n.fileName})
-                </a>
-              </div>
+      {/* Enrolled Notes Tab */}
+      {activeTab === 'enrolled' && (
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-lg font-bold">Notes for your enrolled courses</h3>
+            <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">
+              Upload notes
+            </button>
+          </div>
+
+          {enrolledCourses.length === 0 ? (
+            <div className="text-zinc-600">Enroll in courses to see notes here.</div>
+          ) : (
+            renderNotesList(enrolledNotes)
+          )}
+        </div>
+      )}
+
+      {/* Search All Notes Tab */}
+      {activeTab === 'search' && (
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-bold">Search All Notes</h3>
+            <button onClick={onUploadClick} className="bg-blue-600 text-white px-3 py-1 rounded">
+              Upload notes
+            </button>
+          </div>
+
+          {/* Search Controls */}
+          <div className="bg-zinc-50 p-4 rounded-lg mb-4">
+            <div className="mb-3">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search by title, content, author, or course code..."
+                className="w-full px-4 py-2 border border-zinc-300 rounded-lg"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <select
+                value={searchFilters.course}
+                onChange={(e) => setSearchFilters(prev => ({...prev, course: e.target.value}))}
+                className="px-3 py-2 border border-zinc-300 rounded"
+              >
+                <option value="">All Courses</option>
+                {allCourses.map(course => (
+                  <option key={course} value={course}>{course}</option>
+                ))}
+              </select>
+
+              <select
+                value={searchFilters.author}
+                onChange={(e) => setSearchFilters(prev => ({...prev, author: e.target.value}))}
+                className="px-3 py-2 border border-zinc-300 rounded"
+              >
+                <option value="">All Authors</option>
+                {allAuthors.map(author => (
+                  <option key={author} value={author}>{author}</option>
+                ))}
+              </select>
+
+              <select
+                value={searchFilters.dateRange}
+                onChange={(e) => setSearchFilters(prev => ({...prev, dateRange: e.target.value}))}
+                className="px-3 py-2 border border-zinc-300 rounded"
+              >
+                <option value="all">All Time</option>
+                <option value="week">Past Week</option>
+                <option value="month">Past Month</option>
+                <option value="year">Past Year</option>
+              </select>
+            </div>
+
+            {(searchQuery || searchFilters.course || searchFilters.author || searchFilters.dateRange !== 'all') && (
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSearchFilters({ course: '', author: '', dateRange: 'all' });
+                }}
+                className="mt-3 text-sm text-blue-600 hover:underline"
+              >
+                Clear all filters
+              </button>
             )}
           </div>
-        ))
+
+          <div>
+            <div className="text-sm text-zinc-600 mb-3">
+              {searchedNotes.length} notes found
+            </div>
+            {renderNotesList(searchedNotes)}
+          </div>
+        </div>
       )}
     </div>
   );
