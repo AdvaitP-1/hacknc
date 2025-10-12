@@ -6,7 +6,7 @@ import Navbar from '../components/navbar';
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001';
 
 export default function ForumsPage() {
-  const { isSignedIn, userId } = useAuth();
+  const { isSignedIn, userId, user } = useAuth();
   const [search, setSearch] = useState('');
   const [universityFilter, setUniversityFilter] = useState('all');
   const [courses, setCourses] = useState([]);
@@ -15,6 +15,14 @@ export default function ForumsPage() {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [posts, setPosts] = useState([]);
   const [postsLoading, setPostsLoading] = useState(false);
+  const [showCreatePost, setShowCreatePost] = useState(false);
+  const [newPostTitle, setNewPostTitle] = useState('');
+  const [newPostContent, setNewPostContent] = useState('');
+  const [creatingPost, setCreatingPost] = useState(false);
+  const [expandedPost, setExpandedPost] = useState(null);
+  const [replies, setReplies] = useState({});
+  const [newReplyContent, setNewReplyContent] = useState('');
+  const [creatingReply, setCreatingReply] = useState(false);
 
   const fetchCourses = async () => {
     try {
@@ -82,6 +90,167 @@ export default function ForumsPage() {
     }
   };
 
+  const createPost = async () => {
+    if (!newPostTitle.trim() || !newPostContent.trim() || !selectedCourse?.course_code || !userId) {
+      return;
+    }
+
+    try {
+      setCreatingPost(true);
+      
+      const response = await fetch(`${API_BASE_URL}/api/forums/posts`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title: newPostTitle.trim(),
+          content: newPostContent.trim(),
+          course: selectedCourse.course_code,
+          user_id: userId,
+          user_name: user?.fullName || user?.firstName || 'Anonymous'
+        }),
+        signal: AbortSignal.timeout(10000)
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setNewPostTitle('');
+        setNewPostContent('');
+        setShowCreatePost(false);
+        await fetchPosts(selectedCourse.course_code);
+      } else {
+        throw new Error(data.message || 'Failed to create post');
+      }
+    } catch (err) {
+      console.error('Error creating post:', err);
+      alert('Failed to create post. Please try again.');
+    } finally {
+      setCreatingPost(false);
+    }
+  };
+
+  const handleUpvote = async (postId) => {
+    if (!userId) {
+      alert('Please log in to upvote posts');
+      return;
+    }
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/forums/posts/${postId}/upvote`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          user_id: userId
+        }),
+        signal: AbortSignal.timeout(10000)
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        await fetchPosts(selectedCourse.course_code);
+      } else {
+        throw new Error(data.message || 'Failed to upvote post');
+      }
+    } catch (err) {
+      console.error('Error upvoting post:', err);
+      alert('Failed to upvote post. Please try again.');
+    }
+  };
+
+  const fetchReplies = async (postId) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/forums/posts/${postId}/replies`, {
+        signal: AbortSignal.timeout(10000)
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setReplies(prev => ({
+          ...prev,
+          [postId]: data.data || []
+        }));
+      } else {
+        throw new Error(data.message || 'Failed to fetch replies');
+      }
+    } catch (err) {
+      console.error('Error fetching replies:', err);
+      setReplies(prev => ({
+        ...prev,
+        [postId]: []
+      }));
+    }
+  };
+
+  const createReply = async (postId) => {
+    if (!newReplyContent.trim() || !userId) {
+      return;
+    }
+
+    try {
+      setCreatingReply(true);
+      
+      const response = await fetch(`${API_BASE_URL}/api/forums/posts/${postId}/replies`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          user_id: userId,
+          user_name: user?.fullName || user?.firstName || 'Anonymous',
+          content: newReplyContent.trim()
+        }),
+        signal: AbortSignal.timeout(10000)
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setNewReplyContent('');
+        await fetchReplies(postId);
+      } else {
+        throw new Error(data.message || 'Failed to create reply');
+      }
+    } catch (err) {
+      console.error('Error creating reply:', err);
+      alert('Failed to create reply. Please try again.');
+    } finally {
+      setCreatingReply(false);
+    }
+  };
+
+  const togglePostExpansion = (postId) => {
+    if (expandedPost === postId) {
+      setExpandedPost(null);
+    } else {
+      setExpandedPost(postId);
+      if (!replies[postId]) {
+        fetchReplies(postId);
+      }
+    }
+  };
+
   useEffect(() => {
     if (isSignedIn) {
       fetchCourses();
@@ -132,24 +301,24 @@ export default function ForumsPage() {
                 <p className="text-red-800 font-medium">Backend Connection Issue</p>
                 <p className="text-red-600 text-sm">{error}</p>
               </div>
-              <button
+          <button
                 onClick={fetchCourses}
                 className="ml-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
-              >
+          >
                 Retry
-              </button>
-            </div>
+          </button>
+        </div>
           </div>
         )}
 
         <div className="mb-6 flex flex-col sm:flex-row gap-4">
             <div className="flex-1">
-              <input
-                type="text"
+          <input
+            type="text"
                 placeholder="Search by course code or name (e.g., CSC 111, Introduction to Computing)"
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
               />
             </div>
             <div className="sm:w-64">
@@ -220,21 +389,80 @@ export default function ForumsPage() {
               <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
                 <div className="p-6 border-b border-gray-200">
                   <div className="flex items-center justify-between">
-                    <div>
+          <div>
                       <h2 className="text-2xl font-bold text-gray-900">{selectedCourse.course_code}</h2>
                       <p className="text-gray-600">{selectedCourse.course_name}</p>
                       <p className="text-sm text-gray-500">{selectedCourse.university}</p>
                     </div>
-                    <button
-                      onClick={() => setSelectedCourse(null)}
-                      className="text-gray-400 hover:text-gray-600 text-2xl"
-                    >
-                      ×
-                    </button>
+                    <div className="flex items-center space-x-3">
+                      <button
+                        onClick={() => setShowCreatePost(!showCreatePost)}
+                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        {showCreatePost ? 'Cancel' : 'New Post'}
+                      </button>
+                      <button
+                        onClick={() => setSelectedCourse(null)}
+                        className="text-gray-400 hover:text-gray-600 text-2xl"
+                      >
+                        ×
+                      </button>
+                    </div>
                   </div>
                 </div>
                 
                 <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                  {showCreatePost && (
+                    <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Create New Post</h3>
+                      <div className="space-y-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Title
+                          </label>
+                          <input
+                            type="text"
+                            value={newPostTitle}
+                            onChange={(e) => setNewPostTitle(e.target.value)}
+                            placeholder="Enter post title..."
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Content
+                          </label>
+                          <textarea
+                            value={newPostContent}
+                            onChange={(e) => setNewPostContent(e.target.value)}
+                            placeholder="Write your post content..."
+                            rows={4}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
+                          />
+                        </div>
+                        <div className="flex justify-end space-x-3">
+                          <button
+                            onClick={() => {
+                              setShowCreatePost(false);
+                              setNewPostTitle('');
+                              setNewPostContent('');
+                            }}
+                            className="px-4 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                          >
+                            Cancel
+                          </button>
+                          <button
+                            onClick={createPost}
+                            disabled={!newPostTitle.trim() || !newPostContent.trim() || creatingPost}
+                            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+                          >
+                            {creatingPost ? 'Creating...' : 'Create Post'}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   {postsLoading ? (
                     <div className="text-center py-8">
                       <div className="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
@@ -254,10 +482,63 @@ export default function ForumsPage() {
                           <div className="flex items-center justify-between text-sm text-gray-500">
                             <span>by {post.user_name}</span>
                             <div className="flex items-center space-x-4">
-                              <span>👍 {post.upvotes || 0}</span>
-                              <span>💬 0 replies</span>
+                              <button
+                                onClick={() => handleUpvote(post.id)}
+                                className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
+                                title="Upvote this post"
+                              >
+                                <span>👍</span>
+                                <span>{post.upvotes || 0}</span>
+                              </button>
+                              <button
+                                onClick={() => togglePostExpansion(post.id)}
+                                className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
+                                title="View replies"
+                              >
+                                <span>💬</span>
+                                <span>{replies[post.id]?.length || 0} replies</span>
+                              </button>
                             </div>
                           </div>
+                          
+                          {expandedPost === post.id && (
+                            <div className="mt-4 border-t border-gray-200 pt-4">
+                              <div className="space-y-3">
+                                {replies[post.id]?.map((reply) => (
+                                  <div key={reply.id} className="bg-gray-50 rounded-lg p-3">
+                                    <div className="flex items-start justify-between mb-2">
+                                      <span className="text-sm font-medium text-gray-700">
+                                        {reply.user_name}
+                                      </span>
+                                      <span className="text-xs text-gray-500">
+                                        {new Date(reply.created_at).toLocaleDateString()}
+                                      </span>
+                                    </div>
+                                    <p className="text-gray-700 text-sm">{reply.content}</p>
+                                  </div>
+                                ))}
+                                
+                                <div className="mt-4">
+                                  <textarea
+                                    value={newReplyContent}
+                                    onChange={(e) => setNewReplyContent(e.target.value)}
+                                    placeholder="Write a reply..."
+                                    rows={3}
+                                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
+                                  />
+                                  <div className="flex justify-end mt-2">
+                                    <button
+                                      onClick={() => createReply(post.id)}
+                                      disabled={!newReplyContent.trim() || creatingReply}
+                                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors text-sm"
+                                    >
+                                      {creatingReply ? 'Posting...' : 'Reply'}
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -266,8 +547,8 @@ export default function ForumsPage() {
                       <p className="text-gray-600">No posts yet for this course.</p>
                       <p className="text-gray-500 text-sm mt-2">Be the first to start a discussion!</p>
                     </div>
-                  )}
-                </div>
+            )}
+          </div>
               </div>
             </div>
           )}

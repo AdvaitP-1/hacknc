@@ -53,18 +53,19 @@ def get_user_stats():
             return jsonify({'error': 'User ID is required'}), 400
         
         # Fetch stats from Supabase
-        notes_response = supabase.table('notes').select('id').eq('user_id', user_id).execute()
+        print(f"DEBUG: Fetching stats for user_id: {user_id}")
         posts_response = supabase.table('forum_posts').select('id').eq('user_id', user_id).execute()
-        upvotes_response = supabase.table('upvotes').select('id').eq('target_user_id', user_id).execute()
+        print(f"DEBUG: Posts response: {posts_response}")
+        upvotes_response = supabase.table('post_upvotes').select('id').eq('user_id', user_id).execute()
+        print(f"DEBUG: Upvotes response: {upvotes_response}")
         
         return jsonify({
             'success': True,
             'data': {
-                'notes_shared': len(notes_response.data) if notes_response.data else 0,
+                'notes_shared': 0,
                 'forum_posts': len(posts_response.data) if posts_response.data else 0,
                 'upvotes_received': len(upvotes_response.data) if upvotes_response.data else 0,
-                'total_contributions': (len(notes_response.data) if notes_response.data else 0) + 
-                                     (len(posts_response.data) if posts_response.data else 0)
+                'total_contributions': len(posts_response.data) if posts_response.data else 0
             }
         })
             
@@ -84,24 +85,11 @@ def get_recent_activity():
         if not user_id:
             return jsonify({'error': 'User ID is required'}), 400
         
-        # Fetch recent notes
-        notes_response = supabase.table('notes').select('*').eq('user_id', user_id).order('created_at', desc=True).limit(int(limit)).execute()
-        
         # Fetch recent forum posts
         posts_response = supabase.table('forum_posts').select('*').eq('user_id', user_id).order('created_at', desc=True).limit(int(limit)).execute()
         
         # Combine and sort by date
         activities = []
-        
-        if notes_response.data:
-            for note in notes_response.data:
-                activities.append({
-                    'type': 'note',
-                    'title': note.get('title', ''),
-                    'course': note.get('course', ''),
-                    'created_at': note.get('created_at', ''),
-                    'upvotes': note.get('upvotes', 0)
-                })
         
         if posts_response.data:
             for post in posts_response.data:

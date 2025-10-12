@@ -39,24 +39,24 @@ class CourseDataService:
                     
                     majors_data = data.get('majors', [])
                     
-                            for major in majors_data:
-                                for course in major.get('core_courses', []):
-                                    course_code = course.get('course_code', '').strip()
-                                    course_name = course.get('course_name', '').strip()
-                                    if course_code and course_name:
-                                        courses.add((course_code, course_name, university_name))
-                                
-                                for course in major.get('math_science_requirements', []):
-                                    course_code = course.get('course_code', '').strip()
-                                    course_name = course.get('course_name', '').strip()
-                                    if course_code and course_name:
-                                        courses.add((course_code, course_name, university_name))
-                                
-                                for course in major.get('elective_courses', []):
-                                    course_code = course.get('course_code', '').strip()
-                                    course_name = course.get('course_name', '').strip()
-                                    if course_code and course_name:
-                                        courses.add((course_code, course_name, university_name))
+                    for major in majors_data:
+                        for course in major.get('core_courses', []):
+                            course_code = course.get('course_code', '').strip()
+                            course_name = course.get('course_name', '').strip()
+                            if course_code and course_name:
+                                courses.add((course_code, course_name, university_name))
+                        
+                        for course in major.get('math_science_requirements', []):
+                            course_code = course.get('course_code', '').strip()
+                            course_name = course.get('course_name', '').strip()
+                            if course_code and course_name:
+                                courses.add((course_code, course_name, university_name))
+                        
+                        for course in major.get('elective_courses', []):
+                            course_code = course.get('course_code', '').strip()
+                            course_name = course.get('course_name', '').strip()
+                            if course_code and course_name:
+                                courses.add((course_code, course_name, university_name))
                 
                 except FileNotFoundError:
                     logger.warning(f"University file not found: {file_path}")
@@ -227,6 +227,76 @@ class ForumPostService:
         except Exception as e:
             logger.error(f"Error getting recent activity for course {course_code}: {e}")
             return None
+
+class ReplyService:
+    """Service for managing post replies"""
+    
+    @staticmethod
+    def create_reply(reply_data: Dict) -> Dict:
+        """
+        Create a new reply to a forum post.
+        
+        Args:
+            reply_data (Dict): Reply data containing post_id, user_id, user_name, content
+            
+        Returns:
+            Dict: The created reply data
+            
+        Raises:
+            Exception: If reply creation fails
+        """
+        try:
+            required_fields = ['post_id', 'user_id', 'user_name', 'content']
+            for field in required_fields:
+                if field not in reply_data or not reply_data[field]:
+                    raise ValueError(f"Missing or empty required field: {field}")
+            
+            logger.info(f"Creating reply for post {reply_data['post_id']} by user {reply_data['user_id']}")
+            
+            response = supabase.table('post_replies').insert(reply_data).execute()
+            
+            if response.data:
+                reply = response.data[0]
+                logger.info(f"Successfully created reply with ID: {reply['id']}")
+                return reply
+            else:
+                raise Exception("No data returned from reply creation")
+                
+        except Exception as e:
+            logger.error(f"Error creating reply: {e}")
+            raise Exception(f"Failed to create reply: {e}")
+    
+    @staticmethod
+    def get_replies_for_post(post_id: int) -> List[Dict]:
+        """
+        Get all replies for a specific post.
+        
+        Args:
+            post_id (int): The post ID to get replies for
+            
+        Returns:
+            List[Dict]: List of reply dictionaries
+            
+        Raises:
+            Exception: If database query fails
+        """
+        try:
+            logger.info(f"Fetching replies for post: {post_id}")
+            
+            response = supabase.table('post_replies')\
+                .select('*')\
+                .eq('post_id', post_id)\
+                .order('created_at', desc=False)\
+                .execute()
+            
+            replies = response.data if response.data else []
+            logger.info(f"Retrieved {len(replies)} replies for post {post_id}")
+            
+            return replies
+            
+        except Exception as e:
+            logger.error(f"Error fetching replies for post {post_id}: {e}")
+            raise Exception(f"Failed to fetch replies: {e}")
 
 class UpvoteService:
     """Service for managing post upvote operations"""

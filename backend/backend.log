@@ -51,3 +51,134 @@
 2025-10-12 09:54:26,175 - api.forums.services - INFO - Retrieved 0 posts for course CEGR 3262
 2025-10-12 09:54:26,175 - api.forums.routes - INFO - Successfully fetched 0 posts for course CEGR 3262
 2025-10-12 09:54:26,175 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 09:54:26] "GET /api/forums/posts?course=CEGR%203262&limit=20&offset=0 HTTP/1.1" 200 -
+2025-10-12 10:09:27,334 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:27] "GET /api/health/ HTTP/1.1" 200 -
+2025-10-12 10:09:29,147 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 10:09:29,147 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 10:09:29,147 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 10:09:29,148 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 10:09:29,148 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 10:09:29,149 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 10:09:29,149 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 10:09:29,149 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 10:09:29,149 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:29] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 10:09:31,760 - api.forums.routes - INFO - Creating new post for course: CSC 111
+2025-10-12 10:09:31,761 - api.forums.services - INFO - Creating new post for course: CSC 111
+2025-10-12 10:09:32,618 - httpx - INFO - HTTP Request: POST https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts "HTTP/1.1 201 Created"
+2025-10-12 10:09:32,621 - api.forums.services - INFO - Successfully created post with ID: 1
+2025-10-12 10:09:32,621 - api.forums.routes - INFO - Successfully created post with ID: 1
+2025-10-12 10:09:32,622 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:32] "[35m[1mPOST /api/forums/posts HTTP/1.1[0m" 201 -
+2025-10-12 10:09:34,686 - api.forums.routes - INFO - Fetching posts for course: CSC 111 (limit: 20, offset: 0)
+2025-10-12 10:09:34,686 - api.forums.services - INFO - Fetching posts for course: CSC 111
+2025-10-12 10:09:34,939 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=%2A&course=eq.CSC%20111&order=created_at.desc "HTTP/1.1 200 OK"
+2025-10-12 10:09:34,941 - api.forums.services - INFO - Retrieved 1 posts for course CSC 111
+2025-10-12 10:09:34,941 - api.forums.routes - INFO - Successfully fetched 1 posts for course CSC 111
+2025-10-12 10:09:34,941 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:34] "GET /api/forums/posts?course=CSC%20111 HTTP/1.1" 200 -
+2025-10-12 10:09:36,959 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=%2A&user_id=eq.test_user_123&order=created_at.desc&limit=5 "HTTP/1.1 404 Not Found"
+2025-10-12 10:09:36,959 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:36] "[35m[1mGET /api/dashboard/recent-activity?user_id=test_user_123&limit=5 HTTP/1.1[0m" 500 -
+2025-10-12 10:09:39,527 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=%2A&user_id=eq.test_user_123&order=created_at.desc&limit=5 "HTTP/1.1 404 Not Found"
+2025-10-12 10:09:39,528 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:39] "[35m[1mGET /api/dashboard/recent-activity?user_id=test_user_123&limit=5 HTTP/1.1[0m" 500 -
+2025-10-12 10:09:52,462 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=%2A&user_id=eq.test_user_123&order=created_at.desc&limit=5 "HTTP/1.1 404 Not Found"
+2025-10-12 10:09:52,462 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:52] "[35m[1mGET /api/dashboard/recent-activity?user_id=test_user_123&limit=5 HTTP/1.1[0m" 500 -
+2025-10-12 10:09:54,395 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=%2A&user_id=eq.test_user_123&order=created_at.desc&limit=5 "HTTP/1.1 404 Not Found"
+2025-10-12 10:09:54,395 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:09:54] "[35m[1mGET /api/dashboard/recent-activity?user_id=test_user_123&limit=5 HTTP/1.1[0m" 500 -
+2025-10-12 10:10:03,180 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=%2A&user_id=eq.test_user_123&order=created_at.desc&limit=5 "HTTP/1.1 404 Not Found"
+2025-10-12 10:10:03,181 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:10:03] "[35m[1mGET /api/dashboard/recent-activity?user_id=test_user_123&limit=5 HTTP/1.1[0m" 500 -
+2025-10-12 10:10:05,469 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=%2A&user_id=eq.test_user_123&order=created_at.desc&limit=5 "HTTP/1.1 404 Not Found"
+2025-10-12 10:10:05,470 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:10:05] "[35m[1mGET /api/dashboard/recent-activity?user_id=test_user_123&limit=5 HTTP/1.1[0m" 500 -
+2025-10-12 10:10:20,555 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=%2A&user_id=eq.test_user_123&order=created_at.desc&limit=5 "HTTP/1.1 404 Not Found"
+2025-10-12 10:10:20,556 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:10:20] "[35m[1mGET /api/dashboard/recent-activity?user_id=test_user_123&limit=5 HTTP/1.1[0m" 500 -
+2025-10-12 10:10:29,157 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=id&user_id=eq.test_user_123 "HTTP/1.1 404 Not Found"
+2025-10-12 10:10:29,158 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:10:29] "[35m[1mGET /api/dashboard/stats?user_id=test_user_123 HTTP/1.1[0m" 500 -
+2025-10-12 10:10:36,444 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=id&user_id=eq.test_user_123 "HTTP/1.1 404 Not Found"
+2025-10-12 10:10:36,445 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:10:36] "[35m[1mGET /api/dashboard/stats?user_id=test_user_123 HTTP/1.1[0m" 500 -
+2025-10-12 10:10:53,257 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=id&user_id=eq.test_user_123 "HTTP/1.1 404 Not Found"
+2025-10-12 10:10:53,258 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:10:53] "[35m[1mGET /api/dashboard/stats?user_id=test_user_123 HTTP/1.1[0m" 500 -
+2025-10-12 10:11:00,463 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/notes?select=id&user_id=eq.test_user_123 "HTTP/1.1 404 Not Found"
+2025-10-12 10:11:00,463 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:11:00] "[35m[1mGET /api/dashboard/stats?user_id=test_user_123 HTTP/1.1[0m" 500 -
+2025-10-12 10:13:35,814 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:35] "GET /api/health/ HTTP/1.1" 200 -
+2025-10-12 10:13:35,814 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:35] "GET /api/health/ HTTP/1.1" 200 -
+2025-10-12 10:13:35,821 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 10:13:35,821 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 10:13:35,821 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 10:13:35,822 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 10:13:35,822 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 10:13:35,822 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 10:13:35,825 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 10:13:35,825 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 10:13:35,826 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 10:13:35,826 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 10:13:35,827 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 10:13:35,827 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 10:13:35,827 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 10:13:35,829 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:35] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 10:13:35,830 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 10:13:35,830 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 10:13:35,830 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 10:13:35,832 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:35] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 10:13:36,713 - api.forums.routes - INFO - Fetching posts for course: CE 378 (limit: 20, offset: 0)
+2025-10-12 10:13:36,713 - api.forums.services - INFO - Fetching posts for course: CE 378
+2025-10-12 10:13:37,157 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=%2A&course=eq.CE%20378&order=created_at.desc "HTTP/1.1 200 OK"
+2025-10-12 10:13:37,161 - api.forums.services - INFO - Retrieved 0 posts for course CE 378
+2025-10-12 10:13:37,162 - api.forums.routes - INFO - Successfully fetched 0 posts for course CE 378
+2025-10-12 10:13:37,162 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:37] "GET /api/forums/posts?course=CE%20378&limit=20&offset=0 HTTP/1.1" 200 -
+2025-10-12 10:13:45,309 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:45] "OPTIONS /api/forums/posts HTTP/1.1" 200 -
+2025-10-12 10:13:45,312 - api.forums.routes - INFO - Creating new post for course: CE 378
+2025-10-12 10:13:45,312 - api.forums.services - INFO - Creating new post for course: CE 378
+2025-10-12 10:13:45,498 - httpx - INFO - HTTP Request: POST https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts "HTTP/1.1 201 Created"
+2025-10-12 10:13:45,501 - api.forums.services - INFO - Successfully created post with ID: 2
+2025-10-12 10:13:45,502 - api.forums.routes - INFO - Successfully created post with ID: 2
+2025-10-12 10:13:45,502 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:45] "[35m[1mPOST /api/forums/posts HTTP/1.1[0m" 201 -
+2025-10-12 10:13:45,510 - api.forums.routes - INFO - Fetching posts for course: CE 378 (limit: 20, offset: 0)
+2025-10-12 10:13:45,510 - api.forums.services - INFO - Fetching posts for course: CE 378
+2025-10-12 10:13:45,673 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=%2A&course=eq.CE%20378&order=created_at.desc "HTTP/1.1 200 OK"
+2025-10-12 10:13:45,677 - api.forums.services - INFO - Retrieved 1 posts for course CE 378
+2025-10-12 10:13:45,677 - api.forums.routes - INFO - Successfully fetched 1 posts for course CE 378
+2025-10-12 10:13:45,678 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:13:45] "GET /api/forums/posts?course=CE%20378&limit=20&offset=0 HTTP/1.1" 200 -
+2025-10-12 10:15:01,468 - api.forums.routes - INFO - Toggling upvote for post 1 by user test_user_123
+2025-10-12 10:15:01,468 - api.forums.services - INFO - Toggling upvote for post 1 by user test_user_123
+2025-10-12 10:15:01,685 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/post_upvotes?select=%2A&post_id=eq.1&user_id=eq.test_user_123 "HTTP/1.1 200 OK"
+2025-10-12 10:15:01,804 - httpx - INFO - HTTP Request: POST https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/post_upvotes "HTTP/1.1 201 Created"
+2025-10-12 10:15:01,913 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=upvotes&id=eq.1 "HTTP/1.1 200 OK"
+2025-10-12 10:15:02,028 - httpx - INFO - HTTP Request: PATCH https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?id=eq.1 "HTTP/1.1 200 OK"
+2025-10-12 10:15:02,029 - api.forums.services - INFO - Updated upvote count for post 1: 0 -> 1
+2025-10-12 10:15:02,029 - api.forums.services - INFO - Added upvote for post 1
+2025-10-12 10:15:02,029 - api.forums.routes - INFO - Successfully added upvote for post 1
+2025-10-12 10:15:02,029 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:15:02] "POST /api/forums/posts/1/upvote HTTP/1.1" 200 -
+2025-10-12 10:15:04,935 - api.forums.routes - INFO - Toggling upvote for post 1 by user test_user_123
+2025-10-12 10:15:04,935 - api.forums.services - INFO - Toggling upvote for post 1 by user test_user_123
+2025-10-12 10:15:05,037 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/post_upvotes?select=%2A&post_id=eq.1&user_id=eq.test_user_123 "HTTP/1.1 200 OK"
+2025-10-12 10:15:05,133 - httpx - INFO - HTTP Request: DELETE https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/post_upvotes?post_id=eq.1&user_id=eq.test_user_123 "HTTP/1.1 200 OK"
+2025-10-12 10:15:05,224 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=upvotes&id=eq.1 "HTTP/1.1 200 OK"
+2025-10-12 10:15:05,297 - httpx - INFO - HTTP Request: PATCH https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?id=eq.1 "HTTP/1.1 200 OK"
+2025-10-12 10:15:05,297 - api.forums.services - INFO - Updated upvote count for post 1: 1 -> 0
+2025-10-12 10:15:05,297 - api.forums.services - INFO - Removed upvote for post 1
+2025-10-12 10:15:05,297 - api.forums.routes - INFO - Successfully removed upvote for post 1
+2025-10-12 10:15:05,297 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:15:05] "POST /api/forums/posts/1/upvote HTTP/1.1" 200 -
+2025-10-12 10:15:07,762 - api.forums.routes - INFO - Fetching posts for course: CSC 111 (limit: 20, offset: 0)
+2025-10-12 10:15:07,762 - api.forums.services - INFO - Fetching posts for course: CSC 111
+2025-10-12 10:15:07,815 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=%2A&course=eq.CSC%20111&order=created_at.desc "HTTP/1.1 200 OK"
+2025-10-12 10:15:07,816 - api.forums.services - INFO - Retrieved 1 posts for course CSC 111
+2025-10-12 10:15:07,817 - api.forums.routes - INFO - Successfully fetched 1 posts for course CSC 111
+2025-10-12 10:15:07,817 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:15:07] "GET /api/forums/posts?course=CSC%20111 HTTP/1.1" 200 -
+2025-10-12 10:16:14,586 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:16:14] "GET /api/health/ HTTP/1.1" 200 -
+2025-10-12 10:16:14,589 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 10:16:14,589 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 10:16:14,589 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 10:16:14,590 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 10:16:14,590 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 10:16:14,591 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 10:16:14,591 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 10:16:14,591 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 10:16:14,592 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:16:14] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 10:16:56,034 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:16:56] "[33mPOST /api/forums/posts/1/replies HTTP/1.1[0m" 404 -
+2025-10-12 10:17:02,401 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:17:02] "GET /api/health/ HTTP/1.1" 200 -
+2025-10-12 10:17:06,418 - api.forums.routes - INFO - Toggling upvote for post 1 by user test_user_123
+2025-10-12 10:17:06,418 - api.forums.services - INFO - Toggling upvote for post 1 by user test_user_123
+2025-10-12 10:17:06,625 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/post_upvotes?select=%2A&post_id=eq.1&user_id=eq.test_user_123 "HTTP/1.1 200 OK"
+2025-10-12 10:17:06,701 - httpx - INFO - HTTP Request: POST https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/post_upvotes "HTTP/1.1 201 Created"
+2025-10-12 10:17:06,766 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=upvotes&id=eq.1 "HTTP/1.1 200 OK"
+2025-10-12 10:17:06,821 - httpx - INFO - HTTP Request: PATCH https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?id=eq.1 "HTTP/1.1 200 OK"
+2025-10-12 10:17:06,822 - api.forums.services - INFO - Updated upvote count for post 1: 0 -> 1
+2025-10-12 10:17:06,822 - api.forums.services - INFO - Added upvote for post 1
+2025-10-12 10:17:06,822 - api.forums.routes - INFO - Successfully added upvote for post 1
+2025-10-12 10:17:06,823 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 10:17:06] "POST /api/forums/posts/1/upvote HTTP/1.1" 200 -

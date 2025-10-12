@@ -1,7 +1,7 @@
 
 import logging
 from flask import Blueprint, request, jsonify
-from api.forums.services import CourseDataService, ForumPostService, UpvoteService
+from api.forums.services import CourseDataService, ForumPostService, UpvoteService, ReplyService
 
 logger = logging.getLogger(__name__)
 forums_bp = Blueprint('forums', __name__)
@@ -302,5 +302,75 @@ def get_upvote_status(post_id):
         return jsonify({
             'success': False,
             'error': 'Failed to check upvote status',
+            'message': str(e)
+        }), 500
+
+@forums_bp.route('/posts/<int:post_id>/replies', methods=['GET'])
+def get_replies(post_id):
+    try:
+        logger.info(f"Fetching replies for post {post_id}")
+        
+        replies = ReplyService.get_replies_for_post(post_id)
+        
+        return jsonify({
+            'success': True,
+            'data': replies
+        })
+        
+    except Exception as e:
+        logger.error(f"Error fetching replies for post {post_id}: {e}")
+        return jsonify({
+            'success': False,
+            'error': 'Failed to fetch replies',
+            'message': str(e)
+        }), 500
+
+@forums_bp.route('/posts/<int:post_id>/replies', methods=['POST'])
+def create_reply(post_id):
+    try:
+        data = request.get_json()
+        
+        if not data:
+            return jsonify({
+                'success': False,
+                'error': 'Request body is required'
+            }), 400
+        
+        user_id = data.get('user_id')
+        user_name = data.get('user_name')
+        content = data.get('content')
+        
+        if not user_id or not user_name or not content:
+            return jsonify({
+                'success': False,
+                'error': 'user_id, user_name, and content are required'
+            }), 400
+        
+        reply_data = {
+            'post_id': post_id,
+            'user_id': user_id,
+            'user_name': user_name,
+            'content': content
+        }
+        
+        reply = ReplyService.create_reply(reply_data)
+        
+        return jsonify({
+            'success': True,
+            'data': reply
+        }), 201
+        
+    except ValueError as e:
+        logger.warning(f"Invalid parameter in create_reply: {e}")
+        return jsonify({
+            'success': False,
+            'error': 'Invalid parameter',
+            'message': str(e)
+        }), 400
+    except Exception as e:
+        logger.error(f"Error creating reply for post {post_id}: {e}")
+        return jsonify({
+            'success': False,
+            'error': 'Failed to create reply',
             'message': str(e)
         }), 500
