@@ -1,5 +1,5 @@
 'use client'
-import { SignIn, SignUp, ClerkLoaded } from '@clerk/nextjs';
+import { SignIn, SignUp } from '@clerk/nextjs';
 import { useState } from 'react';
 
 export default function AuthPage() {
@@ -30,11 +30,10 @@ export default function AuthPage() {
           </button>
         </div>
 
-        <ClerkLoaded>
           {isSignUp ? (
             <SignUp
-              routing="hash"
-              fallbackRedirectUrl='/Onboarding'
+              routing="path"
+              forceRedirectUrl="/Onboarding"
               appearance={{
                 elements: {
                   rootBox: 'w-full',
@@ -46,7 +45,7 @@ export default function AuthPage() {
           ) : (
             <SignIn
               routing="hash"
-              fallbackRedirectUrl='/Onboarding'
+              forceRedirectUrl="/dashboard"
               appearance={{
                 elements: {
                   rootBox: 'w-full',
@@ -56,7 +55,6 @@ export default function AuthPage() {
               }}
             />
           )}
-        </ClerkLoaded>
       </div>
     </div>
   );

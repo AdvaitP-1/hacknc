@@ -24,7 +24,7 @@ const getCollegeFromEmail = async (email) => {
 
 export default function OnboardingPage() {
     //Getting the current user from Clerk
-    const { user } = useUser();
+    const { user, isLoaded } = useUser();
     const router = useRouter();
 
     //Stating the variables for the form data
@@ -32,8 +32,13 @@ export default function OnboardingPage() {
     const [major, setMajor] = useState('');
     const [minor, setMinor] = useState('');
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     useEffect(() => {
+        if (isLoaded && !user) {
+            router.push('/');
+            return;
+        }
         const fetchCollege = async() => {
             if (user) {
                 setLoading(true);
@@ -47,15 +52,22 @@ export default function OnboardingPage() {
                 setLoading(false);
             }
         };
-        fetchCollege();
-    }, [user]);
+        if (user) fetchCollege();
+    }, [user, isLoaded, router]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (loading) return;
+        setLoading(true);
+        setError('');
         
         try {
             await user.update({
-                unsafeMetadata: { college, major, minor },
+                unsafeMetadata: { 
+                  university: college, 
+                  major, 
+                  minor: minor || 'None'
+                },
             });
 
             console.log('Saved user data:', {
@@ -66,7 +78,17 @@ export default function OnboardingPage() {
             router.push('/dashboard');
         } catch (error) {
             console.error('Error updating user metadata:', error);
+        } finally {
+            setLoading(false);
         }
+    }
+
+    if (!isLoaded) {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            </div>
+        );
     }
 
     return (

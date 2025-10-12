@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useAuth } from '@clerk/nextjs';
 import Navbar from '../components/navbar';
+// Forum creation state
 
 const forumsData = [
     // Store all forums
@@ -10,6 +11,9 @@ const forumsData = [
 export default function ForumsPage() {
   const { isSignedIn, userId } = useAuth();
   const [search, setSearch] = useState('');
+  const [forumTitle, setForumTitle] = useState('');
+  const [forumContent, setForumContent] = useState('');
+  const [forums, setForums] = useState(forumsData);
 
   if (!isSignedIn) {
     return (
@@ -24,11 +28,6 @@ export default function ForumsPage() {
       </div>
     );
   }
-
-  // Forum creation state
-  const [forumTitle, setForumTitle] = useState('');
-  const [forumContent, setForumContent] = useState('');
-  const [forums, setForums] = useState(forumsData);
 
   // Publish forum handler
   const handlePublishForum = () => {
