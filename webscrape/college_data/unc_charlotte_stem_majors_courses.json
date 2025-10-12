@@ -1,0 +1,828 @@
+{
+    "majors": [
+        {
+            "major": "Computer Science B.S.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "ITSC 1212",
+                    "course_name": "Introduction to Computer Science I"
+                },
+                {
+                    "course_code": "ITSC 1213",
+                    "course_name": "Introduction to Computer Science II"
+                },
+                {
+                    "course_code": "ITSC 1600",
+                    "course_name": "Computing Professionals"
+                },
+                {
+                    "course_code": "ITSC 2214",
+                    "course_name": "Data Structures and Algorithms"
+                },
+                {
+                    "course_code": "ITSC 2181",
+                    "course_name": "Introduction to Computer Systems"
+                },
+                {
+                    "course_code": "ITSC 3146",
+                    "course_name": "Introduction to Operating Systems and Networking"
+                },
+                {
+                    "course_code": "ITSC 3155",
+                    "course_name": "Software Engineering"
+                },
+                {
+                    "course_code": "ITSC 2175",
+                    "course_name": "Logic and Algorithms"
+                },
+                {
+                    "course_code": "ITSC 3688",
+                    "course_name": "Computing Ethics and Society"
+                },
+                {
+                    "course_code": "ITSC 4980",
+                    "course_name": "Senior Design I"
+                },
+                {
+                    "course_code": "ITSC 4981",
+                    "course_name": "Senior Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 1242",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "STAT 2122",
+                    "course_name": "Introduction to Probability and Statistics"
+                },
+                {
+                    "course_code": "PHYS 2101",
+                    "course_name": "Physics for Science and Engineering I (with Lab)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Electrical Engineering B.S.E.E.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science in Electrical Engineering",
+            "core_courses": [
+                {
+                    "course_code": "ECGR 2156",
+                    "course_name": "Logic and Networks Laboratory"
+                },
+                {
+                    "course_code": "ECGR 2111",
+                    "course_name": "Circuits I"
+                },
+                {
+                    "course_code": "ECGR 2112",
+                    "course_name": "Circuits II"
+                },
+                {
+                    "course_code": "ECGR 3111",
+                    "course_name": "Signals and Systems"
+                },
+                {
+                    "course_code": "ECGR 3121",
+                    "course_name": "Intro to Electromagnetic Fields"
+                },
+                {
+                    "course_code": "ECGR 3131",
+                    "course_name": "Fundamentals of Electronics/Semiconductors"
+                },
+                {
+                    "course_code": "ECGR 3142",
+                    "course_name": "Electric Energy Conversion"
+                },
+                {
+                    "course_code": "ECGR 3155",
+                    "course_name": "Systems and Electronics Lab"
+                },
+                {
+                    "course_code": "ECGR 3156",
+                    "course_name": "Electromagnetic & Electronic Devices Lab"
+                },
+                {
+                    "course_code": "ECGR 3157",
+                    "course_name": "ECE Junior Design"
+                },
+                {
+                    "course_code": "ECGR 3112",
+                    "course_name": "Systems Analysis II"
+                },
+                {
+                    "course_code": "ECGR 4241",
+                    "course_name": "Electrical Engineering Senior Design I"
+                },
+                {
+                    "course_code": "ECGR 4242",
+                    "course_name": "Electrical Engineering Senior Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 1242",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 2171",
+                    "course_name": "Engineering Calculus III"
+                },
+                {
+                    "course_code": "MATH 2164",
+                    "course_name": "Matrices and Linear Algebra"
+                },
+                {
+                    "course_code": "STAT 3128",
+                    "course_name": "Probability & Statistics for Engineers"
+                },
+                {
+                    "course_code": "PHYS 2101/2102",
+                    "course_name": "Physics for Science and Engineering I & II"
+                },
+                {
+                    "course_code": "CHEM 1251",
+                    "course_name": "Chemistry I"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Computer Engineering B.S.Cp.E.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science in Computer Engineering",
+            "core_courses": [
+                {
+                    "course_code": "ECGR 2181",
+                    "course_name": "Logic and Computer Systems"
+                },
+                {
+                    "course_code": "ECGR 2156",
+                    "course_name": "Logic and Networks Laboratory"
+                },
+                {
+                    "course_code": "ECGR 3111",
+                    "course_name": "Signals and Systems"
+                },
+                {
+                    "course_code": "ECGR 3131",
+                    "course_name": "Fundamentals of Electronics/Semiconductors"
+                },
+                {
+                    "course_code": "ECGR 3210",
+                    "course_name": "Microprocessors and Microcontrollers"
+                },
+                {
+                    "course_code": "ECGR 3220",
+                    "course_name": "Digital Logic and Systems"
+                },
+                {
+                    "course_code": "ECGR 3253",
+                    "course_name": "Computer Architecture"
+                },
+                {
+                    "course_code": "ECGR 3155",
+                    "course_name": "Systems and Electronics Lab"
+                },
+                {
+                    "course_code": "ECGR 3157",
+                    "course_name": "ECE Junior Design"
+                },
+                {
+                    "course_code": "ECGR 4241",
+                    "course_name": "Senior Design I"
+                },
+                {
+                    "course_code": "ECGR 4242",
+                    "course_name": "Senior Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 1242",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 2171",
+                    "course_name": "Engineering Calculus III"
+                },
+                {
+                    "course_code": "MATH 2164",
+                    "course_name": "Matrices and Linear Algebra"
+                },
+                {
+                    "course_code": "STAT 3128",
+                    "course_name": "Probability & Statistics for Engineers"
+                },
+                {
+                    "course_code": "PHYS 2101/2102",
+                    "course_name": "Physics for Science and Engineering I & II"
+                },
+                {
+                    "course_code": "CHEM 1251",
+                    "course_name": "Chemistry I"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Mechanical Engineering B.S.M.E.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science in Mechanical Engineering",
+            "core_courses": [
+                {
+                    "course_code": "MEGR 2141",
+                    "course_name": "Engineering Mechanics I"
+                },
+                {
+                    "course_code": "MEGR 2144",
+                    "course_name": "Introduction to Engineering Materials"
+                },
+                {
+                    "course_code": "MEGR 2152",
+                    "course_name": "CAD for Mechanical Engineers"
+                },
+                {
+                    "course_code": "MEGR 2180",
+                    "course_name": "Dynamics"
+                },
+                {
+                    "course_code": "MEGR 3121",
+                    "course_name": "Thermodynamics I"
+                },
+                {
+                    "course_code": "MEGR 3122",
+                    "course_name": "Thermodynamics II"
+                },
+                {
+                    "course_code": "MEGR 3141",
+                    "course_name": "Mechanics of Solids"
+                },
+                {
+                    "course_code": "MEGR 3221",
+                    "course_name": "Machine Analysis and Design I"
+                },
+                {
+                    "course_code": "MEGR 3222",
+                    "course_name": "Machine Analysis and Design II"
+                },
+                {
+                    "course_code": "MEGR 3111",
+                    "course_name": "Fluid Mechanics"
+                },
+                {
+                    "course_code": "MEGR 3231",
+                    "course_name": "Heat Transfer"
+                },
+                {
+                    "course_code": "MEGR 3251",
+                    "course_name": "Engineering Analysis"
+                },
+                {
+                    "course_code": "MEGR 3216",
+                    "course_name": "Introduction to Mechanical Engineering Design"
+                },
+                {
+                    "course_code": "MEGR 4255",
+                    "course_name": "Senior Design I"
+                },
+                {
+                    "course_code": "MEGR 4256",
+                    "course_name": "Senior Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 1242",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 2171",
+                    "course_name": "Engineering Calculus III"
+                },
+                {
+                    "course_code": "MATH 2164",
+                    "course_name": "Matrices and Linear Algebra"
+                },
+                {
+                    "course_code": "PHYS 2101/2102",
+                    "course_name": "Physics for Science and Engineering I & II"
+                },
+                {
+                    "course_code": "CHEM 1251",
+                    "course_name": "Chemistry I"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Civil Engineering B.S.C.E.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science in Civil Engineering",
+            "core_courses": [
+                {
+                    "course_code": "CEGR 3121",
+                    "course_name": "Structural Analysis I"
+                },
+                {
+                    "course_code": "CEGR 3122",
+                    "course_name": "Structural Analysis II"
+                },
+                {
+                    "course_code": "CEGR 3141",
+                    "course_name": "Fluid Mechanics"
+                },
+                {
+                    "course_code": "CEGR 3161",
+                    "course_name": "Transportation Engineering"
+                },
+                {
+                    "course_code": "CEGR 3211",
+                    "course_name": "Soil Mechanics"
+                },
+                {
+                    "course_code": "CEGR 3225",
+                    "course_name": "Civil Engineering Materials"
+                },
+                {
+                    "course_code": "CEGR 3255",
+                    "course_name": "Water Resources Engineering"
+                },
+                {
+                    "course_code": "CEGR 3261",
+                    "course_name": "Introduction to Environmental Engineering"
+                },
+                {
+                    "course_code": "CEGR 3278",
+                    "course_name": "Civil Engineering Systems"
+                },
+                {
+                    "course_code": "CEGR 4290",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 1242",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 2171",
+                    "course_name": "Engineering Calculus III"
+                },
+                {
+                    "course_code": "STAT 3128",
+                    "course_name": "Probability & Statistics for Engineers"
+                },
+                {
+                    "course_code": "PHYS 2101",
+                    "course_name": "Physics for Science and Engineering I"
+                },
+                {
+                    "course_code": "CHEM 1251",
+                    "course_name": "Chemistry I"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Environmental Engineering B.S.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CEGR 3261",
+                    "course_name": "Introduction to Environmental Engineering"
+                },
+                {
+                    "course_code": "CEGR 3262",
+                    "course_name": "Water and Wastewater Treatment"
+                },
+                {
+                    "course_code": "CEGR 3263",
+                    "course_name": "Air Pollution Control"
+                },
+                {
+                    "course_code": "CEGR 3255",
+                    "course_name": "Water Resources Engineering"
+                },
+                {
+                    "course_code": "CEGR 4248",
+                    "course_name": "Environmental Engineering Design I"
+                },
+                {
+                    "course_code": "CEGR 4249",
+                    "course_name": "Environmental Engineering Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 1242",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 2171",
+                    "course_name": "Engineering Calculus III"
+                },
+                {
+                    "course_code": "STAT 3128",
+                    "course_name": "Probability & Statistics for Engineers"
+                },
+                {
+                    "course_code": "PHYS 2101",
+                    "course_name": "Physics for Science and Engineering I"
+                },
+                {
+                    "course_code": "CHEM 1251/1252",
+                    "course_name": "Chemistry I & II"
+                }
+            ],
+            "total_credit_hours": 128
+        },
+        {
+            "major": "Mathematics B.S.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                },
+                {
+                    "course_code": "MATH 1242",
+                    "course_name": "Calculus II"
+                },
+                {
+                    "course_code": "MATH 2164",
+                    "course_name": "Matrices and Linear Algebra"
+                },
+                {
+                    "course_code": "MATH 2167",
+                    "course_name": "Introduction to Mathematical Reasoning"
+                },
+                {
+                    "course_code": "MATH 2171",
+                    "course_name": "Engineering Calculus III"
+                },
+                {
+                    "course_code": "MATH 2241",
+                    "course_name": "Calculus III (Alternate Numbering)"
+                },
+                {
+                    "course_code": "MATH 2242",
+                    "course_name": "Calculus IV (Alternate Numbering)"
+                },
+                {
+                    "course_code": "MATH 3141",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "MATH 3163",
+                    "course_name": "Linear Algebra"
+                },
+                {
+                    "course_code": "MATH 3171",
+                    "course_name": "Advanced Calculus I"
+                },
+                {
+                    "course_code": "STAT 3110",
+                    "course_name": "Introduction to Probability and Statistics"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "ITSC 1212",
+                    "course_name": "Introduction to Computer Science I"
+                },
+                {
+                    "course_code": "ITSC 1213",
+                    "course_name": "Introduction to Computer Science II"
+                },
+                {
+                    "course_code": "Science Electives",
+                    "course_name": "11 credit hours of approved science electives"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Biology B.S.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BIOL 1110",
+                    "course_name": "Principles of Biology I"
+                },
+                {
+                    "course_code": "BIOL 1120",
+                    "course_name": "Principles of Biology II"
+                },
+                {
+                    "course_code": "BIOL 2120",
+                    "course_name": "Molecular Biology and Genetics"
+                },
+                {
+                    "course_code": "BIOL 2130",
+                    "course_name": "Ecology and Evolution"
+                },
+                {
+                    "course_code": "BIOL 3111",
+                    "course_name": "Cell Biology"
+                },
+                {
+                    "course_code": "BIOL 3144",
+                    "course_name": "Ecology"
+                },
+                {
+                    "course_code": "BIOL 3273",
+                    "course_name": "Genetics"
+                },
+                {
+                    "course_code": "BIOL 3312",
+                    "course_name": "Microbiology"
+                },
+                {
+                    "course_code": "BIOL 4250",
+                    "course_name": "Advanced Microbiology"
+                },
+                {
+                    "course_code": "BIOL 4700",
+                    "course_name": "Senior Seminar/Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CHEM 1251/1251L",
+                    "course_name": "Chemistry I with Lab"
+                },
+                {
+                    "course_code": "CHEM 1252/1252L",
+                    "course_name": "Chemistry II with Lab"
+                },
+                {
+                    "course_code": "PHYS 1101/1102 or PHYS 2101/2102",
+                    "course_name": "Physics Sequence (Algebra- or Calculus-based)"
+                },
+                {
+                    "course_code": "MATH 1241",
+                    "course_name": "Calculus I"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Chemistry B.S.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CHEM 1251/1251L",
+                    "course_name": "General Chemistry I with Lab"
+                },
+                {
+                    "course_code": "CHEM 1252/1252L",
+                    "course_name": "General Chemistry II with Lab"
+                },
+                {
+                    "course_code": "CHEM 2131/2131L",
+                    "course_name": "Organic Chemistry I with Lab"
+                },
+                {
+                    "course_code": "CHEM 2132/2132L",
+                    "course_name": "Organic Chemistry II with Lab"
+                },
+                {
+                    "course_code": "CHEM 3111",
+                    "course_name": "Analytical Chemistry I"
+                },
+                {
+                    "course_code": "CHEM 3113",
+                    "course_name": "Physical Chemistry I"
+                },
+                {
+                    "course_code": "CHEM 3114",
+                    "course_name": "Physical Chemistry II"
+                },
+                {
+                    "course_code": "CHEM 3121",
+                    "course_name": "Inorganic Chemistry"
+                },
+                {
+                    "course_code": "CHEM 4695",
+                    "course_name": "Senior Seminar"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241/1242",
+                    "course_name": "Calculus I & II"
+                },
+                {
+                    "course_code": "PHYS 2101/2102",
+                    "course_name": "Physics for Science and Engineering I & II"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Physics B.S.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "PHYS 2101",
+                    "course_name": "Physics for Science and Engineering I"
+                },
+                {
+                    "course_code": "PHYS 2102",
+                    "course_name": "Physics for Science and Engineering II"
+                },
+                {
+                    "course_code": "PHYS 3121",
+                    "course_name": "Intermediate Mechanics"
+                },
+                {
+                    "course_code": "PHYS 3141",
+                    "course_name": "Introduction to Modern Physics"
+                },
+                {
+                    "course_code": "PHYS 3221",
+                    "course_name": "Electricity and Magnetism I"
+                },
+                {
+                    "course_code": "PHYS 3231",
+                    "course_name": "Thermodynamics and Statistical Mechanics"
+                },
+                {
+                    "course_code": "PHYS 3241",
+                    "course_name": "Quantum Mechanics I"
+                },
+                {
+                    "course_code": "PHYS 3281",
+                    "course_name": "Experimental Physics Laboratory"
+                },
+                {
+                    "course_code": "PHYS 4697",
+                    "course_name": "Senior Seminar/Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1241/1242",
+                    "course_name": "Calculus I & II"
+                },
+                {
+                    "course_code": "MATH 2171",
+                    "course_name": "Engineering Calculus III"
+                },
+                {
+                    "course_code": "MATH 3163",
+                    "course_name": "Linear Algebra"
+                },
+                {
+                    "course_code": "MATH 3141",
+                    "course_name": "Differential Equations"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Construction Management B.S.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CMET 1311",
+                    "course_name": "Introduction to Construction"
+                },
+                {
+                    "course_code": "ETCE 2163",
+                    "course_name": "Construction Graphics"
+                },
+                {
+                    "course_code": "CMET 2313",
+                    "course_name": "Construction Materials and Methods"
+                },
+                {
+                    "course_code": "CMET 3121",
+                    "course_name": "Construction Estimating"
+                },
+                {
+                    "course_code": "CMET 3131",
+                    "course_name": "Construction Scheduling"
+                },
+                {
+                    "course_code": "CMET 3221",
+                    "course_name": "Construction Safety"
+                },
+                {
+                    "course_code": "CMET 4223",
+                    "course_name": "Construction Law and Contracts"
+                },
+                {
+                    "course_code": "CMET 4279",
+                    "course_name": "Senior Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1120 or higher",
+                    "course_name": "Mathematics Requirement"
+                },
+                {
+                    "course_code": "PHYS 1101",
+                    "course_name": "Introductory Physics I"
+                },
+                {
+                    "course_code": "CHEM 1200-level",
+                    "course_name": "Chemistry Requirement"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Electrical Engineering Technology B.S.E.T.",
+            "university": "University of North Carolina at Charlotte",
+            "degree_type": "Bachelor of Science in Engineering Technology",
+            "core_courses": [
+                {
+                    "course_code": "EGET 1100",
+                    "course_name": "Introduction to EET"
+                },
+                {
+                    "course_code": "EGET 2111",
+                    "course_name": "Circuit Analysis I"
+                },
+                {
+                    "course_code": "EGET 2112",
+                    "course_name": "Circuit Analysis II"
+                },
+                {
+                    "course_code": "EGET 3131",
+                    "course_name": "Electronics I"
+                },
+                {
+                    "course_code": "EGET 3132",
+                    "course_name": "Electronics II"
+                },
+                {
+                    "course_code": "EGET 3221",
+                    "course_name": "Digital Logic"
+                },
+                {
+                    "course_code": "EGET 3241",
+                    "course_name": "Electric Machines and Power"
+                },
+                {
+                    "course_code": "EGET 4279",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MATH 1121/1122",
+                    "course_name": "Calculus for Technology I & II"
+                },
+                {
+                    "course_code": "PHYS 1101/1102",
+                    "course_name": "Introductory Physics I & II"
+                },
+                {
+                    "course_code": "CHEM 1111",
+                    "course_name": "Chemistry Fundamentals"
+                }
+            ],
+            "total_credit_hours": 120
+        }
+    ]
+}
