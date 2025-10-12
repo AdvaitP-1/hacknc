@@ -1,49 +1,375 @@
 {
     "majors": [
         {
+            "major": "Aerospace Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MAE 201",
+                    "course_name": "Engineering Thermodynamics I"
+                },
+                {
+                    "course_code": "MAE 206",
+                    "course_name": "Engineering Statics"
+                },
+                {
+                    "course_code": "MAE 208",
+                    "course_name": "Engineering Dynamics"
+                },
+                {
+                    "course_code": "MAE 214",
+                    "course_name": "Solid Mechanics"
+                },
+                {
+                    "course_code": "MAE 308",
+                    "course_name": "Fluid Mechanics"
+                },
+                {
+                    "course_code": "MAE 371",
+                    "course_name": "Aerospace Structures"
+                },
+                {
+                    "course_code": "MAE 451",
+                    "course_name": "Aerodynamics I"
+                },
+                {
+                    "course_code": "MAE 452",
+                    "course_name": "Aerodynamics II"
+                },
+                {
+                    "course_code": "MAE 471",
+                    "course_name": "Aerospace Propulsion"
+                },
+                {
+                    "course_code": "MAE 478",
+                    "course_name": "Space Flight Mechanics"
+                },
+                {
+                    "course_code": "MAE 480/481",
+                    "course_name": "Aerospace Engineering Design I/II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics for Engineers and Scientists I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry - A Molecular Science / Lab"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Biomedical Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BME 201",
+                    "course_name": "Introduction to Biomedical Engineering"
+                },
+                {
+                    "course_code": "BME 204",
+                    "course_name": "Biomedical Measurements"
+                },
+                {
+                    "course_code": "BME 302",
+                    "course_name": "Biomedical Engineering Design and Manufacturing"
+                },
+                {
+                    "course_code": "BME 310",
+                    "course_name": "Systems Physiology for Engineers"
+                },
+                {
+                    "course_code": "BME 315",
+                    "course_name": "Biomechanics"
+                },
+                {
+                    "course_code": "BME 316",
+                    "course_name": "Biolectricity"
+                },
+                {
+                    "course_code": "BME 351",
+                    "course_name": "Biomaterials"
+                },
+                {
+                    "course_code": "BME 490",
+                    "course_name": "Biomedical Engineering Design I"
+                },
+                {
+                    "course_code": "BME 491",
+                    "course_name": "Biomedical Engineering Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 201/202",
+                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 183",
+                    "course_name": "Introductory Biology: Cellular and Molecular"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Chemical Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CHE 205",
+                    "course_name": "Chemical Process Principles"
+                },
+                {
+                    "course_code": "CHE 225",
+                    "course_name": "Problem Solving in Chemical Engineering"
+                },
+                {
+                    "course_code": "CHE 311",
+                    "course_name": "Transport Processes I"
+                },
+                {
+                    "course_code": "CHE 312",
+                    "course_name": "Transport Processes II"
+                },
+                {
+                    "course_code": "CHE 315",
+                    "course_name": "Chemical Process Thermodynamics"
+                },
+                {
+                    "course_code": "CHE 316",
+                    "course_name": "Chemical Engineering Thermodynamics II"
+                },
+                {
+                    "course_code": "CHE 330",
+                    "course_name": "Chemical Engineering Lab I"
+                },
+                {
+                    "course_code": "CHE 331",
+                    "course_name": "Chemical Reactor Design"
+                },
+                {
+                    "course_code": "CHE 450/451",
+                    "course_name": "Chemical Engineering Design I/II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 201/202",
+                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 221/222",
+                    "course_name": "Organic Chemistry I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Civil Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CE 214",
+                    "course_name": "Engineering Mechanics (Statics)"
+                },
+                {
+                    "course_code": "CE 225",
+                    "course_name": "Mechanics of Solids"
+                },
+                {
+                    "course_code": "CE 297",
+                    "course_name": "Civil Engineering Tools"
+                },
+                {
+                    "course_code": "CE 301",
+                    "course_name": "Engineering Surveying/Geomatics"
+                },
+                {
+                    "course_code": "CE 305",
+                    "course_name": "Fluid Mechanics for Civil Engineers"
+                },
+                {
+                    "course_code": "CE 325",
+                    "course_name": "Structural Analysis"
+                },
+                {
+                    "course_code": "CE 327",
+                    "course_name": "Reinforced Concrete Design"
+                },
+                {
+                    "course_code": "CE 342",
+                    "course_name": "Transportation Engineering"
+                },
+                {
+                    "course_code": "CE 382",
+                    "course_name": "Hydraulics"
+                },
+                {
+                    "course_code": "CE 400",
+                    "course_name": "Senior Design Project"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry (Lecture/Lab)"
+                },
+                {
+                    "course_code": "MEA 101",
+                    "course_name": "Geology I (Earth Science)"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Computer Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "ECE 109",
+                    "course_name": "Introduction to Computer Systems"
+                },
+                {
+                    "course_code": "ECE 211/212",
+                    "course_name": "Electric Circuits I/II"
+                },
+                {
+                    "course_code": "ECE 214",
+                    "course_name": "ECE Lab"
+                },
+                {
+                    "course_code": "ECE 306",
+                    "course_name": "Intro to Semiconductor Devices"
+                },
+                {
+                    "course_code": "ECE 310",
+                    "course_name": "Signals and Systems"
+                },
+                {
+                    "course_code": "ECE 331",
+                    "course_name": "Principles of Electronics"
+                },
+                {
+                    "course_code": "ECE 342",
+                    "course_name": "Computer Hardware/Logic Design"
+                },
+                {
+                    "course_code": "ECE 480/481",
+                    "course_name": "Senior Design I/II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
             "major": "Computer Science B.S.",
             "university": "North Carolina State University",
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "CSC 111",
-                    "course_name": "Introduction to Computing"
-                },
-                {
-                    "course_code": "CSC 112",
-                    "course_name": "Fundamentals of Programming"
-                },
-                {
-                    "course_code": "CSC 212",
-                    "course_name": "Data Structures"
+                    "course_code": "CSC 116",
+                    "course_name": "Introduction to Computing - Java"
                 },
                 {
                     "course_code": "CSC 216",
-                    "course_name": "C Programming and Software Development"
+                    "course_name": "Programming Concepts - Java"
                 },
                 {
                     "course_code": "CSC 226",
-                    "course_name": "Discrete Structures in Computer Science"
+                    "course_name": "Discrete Mathematics for Computer Scientists"
                 },
                 {
                     "course_code": "CSC 230",
-                    "course_name": "Introduction to Computer Organization and Architecture"
+                    "course_name": "C and Software Tools"
+                },
+                {
+                    "course_code": "CSC 246",
+                    "course_name": "Concepts and Facilities of Operating Systems"
                 },
                 {
                     "course_code": "CSC 316",
                     "course_name": "Data Structures and Algorithms"
                 },
                 {
-                    "course_code": "CSC 418",
-                    "course_name": "Introduction to Databases"
-                },
-                {
-                    "course_code": "CSC 420",
-                    "course_name": "Operating Systems"
-                },
-                {
-                    "course_code": "CSC 430",
+                    "course_code": "CSC 326",
                     "course_name": "Software Engineering"
+                },
+                {
+                    "course_code": "CSC 333",
+                    "course_name": "Automata, Grammars, and Computability"
+                },
+                {
+                    "course_code": "CSC 440",
+                    "course_name": "Database Management Systems"
                 },
                 {
                     "course_code": "CSC 492",
@@ -52,23 +378,85 @@
             ],
             "math_science_requirements": [
                 {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
+                    "course_code": "MA 141/241",
+                    "course_name": "Calculus I/II"
                 },
                 {
-                    "course_code": "MAT 241",
-                    "course_name": "Discrete Mathematics"
+                    "course_code": "MA 225",
+                    "course_name": "Foundations of Advanced Mathematics"
                 },
                 {
-                    "course_code": "PHY 101",
-                    "course_name": "General Physics I"
+                    "course_code": "ST 370",
+                    "course_name": "Probability and Statistics for Engineers"
                 },
                 {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry I (Lecture/Lab)"
                 }
             ],
             "total_credit_hours": 121
+        },
+        {
+            "major": "Construction Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CE 214",
+                    "course_name": "Engineering Mechanics (Statics)"
+                },
+                {
+                    "course_code": "CE 327",
+                    "course_name": "Reinforced Concrete Design"
+                },
+                {
+                    "course_code": "CE 332",
+                    "course_name": "Construction Equipment and Methods"
+                },
+                {
+                    "course_code": "CE 333",
+                    "course_name": "Project Planning and Scheduling"
+                },
+                {
+                    "course_code": "CE 367",
+                    "course_name": "Construction Estimating"
+                },
+                {
+                    "course_code": "CE 401",
+                    "course_name": "Civil Engineering Project Design"
+                },
+                {
+                    "course_code": "CE 463",
+                    "course_name": "Construction Operations and Safety"
+                },
+                {
+                    "course_code": "CE 469",
+                    "course_name": "Construction Contracts and Law"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry (Lecture/Lab)"
+                },
+                {
+                    "course_code": "MEA 101",
+                    "course_name": "Geology I (recommended)"
+                }
+            ],
+            "total_credit_hours": 126
         },
         {
             "major": "Electrical Engineering B.S.",
@@ -76,289 +464,123 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "EEE 101",
-                    "course_name": "Introduction to Electrical Engineering"
+                    "course_code": "ECE 109",
+                    "course_name": "Introduction to Computer Systems"
                 },
                 {
-                    "course_code": "EEE 211",
-                    "course_name": "Circuit Analysis I"
+                    "course_code": "ECE 211/212",
+                    "course_name": "Electric Circuits I/II"
                 },
                 {
-                    "course_code": "EEE 212",
-                    "course_name": "Circuit Analysis II"
+                    "course_code": "ECE 214",
+                    "course_name": "ECE Lab"
                 },
                 {
-                    "course_code": "EEE 220",
-                    "course_name": "Electronics"
+                    "course_code": "ECE 301",
+                    "course_name": "Linear Systems"
                 },
                 {
-                    "course_code": "EEE 321",
-                    "course_name": "Signals and Systems"
+                    "course_code": "ECE 305",
+                    "course_name": "Principles of Electromagnetics"
                 },
                 {
-                    "course_code": "EEE 330",
-                    "course_name": "Digital Systems Design"
+                    "course_code": "ECE 306",
+                    "course_name": "Intro to Semiconductor Devices"
                 },
                 {
-                    "course_code": "EEE 341",
-                    "course_name": "Electromagnetic Fields and Waves"
+                    "course_code": "ECE 331",
+                    "course_name": "Principles of Electronics"
                 },
                 {
-                    "course_code": "EEE 430",
-                    "course_name": "Control Systems"
+                    "course_code": "ECE 342",
+                    "course_name": "Microelectronics/Logic Design"
                 },
                 {
-                    "course_code": "EEE 482",
-                    "course_name": "Senior Design Project"
+                    "course_code": "ECE 480/481",
+                    "course_name": "Senior Design I/II"
                 }
             ],
             "math_science_requirements": [
                 {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
                 },
                 {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
                 },
                 {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
                 },
                 {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry I (Lecture/Lab)"
                 }
             ],
-            "total_credit_hours": 128
+            "total_credit_hours": 126
         },
         {
-            "major": "Mechanical Engineering B.S.",
+            "major": "Environmental Engineering B.S.",
             "university": "North Carolina State University",
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "ME 101",
-                    "course_name": "Introduction to Mechanical Engineering"
+                    "course_code": "CE 282",
+                    "course_name": "Introduction to Environmental Engineering"
                 },
                 {
-                    "course_code": "ME 212",
-                    "course_name": "Mechanical Engineering Graphics"
+                    "course_code": "CE 373",
+                    "course_name": "Fundamentals of Environmental Engineering"
                 },
                 {
-                    "course_code": "ME 250",
-                    "course_name": "Thermodynamics I"
+                    "course_code": "CE 378",
+                    "course_name": "Environmental Measurement and Analysis"
                 },
                 {
-                    "course_code": "ME 315",
-                    "course_name": "Materials Science and Engineering"
+                    "course_code": "CE 477",
+                    "course_name": "Air Pollution Control Engineering"
                 },
                 {
-                    "course_code": "ME 340",
-                    "course_name": "Dynamics"
+                    "course_code": "CE 478",
+                    "course_name": "Water and Wastewater Engineering"
                 },
                 {
-                    "course_code": "ME 350",
-                    "course_name": "Fluid Mechanics"
+                    "course_code": "CE 479",
+                    "course_name": "Solid and Hazardous Waste Management"
                 },
                 {
-                    "course_code": "ME 360",
-                    "course_name": "Mechanical Systems and Design"
+                    "course_code": "CE 480",
+                    "course_name": "Hydraulic Engineering Design"
                 },
                 {
-                    "course_code": "ME 460",
-                    "course_name": "Mechanical Systems Dynamics"
-                },
-                {
-                    "course_code": "ME 492",
-                    "course_name": "Senior Design Project"
+                    "course_code": "CE 481",
+                    "course_name": "Environmental Engineering Project Design"
                 }
             ],
             "math_science_requirements": [
                 {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
                 },
                 {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
                 },
                 {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
                 },
                 {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
+                    "course_code": "CH 101/102 & CH 201/202",
+                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181",
+                    "course_name": "Introductory Biology: Ecology, Evolution, Biodiversity"
                 }
             ],
-            "total_credit_hours": 128
-        },
-        {
-            "major": "Biological Engineering B.S.",
-            "university": "North Carolina State University",
-            "degree_type": "Bachelor of Science",
-            "core_courses": [
-                {
-                    "course_code": "BE 101",
-                    "course_name": "Introduction to Biological Engineering"
-                },
-                {
-                    "course_code": "BE 220",
-                    "course_name": "Introduction to Biomaterials"
-                },
-                {
-                    "course_code": "BE 240",
-                    "course_name": "Bioengineering Fluid Mechanics"
-                },
-                {
-                    "course_code": "BE 350",
-                    "course_name": "Bioprocess Engineering"
-                },
-                {
-                    "course_code": "BE 460",
-                    "course_name": "Bioengineering Modeling"
-                },
-                {
-                    "course_code": "BE 462",
-                    "course_name": "Biochemical Engineering"
-                },
-                {
-                    "course_code": "BE 492",
-                    "course_name": "Senior Design Project"
-                }
-            ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
-                },
-                {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
-                },
-                {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
-                },
-                {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
-                }
-            ],
-            "total_credit_hours": 120
-        },
-        {
-            "major": "Chemical Engineering B.S.",
-            "university": "North Carolina State University",
-            "degree_type": "Bachelor of Science",
-            "core_courses": [
-                {
-                    "course_code": "CE 101",
-                    "course_name": "Introduction to Chemical Engineering"
-                },
-                {
-                    "course_code": "CE 211",
-                    "course_name": "Chemical Process Principles"
-                },
-                {
-                    "course_code": "CE 241",
-                    "course_name": "Material and Energy Balances"
-                },
-                {
-                    "course_code": "CE 311",
-                    "course_name": "Transport Phenomena"
-                },
-                {
-                    "course_code": "CE 330",
-                    "course_name": "Chemical Engineering Thermodynamics"
-                },
-                {
-                    "course_code": "CE 350",
-                    "course_name": "Chemical Engineering Kinetics"
-                },
-                {
-                    "course_code": "CE 460",
-                    "course_name": "Process Control"
-                },
-                {
-                    "course_code": "CE 492",
-                    "course_name": "Senior Design Project"
-                }
-            ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
-                },
-                {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
-                },
-                {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
-                },
-                {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
-                }
-            ],
-            "total_credit_hours": 128
-        },
-        {
-            "major": "Civil Engineering B.S.",
-            "university": "North Carolina State University",
-            "degree_type": "Bachelor of Science",
-            "core_courses": [
-                {
-                    "course_code": "CE 101",
-                    "course_name": "Introduction to Civil Engineering"
-                },
-                {
-                    "course_code": "CE 211",
-                    "course_name": "Engineering Mechanics I"
-                },
-                {
-                    "course_code": "CE 221",
-                    "course_name": "Surveying and Mapping"
-                },
-                {
-                    "course_code": "CE 310",
-                    "course_name": "Fluid Mechanics"
-                },
-                {
-                    "course_code": "CE 350",
-                    "course_name": "Structural Analysis"
-                },
-                {
-                    "course_code": "CE 450",
-                    "course_name": "Transportation Engineering"
-                },
-                {
-                    "course_code": "CE 492",
-                    "course_name": "Senior Design Project"
-                }
-            ],
-            "math_science_requirements": [
-                {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
-                },
-                {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
-                },
-                {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
-                },
-                {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
-                }
-            ],
-            "total_credit_hours": 128
+            "total_credit_hours": 126
         },
         {
             "major": "Industrial Engineering B.S.",
@@ -366,103 +588,763 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "IE 101",
+                    "course_code": "ISE 110",
                     "course_name": "Introduction to Industrial Engineering"
                 },
                 {
-                    "course_code": "IE 205",
-                    "course_name": "Engineering Economics"
+                    "course_code": "ISE 215",
+                    "course_name": "Manufacturing Engineering I"
                 },
                 {
-                    "course_code": "IE 315",
-                    "course_name": "Manufacturing Processes"
+                    "course_code": "ISE 311",
+                    "course_name": "Engineering Economic Analysis"
                 },
                 {
-                    "course_code": "IE 330",
-                    "course_name": "Operations Research I"
+                    "course_code": "ISE 315",
+                    "course_name": "Stochastic Models in IE"
                 },
                 {
-                    "course_code": "IE 350",
-                    "course_name": "Human Factors Engineering"
+                    "course_code": "ISE 316",
+                    "course_name": "Deterministic Models in IE"
                 },
                 {
-                    "course_code": "IE 480",
-                    "course_name": "Engineering Optimization"
+                    "course_code": "ISE 352",
+                    "course_name": "Systems Safety Engineering"
                 },
                 {
-                    "course_code": "IE 492",
-                    "course_name": "Senior Design Project"
+                    "course_code": "ISE 453",
+                    "course_name": "Production Planning and Control"
+                },
+                {
+                    "course_code": "ISE 485",
+                    "course_name": "Facilities Planning and Material Handling"
+                },
+                {
+                    "course_code": "ISE 489",
+                    "course_name": "Systems Design (Senior Design)"
                 }
             ],
             "math_science_requirements": [
                 {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
                 },
                 {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
+                    "course_code": "ST 371",
+                    "course_name": "Probability and Statistics for Engineers"
                 },
                 {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
                 },
                 {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry I (Lecture/Lab)"
                 }
             ],
-            "total_credit_hours": 128
+            "total_credit_hours": 126
         },
         {
-            "major": "Materials Science & Engineering B.S.",
+            "major": "Materials Science and Engineering B.S.",
             "university": "North Carolina State University",
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "MSE 101",
-                    "course_name": "Introduction to Materials Science"
+                    "course_code": "MSE 201",
+                    "course_name": "Structure of Materials"
                 },
                 {
-                    "course_code": "MSE 220",
-                    "course_name": "Materials Structure and Properties"
+                    "course_code": "MSE 200",
+                    "course_name": "Mechanical Properties of Structural Materials"
                 },
                 {
-                    "course_code": "MSE 240",
+                    "course_code": "MSE 250",
+                    "course_name": "Materials Science Lab I"
+                },
+                {
+                    "course_code": "MSE 300",
+                    "course_name": "Structure and Diffusion in Materials"
+                },
+                {
+                    "course_code": "MSE 301",
                     "course_name": "Thermodynamics of Materials"
                 },
                 {
-                    "course_code": "MSE 350",
-                    "course_name": "Mechanical Behavior of Materials"
+                    "course_code": "MSE 302",
+                    "course_name": "Kinetics of Materials Processes"
                 },
                 {
-                    "course_code": "MSE 420",
-                    "course_name": "Materials Characterization"
+                    "course_code": "MSE 355",
+                    "course_name": "Materials Science Lab II"
                 },
                 {
-                    "course_code": "MSE 492",
-                    "course_name": "Senior Design Project"
+                    "course_code": "MSE 401",
+                    "course_name": "Physical Metallurgy"
+                },
+                {
+                    "course_code": "MSE 455",
+                    "course_name": "Materials Processing and Design"
+                },
+                {
+                    "course_code": "MSE 491/492",
+                    "course_name": "Senior Design I/II"
                 }
             ],
             "math_science_requirements": [
                 {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
                 },
                 {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
                 },
                 {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
                 },
                 {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
                 }
             ],
-            "total_credit_hours": 128
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Mechanical Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MAE 201",
+                    "course_name": "Engineering Thermodynamics I"
+                },
+                {
+                    "course_code": "MAE 206",
+                    "course_name": "Engineering Statics"
+                },
+                {
+                    "course_code": "MAE 208",
+                    "course_name": "Engineering Dynamics"
+                },
+                {
+                    "course_code": "MAE 214",
+                    "course_name": "Solid Mechanics"
+                },
+                {
+                    "course_code": "MAE 301",
+                    "course_name": "Engineering Thermodynamics II"
+                },
+                {
+                    "course_code": "MAE 308",
+                    "course_name": "Fluid Mechanics"
+                },
+                {
+                    "course_code": "MAE 314",
+                    "course_name": "Mechanics of Machines"
+                },
+                {
+                    "course_code": "MAE 318",
+                    "course_name": "Introduction to Machine Design"
+                },
+                {
+                    "course_code": "MAE 435",
+                    "course_name": "Heat Transfer"
+                },
+                {
+                    "course_code": "MAE 480/481",
+                    "course_name": "Mechanical Engineering Design I/II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Nuclear Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "NE 201",
+                    "course_name": "Introduction to Nuclear Engineering"
+                },
+                {
+                    "course_code": "NE 202",
+                    "course_name": "Radiation and Reactor Fundamentals"
+                },
+                {
+                    "course_code": "NE 301",
+                    "course_name": "Radiation Safety and Shielding"
+                },
+                {
+                    "course_code": "NE 302",
+                    "course_name": "Reactor Engineering"
+                },
+                {
+                    "course_code": "NE 401",
+                    "course_name": "Reactor Analysis and Design I"
+                },
+                {
+                    "course_code": "NE 402",
+                    "course_name": "Reactor Analysis and Design II"
+                },
+                {
+                    "course_code": "NE 402L",
+                    "course_name": "Nuclear Engineering Laboratory"
+                },
+                {
+                    "course_code": "NE 490/491",
+                    "course_name": "Nuclear Engineering Design I/II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Paper Science and Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "PSE 201",
+                    "course_name": "Pulp and Paper Science and Engineering I"
+                },
+                {
+                    "course_code": "PSE 211",
+                    "course_name": "Pulping and Papermaking Process Analysis"
+                },
+                {
+                    "course_code": "PSE 212",
+                    "course_name": "Paper Process Analytics and Quality"
+                },
+                {
+                    "course_code": "PSE 300",
+                    "course_name": "Unit Operations in Pulp and Paper"
+                },
+                {
+                    "course_code": "PSE 371",
+                    "course_name": "Introduction to Process Control"
+                },
+                {
+                    "course_code": "PSE 465",
+                    "course_name": "Pulp and Paper Process Design I"
+                },
+                {
+                    "course_code": "PSE 466",
+                    "course_name": "Pulp and Paper Process Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 201/202",
+                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 221/223",
+                    "course_name": "Organic Chemistry I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Applied Mathematics B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 225",
+                    "course_name": "Foundations of Advanced Mathematics"
+                },
+                {
+                    "course_code": "MA 305",
+                    "course_name": "Elementary Linear Algebra"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "MA 405",
+                    "course_name": "Linear Algebra and Matrix Theory"
+                },
+                {
+                    "course_code": "MA 421",
+                    "course_name": "Introduction to Probability"
+                },
+                {
+                    "course_code": "MA 425",
+                    "course_name": "Mathematical Analysis I"
+                },
+                {
+                    "course_code": "MA 493",
+                    "course_name": "Senior Seminar in Applied Mathematics"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 208/209",
+                    "course_name": "Physics II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CSC 116",
+                    "course_name": "Introduction to Computing - Java"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Biological Sciences B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "BIO 202",
+                    "course_name": "Laboratory Investigations in Biology"
+                },
+                {
+                    "course_code": "GN 311",
+                    "course_name": "Principles of Genetics"
+                },
+                {
+                    "course_code": "BIO 330",
+                    "course_name": "Evolutionary Biology"
+                },
+                {
+                    "course_code": "BIO 250",
+                    "course_name": "Introductory Microbiology"
+                },
+                {
+                    "course_code": "BIO 495",
+                    "course_name": "Senior Capstone/Topics (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 205/206 or PY 211/212",
+                    "course_name": "Physics I/II (calc- or algebra-based)"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus (Life Science or Engineering)"
+                },
+                {
+                    "course_code": "ST 311 or ST 370",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Chemistry B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "Chemistry - A Molecular Science / Laboratory"
+                },
+                {
+                    "course_code": "CH 201/202",
+                    "course_name": "Chemistry - A Quantitative Science / Laboratory"
+                },
+                {
+                    "course_code": "CH 221/223 & CH 222/224",
+                    "course_name": "Organic Chemistry I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 315",
+                    "course_name": "Quantitative Analysis"
+                },
+                {
+                    "course_code": "CH 431/433 & CH 432/434",
+                    "course_name": "Physical Chemistry I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 444",
+                    "course_name": "Analysis of Organic Compounds"
+                },
+                {
+                    "course_code": "CH 479",
+                    "course_name": "Chemistry Capstone/Research (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Genetics B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "GN 311",
+                    "course_name": "Principles of Genetics"
+                },
+                {
+                    "course_code": "GN 312",
+                    "course_name": "Elementary Genetics Laboratory"
+                },
+                {
+                    "course_code": "GN 421",
+                    "course_name": "Molecular Genetics"
+                },
+                {
+                    "course_code": "GN 423",
+                    "course_name": "Population, Quantitative and Evolutionary Genetics"
+                },
+                {
+                    "course_code": "GN 428",
+                    "course_name": "Genomics and Bioinformatics"
+                },
+                {
+                    "course_code": "GN 490",
+                    "course_name": "Senior Seminar in Genetics"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "ST 311 or ST 371",
+                    "course_name": "Statistics"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Geology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MEA 101",
+                    "course_name": "Introduction to Geology"
+                },
+                {
+                    "course_code": "MEA 200",
+                    "course_name": "Introduction to Oceanography (or Earth Systems)"
+                },
+                {
+                    "course_code": "MEA 211",
+                    "course_name": "Mineralogy"
+                },
+                {
+                    "course_code": "MEA 213",
+                    "course_name": "Structural Geology"
+                },
+                {
+                    "course_code": "MEA 323",
+                    "course_name": "Earth Materials"
+                },
+                {
+                    "course_code": "MEA 373",
+                    "course_name": "Field Geology"
+                },
+                {
+                    "course_code": "MEA 493",
+                    "course_name": "Senior Seminar in Geology"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Marine Sciences B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MEA 200",
+                    "course_name": "Introduction to Oceanography"
+                },
+                {
+                    "course_code": "MEA 210",
+                    "course_name": "Oceanography Lab/Techniques"
+                },
+                {
+                    "course_code": "MEA 220",
+                    "course_name": "Marine Biology"
+                },
+                {
+                    "course_code": "MEA 250",
+                    "course_name": "Introduction to Coastal Environments"
+                },
+                {
+                    "course_code": "MEA 360",
+                    "course_name": "Geological Oceanography"
+                },
+                {
+                    "course_code": "MEA 370",
+                    "course_name": "Physical Oceanography"
+                },
+                {
+                    "course_code": "MEA 420",
+                    "course_name": "Biological Oceanography"
+                },
+                {
+                    "course_code": "MEA 493",
+                    "course_name": "Senior Seminar in Marine Sciences"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 131 or MA 141/241",
+                    "course_name": "Calculus sequence"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Mathematics B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 225",
+                    "course_name": "Foundations of Advanced Mathematics"
+                },
+                {
+                    "course_code": "MA 305",
+                    "course_name": "Elementary Linear Algebra"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "MA 405",
+                    "course_name": "Linear Algebra and Matrix Theory"
+                },
+                {
+                    "course_code": "MA 407/408",
+                    "course_name": "Advanced Calculus I/II"
+                },
+                {
+                    "course_code": "MA 425",
+                    "course_name": "Mathematical Analysis I"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CSC 116",
+                    "course_name": "Intro to Computing"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Meteorology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MEA 213",
+                    "course_name": "Atmospheric Thermodynamics"
+                },
+                {
+                    "course_code": "MEA 214",
+                    "course_name": "Atmospheric Physics"
+                },
+                {
+                    "course_code": "MEA 215",
+                    "course_name": "Weather Analysis and Forecasting"
+                },
+                {
+                    "course_code": "MEA 311",
+                    "course_name": "Dynamic Meteorology I"
+                },
+                {
+                    "course_code": "MEA 312",
+                    "course_name": "Dynamic Meteorology II"
+                },
+                {
+                    "course_code": "MEA 415",
+                    "course_name": "Synoptic Meteorology"
+                },
+                {
+                    "course_code": "MEA 421",
+                    "course_name": "Boundary-Layer Meteorology"
+                },
+                {
+                    "course_code": "MEA 493",
+                    "course_name": "Senior Seminar in Meteorology"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 341",
+                    "course_name": "Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Microbiology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "MB 351/352",
+                    "course_name": "General Microbiology / Lab"
+                },
+                {
+                    "course_code": "MB 412",
+                    "course_name": "Microbial Diversity"
+                },
+                {
+                    "course_code": "MB 414",
+                    "course_name": "Microbial Metabolism"
+                },
+                {
+                    "course_code": "MB 420",
+                    "course_name": "Bacterial Physiology"
+                },
+                {
+                    "course_code": "MB 455",
+                    "course_name": "Microbial Biotechnology"
+                },
+                {
+                    "course_code": "MB 492",
+                    "course_name": "Microbiology Capstone/Research (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "ST 311 or ST 371",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
         },
         {
             "major": "Physics B.S.",
@@ -470,49 +1352,1179 @@
             "degree_type": "Bachelor of Science",
             "core_courses": [
                 {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics for Engineers and Scientists I & II (Lecture/Lab)"
                 },
                 {
-                    "course_code": "PHY 212",
-                    "course_name": "General Physics II"
+                    "course_code": "PY 310/311",
+                    "course_name": "Intermediate Mechanics I/II"
                 },
                 {
-                    "course_code": "PHY 301",
-                    "course_name": "Mathematical Methods in Physics"
+                    "course_code": "PY 401/402",
+                    "course_name": "Electromagnetic Fields I/II"
                 },
                 {
-                    "course_code": "PHY 311",
-                    "course_name": "Classical Mechanics"
+                    "course_code": "PY 403",
+                    "course_name": "Modern Physics Laboratory"
                 },
                 {
-                    "course_code": "PHY 321",
-                    "course_name": "Electromagnetic Theory"
+                    "course_code": "PY 452/453",
+                    "course_name": "Quantum Physics I/II"
                 },
                 {
-                    "course_code": "PHY 492",
-                    "course_name": "Senior Design Project"
+                    "course_code": "PY 499",
+                    "course_name": "Senior Research/Capstone (as offered)"
                 }
             ],
             "math_science_requirements": [
                 {
-                    "course_code": "MAT 171",
-                    "course_name": "Calculus for Life and Management Sciences"
+                    "course_code": "MA 141/241/242 & MA 341",
+                    "course_name": "Calculus I/II/III & Differential Equations"
                 },
                 {
-                    "course_code": "MAT 242",
-                    "course_name": "Calculus for Engineers"
-                },
-                {
-                    "course_code": "PHY 211",
-                    "course_name": "General Physics I"
-                },
-                {
-                    "course_code": "CH 101",
-                    "course_name": "Chemistry - A Molecular Science"
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
                 }
             ],
-            "total_credit_hours": 128
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Statistics B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "ST 307/308",
+                    "course_name": "Intro Statistical Programming (SAS/R)"
+                },
+                {
+                    "course_code": "ST 371/372",
+                    "course_name": "Probability / Statistical Inference"
+                },
+                {
+                    "course_code": "ST 430/431",
+                    "course_name": "Regression / Experimental Design"
+                },
+                {
+                    "course_code": "ST 445",
+                    "course_name": "Statistical Machine Learning"
+                },
+                {
+                    "course_code": "ST 495",
+                    "course_name": "Statistics Capstone (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242",
+                    "course_name": "Calculus I/II/III"
+                },
+                {
+                    "course_code": "MA 405",
+                    "course_name": "Linear Algebra"
+                },
+                {
+                    "course_code": "CSC 116",
+                    "course_name": "Intro to Computing"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Zoology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "BIO 350",
+                    "course_name": "Animal Physiology"
+                },
+                {
+                    "course_code": "BIO 432",
+                    "course_name": "Evolution"
+                },
+                {
+                    "course_code": "GN 311",
+                    "course_name": "Principles of Genetics"
+                },
+                {
+                    "course_code": "BIO 405",
+                    "course_name": "Functional Histology (representative lab)"
+                },
+                {
+                    "course_code": "BIO 495",
+                    "course_name": "Senior Capstone/Topics (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 205/206 or PY 211/212",
+                    "course_name": "Physics I/II (calc- or algebra-based)"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "ST 311 or ST 371",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Environmental Sciences B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "ES 100",
+                    "course_name": "Introduction to Environmental Sciences"
+                },
+                {
+                    "course_code": "ES 200",
+                    "course_name": "Climate Change and Sustainability"
+                },
+                {
+                    "course_code": "SSC 200",
+                    "course_name": "Soil Science"
+                },
+                {
+                    "course_code": "MEA 200",
+                    "course_name": "Introduction to Oceanography"
+                },
+                {
+                    "course_code": "NR 300",
+                    "course_name": "Natural Resource Measurements"
+                },
+                {
+                    "course_code": "ES 450",
+                    "course_name": "Environmental Assessment & Management"
+                },
+                {
+                    "course_code": "ES 490",
+                    "course_name": "Environmental Sciences Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Elements of Calculus or Calculus for Life Sciences"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 211/212 or PY 205/208",
+                    "course_name": "Physics sequence (algebra- or calculus-based)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Environmental Technology and Management B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "ETM 251",
+                    "course_name": "Environmental Monitoring and Analysis"
+                },
+                {
+                    "course_code": "ETM 310",
+                    "course_name": "Environmental Regulations and Compliance"
+                },
+                {
+                    "course_code": "ETM 320",
+                    "course_name": "Water Quality and Wastewater Treatment"
+                },
+                {
+                    "course_code": "ETM 420",
+                    "course_name": "Hazardous Waste Operations"
+                },
+                {
+                    "course_code": "ETM 431",
+                    "course_name": "Air Quality Management"
+                },
+                {
+                    "course_code": "ETM 492",
+                    "course_name": "Environmental Technology Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 201/202",
+                    "course_name": "General & Quantitative Chemistry"
+                },
+                {
+                    "course_code": "PY 211/212 or PY 205/208",
+                    "course_name": "Physics sequence"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Fisheries, Wildlife, and Conservation Biology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "FW 311",
+                    "course_name": "Wildlife Ecology and Management"
+                },
+                {
+                    "course_code": "FW 353",
+                    "course_name": "Wildlife Management Techniques"
+                },
+                {
+                    "course_code": "FW 404",
+                    "course_name": "Aquaculture"
+                },
+                {
+                    "course_code": "FW 405",
+                    "course_name": "Fishery Science and Management"
+                },
+                {
+                    "course_code": "FW 453",
+                    "course_name": "Wildlife Research Methods"
+                },
+                {
+                    "course_code": "FW 488",
+                    "course_name": "Fisheries, Wildlife, and Conservation Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Intro to Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Forest Management B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "FOR 172",
+                    "course_name": "Forest Systems"
+                },
+                {
+                    "course_code": "FOR 204",
+                    "course_name": "Silviculture"
+                },
+                {
+                    "course_code": "FOR 260",
+                    "course_name": "Forest Measurements"
+                },
+                {
+                    "course_code": "FOR 261",
+                    "course_name": "Forest Products"
+                },
+                {
+                    "course_code": "FOR 353",
+                    "course_name": "Forest Soils"
+                },
+                {
+                    "course_code": "FOR 402",
+                    "course_name": "Forest Management"
+                },
+                {
+                    "course_code": "FOR 491",
+                    "course_name": "Forest Management Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Natural Resources B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "NR 201",
+                    "course_name": "Sustainability and the Global Environment"
+                },
+                {
+                    "course_code": "NR 300",
+                    "course_name": "Natural Resource Measurements"
+                },
+                {
+                    "course_code": "NR 320",
+                    "course_name": "Natural Resources Assessment"
+                },
+                {
+                    "course_code": "NR 406",
+                    "course_name": "Conservation of Biological Diversity"
+                },
+                {
+                    "course_code": "NR 460",
+                    "course_name": "Renewable Natural Resource Management and Policy"
+                },
+                {
+                    "course_code": "NR 492",
+                    "course_name": "Natural Resources Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Sustainable Materials and Technology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "SMT 201",
+                    "course_name": "Sustainable Materials Overview"
+                },
+                {
+                    "course_code": "SMT 232",
+                    "course_name": "Processing of Sustainable Materials"
+                },
+                {
+                    "course_code": "SMT 301",
+                    "course_name": "Sustainable Systems"
+                },
+                {
+                    "course_code": "SMT 310",
+                    "course_name": "Materials Logistics and Supply Chains"
+                },
+                {
+                    "course_code": "SMT 444",
+                    "course_name": "Sustainable Product Development"
+                },
+                {
+                    "course_code": "SMT 487",
+                    "course_name": "Sustainable Materials Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 211/212 or PY 205/208",
+                    "course_name": "Physics sequence"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Textile Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "TE 110",
+                    "course_name": "Textile Engineering Orientation"
+                },
+                {
+                    "course_code": "TE 201",
+                    "course_name": "Structure and Properties of Fibers"
+                },
+                {
+                    "course_code": "TE 301",
+                    "course_name": "Engineering of Textile Structures"
+                },
+                {
+                    "course_code": "TE 303",
+                    "course_name": "Thermal and Mechanical Processing of Textiles"
+                },
+                {
+                    "course_code": "TE 401",
+                    "course_name": "Engineering Quality Control for Textiles"
+                },
+                {
+                    "course_code": "TE 404",
+                    "course_name": "Textile Engineering Design I"
+                },
+                {
+                    "course_code": "TE 405",
+                    "course_name": "Textile Engineering Design II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242 & MA 341",
+                    "course_name": "Calculus I/II/III & Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206 & PY 208/209",
+                    "course_name": "Physics I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 201/202",
+                    "course_name": "General & Quantitative Chemistry (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Polymer and Color Chemistry B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "PCC 201",
+                    "course_name": "Introduction to Polymer and Color Chemistry"
+                },
+                {
+                    "course_code": "PCC 302",
+                    "course_name": "Polymer Chemistry"
+                },
+                {
+                    "course_code": "PCC 304",
+                    "course_name": "Color Physics"
+                },
+                {
+                    "course_code": "PCC 305",
+                    "course_name": "Coloration and Finishing of Textiles"
+                },
+                {
+                    "course_code": "PCC 461",
+                    "course_name": "Polymer Characterization"
+                },
+                {
+                    "course_code": "PCC 491",
+                    "course_name": "Capstone in Polymer and Color Chemistry"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241",
+                    "course_name": "Calculus I/II"
+                },
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 221/223 & CH 222/224",
+                    "course_name": "General & Organic Chemistry I & II (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Textile Technology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "TT 105",
+                    "course_name": "Introduction to Textile Technology"
+                },
+                {
+                    "course_code": "TT 221",
+                    "course_name": "Yarn Production"
+                },
+                {
+                    "course_code": "TT 252",
+                    "course_name": "Fabric Formation"
+                },
+                {
+                    "course_code": "TT 331",
+                    "course_name": "Textile Dyeing and Finishing"
+                },
+                {
+                    "course_code": "TT 341",
+                    "course_name": "Nonwovens and Advanced Materials"
+                },
+                {
+                    "course_code": "TT 451",
+                    "course_name": "Textile Technology Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241",
+                    "course_name": "Calculus I/II"
+                },
+                {
+                    "course_code": "PY 211/212 or PY 205/208",
+                    "course_name": "Physics sequence"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Biochemistry B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BIO 183",
+                    "course_name": "Introductory Biology: Cellular and Molecular"
+                },
+                {
+                    "course_code": "GN 311",
+                    "course_name": "Principles of Genetics"
+                },
+                {
+                    "course_code": "BCH 351",
+                    "course_name": "General Biochemistry"
+                },
+                {
+                    "course_code": "BCH 451",
+                    "course_name": "Principles of Biochemistry"
+                },
+                {
+                    "course_code": "BCH 452",
+                    "course_name": "Advanced Biochemistry Laboratory"
+                },
+                {
+                    "course_code": "BCH 453",
+                    "course_name": "Biochemistry of Gene Expression"
+                },
+                {
+                    "course_code": "BCH 495",
+                    "course_name": "Biochemistry Capstone/Research (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102 & CH 221/223 & CH 222/224",
+                    "course_name": "General & Organic Chemistry I & II (Lecture/Lab)"
+                },
+                {
+                    "course_code": "PY 205/206 or PY 211/212",
+                    "course_name": "Physics sequence"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Intro to Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Biological Engineering B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BAE 200",
+                    "course_name": "Introduction to Biological and Agricultural Engineering"
+                },
+                {
+                    "course_code": "BAE 302",
+                    "course_name": "Transport Phenomena in Biological Systems"
+                },
+                {
+                    "course_code": "BAE 305",
+                    "course_name": "Soil and Water Engineering"
+                },
+                {
+                    "course_code": "BAE 315",
+                    "course_name": "Bioinstrumentation"
+                },
+                {
+                    "course_code": "BAE 325",
+                    "course_name": "Bioenvironmental Engineering"
+                },
+                {
+                    "course_code": "BAE 451/452",
+                    "course_name": "Engineering Design I/II"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 141/241/242 & MA 341",
+                    "course_name": "Calculus I/II/III & Differential Equations"
+                },
+                {
+                    "course_code": "PY 205/206",
+                    "course_name": "Physics I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                }
+            ],
+            "total_credit_hours": 126
+        },
+        {
+            "major": "Biological & Agricultural Engineering Technology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science in Engineering Technology",
+            "core_courses": [
+                {
+                    "course_code": "BBS 200",
+                    "course_name": "Introduction to Bio & Ag Systems Technology"
+                },
+                {
+                    "course_code": "BAT 240",
+                    "course_name": "Hydraulics and Pneumatics"
+                },
+                {
+                    "course_code": "BAT 310",
+                    "course_name": "Instrumentation and Controls"
+                },
+                {
+                    "course_code": "BAT 332",
+                    "course_name": "Soil and Water Technology"
+                },
+                {
+                    "course_code": "BAT 441",
+                    "course_name": "Environmental Systems Technology"
+                },
+                {
+                    "course_code": "BAT 490",
+                    "course_name": "Senior Project in BAET"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "PY 211/212",
+                    "course_name": "College Physics I/II"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Bioprocessing Science B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "BBS 200",
+                    "course_name": "Intro to Biomanufacturing Science"
+                },
+                {
+                    "course_code": "BEC 330",
+                    "course_name": "Principles of Biomanufacturing"
+                },
+                {
+                    "course_code": "BEC 430",
+                    "course_name": "Unit Operations in Biomanufacturing"
+                },
+                {
+                    "course_code": "BEC 480",
+                    "course_name": "cGMP for Biomanufacturing"
+                },
+                {
+                    "course_code": "BEC 485",
+                    "course_name": "Biomanufacturing Process Development"
+                },
+                {
+                    "course_code": "BEC 488",
+                    "course_name": "Bioprocessing Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 183 & MB 351/352",
+                    "course_name": "Cell Biology & General Microbiology/Lab"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Food Science B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "FS 201",
+                    "course_name": "Introduction to Food Science"
+                },
+                {
+                    "course_code": "FS 322",
+                    "course_name": "Food Microbiology"
+                },
+                {
+                    "course_code": "FS 341",
+                    "course_name": "Food Chemistry"
+                },
+                {
+                    "course_code": "FS 352",
+                    "course_name": "Food Safety and Quality Systems"
+                },
+                {
+                    "course_code": "FS 402",
+                    "course_name": "Processing of Foods"
+                },
+                {
+                    "course_code": "FS 453",
+                    "course_name": "Food Product Development"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "MB 351/352",
+                    "course_name": "General Microbiology / Lab"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Nutrition Sciences B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "NTR 301",
+                    "course_name": "Introduction to Human Nutrition"
+                },
+                {
+                    "course_code": "NTR 330",
+                    "course_name": "Public Health Nutrition"
+                },
+                {
+                    "course_code": "NTR 401",
+                    "course_name": "Advanced Human Nutrition and Metabolism"
+                },
+                {
+                    "course_code": "NTR 419",
+                    "course_name": "Nutrition Education"
+                },
+                {
+                    "course_code": "NTR 440",
+                    "course_name": "Nutrition and Chronic Disease"
+                },
+                {
+                    "course_code": "NTR 495",
+                    "course_name": "Nutrition Capstone/Senior Seminar"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102 & CH 221/223",
+                    "course_name": "General & Organic Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 183",
+                    "course_name": "Cellular and Molecular Biology"
+                },
+                {
+                    "course_code": "MB 351/352",
+                    "course_name": "General Microbiology / Lab"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Plant Biology B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "PB 200",
+                    "course_name": "Plant Life"
+                },
+                {
+                    "course_code": "PB 250",
+                    "course_name": "Plant Biology"
+                },
+                {
+                    "course_code": "PB 321",
+                    "course_name": "Plant Systematics"
+                },
+                {
+                    "course_code": "PB 421",
+                    "course_name": "Plant Physiology"
+                },
+                {
+                    "course_code": "PB 480",
+                    "course_name": "Plant Molecular Biology"
+                },
+                {
+                    "course_code": "PB 495",
+                    "course_name": "Plant Biology Capstone/Research (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                },
+                {
+                    "course_code": "MA 131 or MA 141",
+                    "course_name": "Calculus"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Animal Science B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "ANS 150",
+                    "course_name": "Introduction to Animal Science"
+                },
+                {
+                    "course_code": "ANS 205/206",
+                    "course_name": "Physiology of Domestic Animals / Lab"
+                },
+                {
+                    "course_code": "ANS 215",
+                    "course_name": "Animal Genetics"
+                },
+                {
+                    "course_code": "ANS 303",
+                    "course_name": "Principles of Animal Nutrition"
+                },
+                {
+                    "course_code": "ANS 402",
+                    "course_name": "Animal Management"
+                },
+                {
+                    "course_code": "ANS 495",
+                    "course_name": "Animal Science Capstone/Topics (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                },
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Horticultural Science B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "HS 201",
+                    "course_name": "The World of Horticulture"
+                },
+                {
+                    "course_code": "HS 303",
+                    "course_name": "Plant Propagation"
+                },
+                {
+                    "course_code": "HS 341",
+                    "course_name": "Plant Materials"
+                },
+                {
+                    "course_code": "HS 411",
+                    "course_name": "Plant Growth and Development"
+                },
+                {
+                    "course_code": "HS 418",
+                    "course_name": "Nursery Management"
+                },
+                {
+                    "course_code": "HS 495",
+                    "course_name": "Horticultural Science Capstone/Topics (as offered)"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                },
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Agricultural Science B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "AGS 101",
+                    "course_name": "Introduction to Agricultural Science"
+                },
+                {
+                    "course_code": "AEC 201",
+                    "course_name": "Introduction to Agricultural and Resource Economics"
+                },
+                {
+                    "course_code": "SSC 200",
+                    "course_name": "Soil Science"
+                },
+                {
+                    "course_code": "CS 213",
+                    "course_name": "Crop Science"
+                },
+                {
+                    "course_code": "ANS 150",
+                    "course_name": "Introduction to Animal Science"
+                },
+                {
+                    "course_code": "AGS 492",
+                    "course_name": "Agricultural Science Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                },
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Poultry Science B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "PO 201",
+                    "course_name": "Poultry Science and Production"
+                },
+                {
+                    "course_code": "PO 212",
+                    "course_name": "Poultry Anatomy and Physiology"
+                },
+                {
+                    "course_code": "PO 335",
+                    "course_name": "Poultry Management"
+                },
+                {
+                    "course_code": "PO 401",
+                    "course_name": "Avian Anatomy and Physiology"
+                },
+                {
+                    "course_code": "PO 421",
+                    "course_name": "Poultry Nutrition"
+                },
+                {
+                    "course_code": "PO 492",
+                    "course_name": "Poultry Science Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                },
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                }
+            ],
+            "total_credit_hours": 120
+        },
+        {
+            "major": "Crop and Soil Sciences B.S.",
+            "university": "North Carolina State University",
+            "degree_type": "Bachelor of Science",
+            "core_courses": [
+                {
+                    "course_code": "SSC 200",
+                    "course_name": "Soil Science"
+                },
+                {
+                    "course_code": "SSC 341",
+                    "course_name": "Soil Fertility and Nutrient Management"
+                },
+                {
+                    "course_code": "SSC 351",
+                    "course_name": "Soil Physical Properties"
+                },
+                {
+                    "course_code": "CS 213",
+                    "course_name": "Crop Science"
+                },
+                {
+                    "course_code": "CS 414",
+                    "course_name": "Weed Science"
+                },
+                {
+                    "course_code": "CS 492",
+                    "course_name": "Crop and Soil Sciences Capstone"
+                }
+            ],
+            "math_science_requirements": [
+                {
+                    "course_code": "CH 101/102",
+                    "course_name": "General Chemistry I (Lecture/Lab)"
+                },
+                {
+                    "course_code": "BIO 181/183",
+                    "course_name": "Introductory Biology I & II"
+                },
+                {
+                    "course_code": "ST 311",
+                    "course_name": "Statistics"
+                },
+                {
+                    "course_code": "MA 121 or MA 131",
+                    "course_name": "Calculus"
+                }
+            ],
+            "total_credit_hours": 120
         }
     ]
 }
