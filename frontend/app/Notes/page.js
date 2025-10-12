@@ -1,7 +1,7 @@
  'use client'
 
 import React, { useEffect, useState, useRef } from 'react';
-import majorsData from '../../../webscrape/college_data/all_stem_majors.json';
+import majorsData from '../../../webscrape/college_data/nc_state_stem_majors.json';
 import { useAuth } from '@clerk/nextjs';
 import Navbar from '../components/navbar';
 
