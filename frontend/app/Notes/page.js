@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import majorsData from '../../../webscrape/college_data/all_stem_majors.json';
 import { useAuth } from '@clerk/nextjs';
+import Navbar from '../components/navbar';
 
 
 const flattenCourses = (majorsJson) => {
@@ -280,6 +281,7 @@ const NotesPage = () => {
 
   return (
     <div className="pt-32 max-w-6xl mx-auto px-4">
+      <Navbar />
       {!isSignedIn && (
         <div className="mb-6 text-red-600">You have to be logged in to use enrollment and upload notes.</div>
       )}
