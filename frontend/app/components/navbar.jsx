@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/dashboard", label: "Dashboard" },
   { href: "/Forums", label: "Forums" },
-  { href: "/notes", label: "Notes" },
+  { href: "/Notes", label: "Notes" },
 
 ];
 

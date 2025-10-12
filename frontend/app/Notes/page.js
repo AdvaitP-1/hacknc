@@ -2,10 +2,8 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import majorsData from '../../../webscrape/college_data/all_stem_majors.json';
+import { useAuth } from '@clerk/nextjs';
 
-const isLoggedIn = () => {
-  return typeof window !== 'undefined' && localStorage.getItem('userToken') !== null;
-};
 
 const flattenCourses = (majorsJson) => {
   const list = [];
@@ -228,6 +226,7 @@ const UploadModal = ({ visible, onClose, enrolledCourses, onUpload }) => {
 
 const NotesPage = () => {
   const allCourses = flattenCourses(majorsData);
+  const { isSignedIn } = useAuth();
   const [enrolledCourses, setEnrolledCourses] = useState([]);
   const [notes, setNotes] = useState([]);
   const [uploadOpen, setUploadOpen] = useState(false);
@@ -263,7 +262,7 @@ const NotesPage = () => {
   }, [notes]);
 
   const handleEnroll = (course) => {
-    if (!isLoggedIn()) {
+    if (!isSignedIn) {
       alert('You must be logged in to enroll.');
       return;
     }
@@ -281,7 +280,7 @@ const NotesPage = () => {
 
   return (
     <div className="pt-32 max-w-6xl mx-auto px-4">
-      {!isLoggedIn() && (
+      {!isSignedIn && (
         <div className="mb-6 text-red-600">You have to be logged in to use enrollment and upload notes.</div>
       )}
 
