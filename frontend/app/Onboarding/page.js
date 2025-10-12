@@ -3,6 +3,11 @@ import { useUser } from '@clerk/nextjs';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import majorsData from '../../../webscrape/college_data/all_stem_majors.json';
+
+const majors = Array.from(
+  new Set(majorsData.majors.map((entry) => entry.major).filter(Boolean))
+);
 
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
 
@@ -108,14 +113,19 @@ export default function OnboardingPage() {
           {/* Major Selection */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Major</label>
-            <input
-              type="text"
+            <select
               value={major}
               onChange={(e) => setMajor(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-              placeholder="Enter your major"
-            />
+            >
+              <option value="">Select your major</option>
+              {majors.map((label) => (
+                <option key={label} value={label}>
+                  {label}
+                </option>
+            ))}
+
+            </select>
           </div>
 
           {/* Minor (Optional) */}
