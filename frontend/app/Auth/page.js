@@ -34,6 +34,7 @@ export default function AuthPage() {
           {isSignUp ? (
             <SignUp
               routing="hash"
+              fallbackRedirectUrl='/Onboarding'
               appearance={{
                 elements: {
                   rootBox: 'w-full',
@@ -45,6 +46,7 @@ export default function AuthPage() {
           ) : (
             <SignIn
               routing="hash"
+              fallbackRedirectUrl='/Onboarding'
               appearance={{
                 elements: {
                   rootBox: 'w-full',
