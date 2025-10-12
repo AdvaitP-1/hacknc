@@ -24,59 +24,91 @@ class CourseDataService:
     @staticmethod
     def load_course_data() -> List[Dict[str, str]]:
         """
-        Load course data from the JSON file.
+        Load course data from NC State and UNC JSON files.
         
         Returns:
-            List[Dict[str, str]]: List of course dictionaries with course_code and course_name
+            List[Dict[str, str]]: List of course dictionaries with course_code, course_name, and university
             
         Raises:
-            Exception: If file cannot be read or parsed
+            Exception: If files cannot be read or parsed
         """
         try:
-            # Get the path to the course data file
+            # Get the path to the college data directory
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            course_data_path = os.path.join(
-                current_dir, '../../../webscrape/college_data/all_stem_majors.json'
+            college_data_dir = os.path.join(
+                current_dir, '../../../webscrape/college_data'
             )
             
-            logger.info(f"Loading course data from: {course_data_path}")
-            
-            with open(course_data_path, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-            
-            # Extract unique courses from all majors
-            courses = set()
-            majors_data = data.get('majors', [])
-            
-            for major in majors_data:
-                # Add core courses
-                for course in major.get('core_courses', []):
-                    course_code = course.get('course_code', '').strip()
-                    course_name = course.get('course_name', '').strip()
-                    if course_code and course_name:
-                        courses.add((course_code, course_name))
-                
-                # Add math/science requirements
-                for course in major.get('math_science_requirements', []):
-                    course_code = course.get('course_code', '').strip()
-                    course_name = course.get('course_name', '').strip()
-                    if course_code and course_name:
-                        courses.add((course_code, course_name))
-            
-            course_list = [
-                {'course_code': code, 'course_name': name} 
-                for code, name in courses
+            # Define the university files to load
+            university_files = [
+                'North Carolina State University.json',
+                'University of North Carolina at Chapel Hill.json',
+                'University of North Carolina at Charlotte.json'
             ]
             
-            logger.info(f"Loaded {len(course_list)} unique courses")
+            logger.info(f"Loading course data from: {college_data_dir}")
+            
+            courses = set()
+            
+            for filename in university_files:
+                file_path = os.path.join(college_data_dir, filename)
+                university_name = filename.replace('.json', '')
+                
+                logger.info(f"Loading courses from: {university_name}")
+                
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as file:
+                        data = json.load(file)
+                    
+                    majors_data = data.get('majors', [])
+                    
+                    for major in majors_data:
+                        # Add core courses
+                        for course in major.get('core_courses', []):
+                            course_code = course.get('course_code', '').strip()
+                            course_name = course.get('course_name', '').strip()
+                            if course_code and course_name:
+                                courses.add((course_code, course_name, university_name))
+                        
+                        # Add math/science requirements
+                        for course in major.get('math_science_requirements', []):
+                            course_code = course.get('course_code', '').strip()
+                            course_name = course.get('course_name', '').strip()
+                            if course_code and course_name:
+                                courses.add((course_code, course_name, university_name))
+                        
+                        # Add elective courses if they exist
+                        for course in major.get('elective_courses', []):
+                            course_code = course.get('course_code', '').strip()
+                            course_name = course.get('course_name', '').strip()
+                            if course_code and course_name:
+                                courses.add((course_code, course_name, university_name))
+                
+                except FileNotFoundError:
+                    logger.warning(f"University file not found: {file_path}")
+                    continue
+                except json.JSONDecodeError as e:
+                    logger.warning(f"Invalid JSON in {filename}: {e}")
+                    continue
+            
+            # Convert set to list and deduplicate by course_code and university
+            course_list = []
+            seen_courses = set()
+            
+            for code, name, university in courses:
+                # Create a unique key for deduplication
+                unique_key = f"{code}-{university}"
+                if unique_key not in seen_courses:
+                    seen_courses.add(unique_key)
+                    course_list.append({
+                        'course_code': code, 
+                        'course_name': name,
+                        'university': university
+                    })
+            
+            logger.info(f"Loaded {len(course_list)} unique courses from {len(university_files)} universities")
             return course_list
             
-        except FileNotFoundError:
-            logger.error(f"Course data file not found: {course_data_path}")
-            raise Exception("Course data file not found")
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in course data file: {e}")
-            raise Exception("Invalid course data file format")
         except Exception as e:
             logger.error(f"Error loading course data: {e}")
             raise Exception(f"Failed to load course data: {e}")

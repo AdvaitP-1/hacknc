@@ -1,12 +1,3 @@
-"""
-StudyShare Backend API Server
-
-This is the main Flask application that serves as the backend API for the StudyShare platform.
-It provides endpoints for health monitoring, dashboard data, and forum functionality.
-
-Author: StudyShare Team
-Version: 1.0.0
-"""
 
 import os
 import logging
@@ -42,9 +33,9 @@ def create_app():
     ])
     
     # Register API blueprints
-    app.register_blueprint(health_bp, url_prefix='/api')
-    app.register_blueprint(dashboard_bp, url_prefix='/api')
-    app.register_blueprint(forums_bp, url_prefix='/api')
+    app.register_blueprint(health_bp, url_prefix='/api/health')
+    app.register_blueprint(dashboard_bp, url_prefix='/api/dashboard')
+    app.register_blueprint(forums_bp, url_prefix='/api/forums')
     
     # Global error handlers
     @app.errorhandler(404)

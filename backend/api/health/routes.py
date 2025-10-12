@@ -7,7 +7,7 @@ from datetime import datetime
 from flask import Blueprint, jsonify
 
 # Create blueprint for health routes
-health_bp = Blueprint('health', __name__, url_prefix='/api/health')
+health_bp = Blueprint('health', __name__)
 
 @health_bp.route('/')
 def health_check():

@@ -16,7 +16,7 @@ from api.forums.services import CourseDataService, ForumPostService, UpvoteServi
 logger = logging.getLogger(__name__)
 
 # Create blueprint for forums routes
-forums_bp = Blueprint('forums', __name__, url_prefix='/forums')
+forums_bp = Blueprint('forums', __name__)
 
 @forums_bp.route('/courses', methods=['GET'])
 def get_courses():
@@ -44,21 +44,21 @@ def get_courses():
         
         # Load course data from JSON file
         courses = CourseDataService.load_course_data()
+        logger.info(f"Loaded {len(courses)} courses from service")
         
         # Enrich courses with post counts and recent activity
         courses_with_metadata = []
         for course in courses:
             course_code = course['course_code']
             
-            # Get post count and recent activity
-            post_count = ForumPostService.get_post_count_for_course(course_code)
-            recent_activity = ForumPostService.get_recent_activity_for_course(course_code)
-            
+            # For now, set default values to avoid overwhelming the database
+            # Post counts and recent activity can be fetched on-demand when viewing specific courses
             courses_with_metadata.append({
                 'course_code': course_code,
                 'course_name': course['course_name'],
-                'post_count': post_count,
-                'recent_activity': recent_activity
+                'university': course.get('university', 'Unknown'),
+                'post_count': 0,  # Will be fetched when needed
+                'recent_activity': None  # Will be fetched when needed
             })
         
         logger.info(f"Successfully fetched {len(courses_with_metadata)} courses")

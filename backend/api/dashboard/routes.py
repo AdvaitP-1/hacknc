@@ -5,7 +5,7 @@ from flask import Blueprint, request, jsonify
 from config.database import supabase
 
 # Create blueprint for dashboard routes
-dashboard_bp = Blueprint('dashboard', __name__, url_prefix='/api/dashboard')
+dashboard_bp = Blueprint('dashboard', __name__)
 
 @dashboard_bp.route('/user-profile', methods=['GET'])
 def get_user_profile():

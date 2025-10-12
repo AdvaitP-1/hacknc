@@ -1,0 +1,53 @@
+2025-10-12 09:53:38,932 - __main__ - INFO - Flask application created successfully
+2025-10-12 09:53:38,932 - __main__ - INFO - Starting StudyShare API server on 0.0.0.0:5001
+2025-10-12 09:53:38,932 - __main__ - INFO - Debug mode: False
+ * Serving Flask app 'app'
+ * Debug mode: off
+2025-10-12 09:53:38,963 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.179:5001
+2025-10-12 09:53:38,963 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 09:53:49,965 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 09:53:49,965 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 09:53:49,965 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 09:53:49,966 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 09:53:49,967 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 09:53:49,968 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 09:53:49,968 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 09:53:49,968 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 09:53:49,970 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 09:53:49] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 09:54:02,311 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 09:54:02,311 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 09:54:02,312 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 09:54:02,312 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 09:54:02,312 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 09:54:02,312 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 09:54:02,312 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 09:54:02,312 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 09:54:02,313 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 09:54:02] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 09:54:04,428 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 09:54:04,428 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 09:54:04,428 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 09:54:04,429 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 09:54:04,429 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 09:54:04,429 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 09:54:04,429 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 09:54:04,429 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 09:54:04,430 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 09:54:04] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 09:54:20,178 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 09:54:20] "GET /api/health/ HTTP/1.1" 200 -
+2025-10-12 09:54:20,187 - api.forums.routes - INFO - Fetching courses for forums
+2025-10-12 09:54:20,187 - api.forums.services - INFO - Loading course data from: /Users/advaitpandey/Documents/hackncproject/hacknc/backend/api/forums/../../../webscrape/college_data
+2025-10-12 09:54:20,187 - api.forums.services - INFO - Loading courses from: North Carolina State University
+2025-10-12 09:54:20,189 - api.forums.services - INFO - Loading courses from: University of North Carolina at Chapel Hill
+2025-10-12 09:54:20,190 - api.forums.services - INFO - Loading courses from: University of North Carolina at Charlotte
+2025-10-12 09:54:20,191 - api.forums.services - INFO - Loaded 542 unique courses from 3 universities
+2025-10-12 09:54:20,191 - api.forums.routes - INFO - Loaded 542 courses from service
+2025-10-12 09:54:20,191 - api.forums.routes - INFO - Successfully fetched 542 courses
+2025-10-12 09:54:20,192 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 09:54:20] "GET /api/forums/courses HTTP/1.1" 200 -
+2025-10-12 09:54:25,916 - api.forums.routes - INFO - Fetching posts for course: CEGR 3262 (limit: 20, offset: 0)
+2025-10-12 09:54:25,916 - api.forums.services - INFO - Fetching posts for course: CEGR 3262
+2025-10-12 09:54:26,170 - httpx - INFO - HTTP Request: GET https://ezhtahdquefgcfsiembe.supabase.co/rest/v1/forum_posts?select=%2A&course=eq.CEGR%203262&order=created_at.desc "HTTP/1.1 200 OK"
+2025-10-12 09:54:26,175 - api.forums.services - INFO - Retrieved 0 posts for course CEGR 3262
+2025-10-12 09:54:26,175 - api.forums.routes - INFO - Successfully fetched 0 posts for course CEGR 3262
+2025-10-12 09:54:26,175 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 09:54:26] "GET /api/forums/posts?course=CEGR%203262&limit=20&offset=0 HTTP/1.1" 200 -
