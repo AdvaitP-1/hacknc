@@ -23,33 +23,32 @@ class CourseSearch:
         self.courses_data = []
         self.majors_data = []
     
-    def load_json_data(self, json_file_path: str, college_name: str = None) -> None:
+    def load_json_data(self, json_file_path: str) -> None:
         """
-        Load college data from a JSON file.
-        
+        Load college data from a JSON file and populate courses and majors.
+
         Args:
             json_file_path: Path to the JSON file
-            college_name: Name of the college (if not in JSON, will extract from university field)
         """
         try:
             with open(json_file_path, 'r', encoding='utf-8') as file:
                 data = json.load(file)
-                
+
             # Extract college name
-            if college_name is None:
-                college_name = data.get('university', 'Unknown College')
-            
+            college_name = data.get('university', 'Unknown College')
+
             # Store the data
             self.colleges_data[college_name] = data
-            
-            # Extract all courses from the JSON structure
+
+            # Extract courses and majors
             self._extract_courses_from_json(data, college_name)
-            
+            self._extract_majors_from_json(data, college_name)
+
         except FileNotFoundError:
             print(f"File not found: {json_file_path}")
         except json.JSONDecodeError:
             print(f"Invalid JSON format in file: {json_file_path}")
-    
+
     def load_csv_data(self, courses_csv_path: str = None, majors_csv_path: str = None) -> None:
         """
         Load courses and majors data from CSV files.
@@ -74,10 +73,32 @@ class CourseSearch:
             except Exception as e:
                 print(f"Error loading majors CSV: {e}")
     
+    def _extract_majors_from_json(self, data: Dict, college_name: str) -> None:
+        """
+        Extract majors from JSON data structure and add to majors list.
+
+        Args:
+            data: The college data dictionary
+            college_name: Name of the college
+        """
+        major_name = data.get('major', 'Unknown Major')
+        degree_type = data.get('degree_type', '')
+        total_credit_hours = data.get('total_credit_hours', 0)
+        concentrations = [c.get('concentration_name') for c in data.get('concentrations', [])]
+
+        # Add major information
+        self.majors_data.append({
+            'college': college_name,
+            'major_name': major_name,
+            'degree_type': degree_type,
+            'total_credit_hours': total_credit_hours,
+            'concentrations': concentrations
+        })
+
     def _extract_courses_from_json(self, data: Dict, college_name: str) -> None:
         """
         Extract all courses from JSON data structure and add to courses list.
-        
+
         Args:
             data: The college data dictionary
             college_name: Name of the college
@@ -92,31 +113,6 @@ class CourseSearch:
                 'course_code': course.get('course_code', ''),
                 'course_title': course.get('course_name', ''),
                 'course_type': 'Core',
-                'description': ''
-            })
-        
-        # Extract concentration courses
-        for concentration in data.get('concentrations', []):
-            concentration_name = concentration.get('concentration_name', '')
-            for course in concentration.get('courses', []):
-                self.courses_data.append({
-                    'college': college_name,
-                    'major_name': f"{major_name} - {concentration_name}",
-                    'course_code': course.get('course_code', ''),
-                    'course_title': course.get('course_name', ''),
-                    'course_type': 'Concentration',
-                    'concentration': concentration_name,
-                    'description': ''
-                })
-        
-        # Extract elective courses
-        for course in data.get('elective_courses', []):
-            self.courses_data.append({
-                'college': college_name,
-                'major_name': major_name,
-                'course_code': course.get('course_code', ''),
-                'course_title': course.get('course_name', ''),
-                'course_type': 'Elective',
                 'description': ''
             })
         
@@ -317,7 +313,7 @@ def main():
     search_engine = CourseSearch()
     
     # Load JSON data (example with the provided file)
-    json_file_path = r"c:\Users\saake\Downloads\computer_science_b_s_major.json"
+    json_file_path = r"webscrape/college_data/all_stem_majors.json"
     if os.path.exists(json_file_path):
         search_engine.load_json_data(json_file_path)
     
